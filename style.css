@@ -24,16 +24,82 @@ nav .list-content{
 }
 nav .list-content li{
     margin-left: 4%;
+    font-weight: 600;
 }
  .list-content li a{
     text-decoration: none;
-    color: green;
+    color: #008000;
     transition: background-color 0.3s ease;
 }
  .list-content li a:hover{
-    color: red;
+    color: #ffff00;
     
 }
 
+ /* **************************************************MAIN **************************************** */
  
- 
+ .hero{
+    width: 100%;
+    height: 70vh;
+    background-image:url(image/charityBackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white; 
+    line-height: 1.6; 
+ }
+ h1{
+    font-size: 50px;
+ }
+ h2{
+    font-size: 16px;
+ }
+ h3{
+    color: #008000;
+    font-weight: 600;
+ }
+ p{
+    font-size: 18px;
+ }
+ .buttonDiv{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+ }
+button{
+  width: 30%;
+  height: 40px;
+  font-size: 20px;
+  font-weight: 400;
+  border: none;
+  border-radius:50px;
+  background-color: #008000;
+  color: white;
+}
+.findFoodButton{
+    background-color: #ffff00;
+    margin-left: 2%;
+}
+.donateButton:hover{
+ color: #ffff00;
+}
+.findFoodButton:hover{
+    color: #008000;
+}
+.mission, .howItWorks{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:20px ;
+    text-align: center;
+}
+.mission p{
+    padding:1%;
+}
