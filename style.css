@@ -4,12 +4,21 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+body{
+  background-color: whitesmoke;
+}
 nav{
+  width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 10px 0px 10px 0px;
     background-color: white;
     box-shadow: 0px 0px 5px rgba(0,0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index:1000;
+    
 }
 nav img{
    width: 5%;
@@ -44,7 +53,7 @@ nav .list-content li{
     background-image:url(image/charityBackground.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    margin-top: 2%;
+    margin-top: 8%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -61,7 +70,12 @@ nav .list-content li{
  h3{
     color: #008000;
     font-weight: 600;
+    font-size: 30px;
  }
+ h4 {
+  color:  #ffff00;
+  font-size: 20px;
+}
  p{
     font-size: 18px;
  }
@@ -91,15 +105,217 @@ button{
 .findFoodButton:hover{
     color: #008000;
 }
-.mission, .howItWorks{
+.mission, .how-it-works{
     
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top:20px ;
-    text-align: center;
+    text-align: center;  
 }
 .mission p{
     padding:1%;
+}
+  .howItWorks-div {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .howItWorks-children {
+    width: 32%;
+      padding: 20px;   
+  }
+  
+  .howItWorks-children:hover {
+    transform: translateY(-10px);
+  }
+   h4 {
+    color:  #ffff00;
+    font-size: 20px;
+  }
+  .howItWorks-children img {
+    width: 100%;
+    margin-top: 15px;
+  } 
+  .howItWorks-children p {
+    font-size: 16px;
+    margin-top: 15px;
+  }
+  .available-food{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+.availablefood-div {
+  width: 100%;
+  overflow: hidden; 
+  padding: 15px 0;
+  position: relative;
+  margin-top: 20px;
+}
+
+
+.foodItems-div { 
+  display: flex;
+  gap: 30px; 
+  animation: marquee 20s linear infinite; 
+}
+
+/* Food Item Styling */
+.food-item {
+  width: 20%; 
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ flex-shrink: 0;
+ padding: 10px 0px 10px 0px;
+  background-color: white;
+  box-shadow: 0px 0px 5px rgba(0,0, 0, 0.1);
+}
+
+.food-item img {
+  width: 80%; 
+  margin-top: 10px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.food-item h4  {
+  margin-top: 10px;
+}
+
+.food-item img:hover {
+  transform: scale(1.1); 
+}
+.food-item button{
+  width: 30%;
+  height: 20px;
+  font-size: 15px;
+  margin-top: 10px;
+ 
+}
+.food-item p {
+  margin-top: 10px;
+}
+.community{
+  width: 100%;
+  background-color: white;
+  padding-bottom: 20px;
+  margin-top: 40px;
+}
+
+.communityImpact{
+ display: flex;
+ flex-direction: column;
+ text-align: center;
+ padding-top: 50px;
+}
+.communityImpactDiv{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 40px; 
+}
+.communityImpact h2{ 
+  font-size: 30px;
+}
+.communityImpactDiv h3{ 
+  font-size: 50px;
+}
+.communityImpactDiv p{
+  margin-top: 10px; 
+  font-size: 20px;
+}
+.testimonial{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 50px;
+ }
+ .testimonialContainer{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   padding-top: 40px; 
+ }
+ .testimonialCards{
+  width: 40%;
+  background-color: whitesmoke;
+  box-shadow: 0px 0px 5px rgba(0,0, 0, 0.1);
+  padding: 20px;
+ }
+ .testimonial h2{ 
+   font-size: 20px;
+ }
+ .testimonialCards h4{ 
+   font-size: 15px;
+   color: #008000;
+   margin-top: 10px;
+ }
+ .communityImpactDiv p{
+   margin-top: 10px; 
+   font-size: 20px;
+ }
+/* scrolling animation */
+@keyframes marquee {
+  from {
+    transform: translateX(0); /* Start position */
+  }
+  to {
+    transform: translateX(-50%); /* Scroll left */
+  }
+}
+
+/* Pause Scrolling on Hover */
+.availablefood-div:hover .foodItems-div {
+  animation-play-state: paused;
+}
+
+/************************************************FOOTER ************************************************ */
+footer{
+  background-color: #008000;
+  color: white;
+  padding: 20px 40px 20px 40px;
+}
+.footerInfo{
+  display: flex;
+  justify-content: space-evenly;
+}
+.footerInfo h4{
+  color: white;
+  font-weight: 600;
+  margin-top: 40px;
+}
+.footerInfo ul{
+  list-style: none;
+  margin-top: 5px;
+}
+.footerInfo ul li{
+  padding-top: 5px;
+}
+.footerInfo ul li a{
+  text-decoration: none;
+  color: white;
+  font: 600;
+  font-size: 15px;
+}
+.footerInfo p{
+  color: white;
+  font: 600;
+  margin-top: 10px;
+  font-size: 15px;
+}
+.copyright{
+  text-align: center;
+  margin-top: 20px;
+}
+.copyright p{
+  font-size: 15px;
 }
