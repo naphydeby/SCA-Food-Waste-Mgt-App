@@ -7,6 +7,9 @@
 body{
   background-color: whitesmoke;
 }
+.mobileview-nav{
+  display: none;
+}
 nav{
   width: 100%;
     display: flex;
@@ -105,7 +108,7 @@ button{
 .findFoodButton:hover{
     color: #008000;
 }
-.mission, .how-it-works{
+.mission, .how-it-works, .available-food, .ourpartnersection{
     
     display: flex;
     flex-direction: column;
@@ -117,7 +120,7 @@ button{
 .mission p{
     padding:1%;
 }
-  .howItWorks-div {
+  .howItWorks-div, .partner {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -145,12 +148,7 @@ button{
     font-size: 16px;
     margin-top: 15px;
   }
-  .available-food{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+  
 
 .availablefood-div {
   width: 100%;
@@ -202,6 +200,63 @@ button{
  
 }
 .food-item p {
+  margin-top: 10px;
+}
+/* .team{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 20px;
+}
+.team-grid{
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 15px;
+  padding:30px 30px 20px 30px;
+}
+.team-grid img{
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
+.team-grid img:hover {
+  transform: translateY(-10px);
+} */
+.newsletter{
+  background-color: #008000;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px 0 40px 0;
+  margin-top: 20px;
+}
+.newsletter form{
+  width: 50%;
+}
+.newsletter h2{
+  font-size: 30px;
+  font-weight: 600;
+}
+.newsletter input{
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 20px;
+  padding: 10px;
+}
+.newsletter button{
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  color: #008000;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 20px;
+  padding: 10px;
   margin-top: 10px;
 }
 .community{
@@ -263,6 +318,40 @@ button{
    margin-top: 10px; 
    font-size: 20px;
  }
+ /* Donate */
+ .form{
+  max-width: 50%;
+  background-color:black;
+  opacity: 50%;
+  margin-top: 120px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ }
+ .form input{
+ width: 70%;
+ height: 40px;
+ padding: 10px;
+ margin-top: 10px;
+ border: none;
+ outline: none;
+ border-radius: 5px;
+ font-size: 20px;
+ }
+ .form button{
+  width: 70%;
+  margin-top: 10px;
+  border-radius: 5px;
+ }
+ .form textarea{
+   border: none;
+   border-radius: 5px;
+   outline: none;
+  margin-top: 10px;
+ }
 /* scrolling animation */
 @keyframes marquee {
   from {
@@ -318,4 +407,137 @@ footer{
 }
 .copyright p{
   font-size: 15px;
+}
+
+
+@media screen and (max-width:640px){
+   
+  .webview-nav{
+   display: none;
+  }
+  .mobileview-nav{
+   display: block;
+   
+ }
+   nav{
+       width: 100%;
+       height: auto;
+       padding: 20px 0px 20px 0px;
+      
+     }
+  
+   nav h1{
+       font-size: 30px;
+    }
+    ul{
+       list-style: none;
+       line-height:2.0;
+    }
+    ul a{
+           text-decoration: none;
+           color: grey;
+           font-weight: 400;
+           transition: 0.3s;
+    }
+    
+  
+   
+   .menu-btn{
+       display: block;
+       
+   }
+   .listContent{ 
+     display: none;
+   }
+    
+   .sidebar{
+       display: block;
+       width: 80%;
+       height: 100vh;
+       background-color: white;
+       box-shadow: 0px 0px 0px 5px rgba(0, 0 , 0, 0.1);
+      padding: 40px;
+      color: gray;
+      font-size: 20px;
+      position: fixed;
+      top: 0;
+      left: -80%;
+      z-index:1000;  
+      transition: left 0.35s ease;
+    }
+    .sidebar.active{
+       left:0;
+    }
+    h1{
+       font-size: 35px;
+       color: white;
+       text-shadow: 0px 0px 3px red;
+   }
+   .listIcon{
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+        
+   }
+   
+  
+   .collection-list-display{
+       display:none; 
+     background-color: white;
+       
+   }
+   .fa-angle-right{
+       
+       transition: transform 0.3s ease;
+       transform-origin: center;
+   }
+    .fa-angle-right.rotate { 
+       transform: rotate(90deg);
+     }
+
+   .sideBarMenu {
+       font-size: 24px;
+       background: none;
+       border: none;
+       cursor: pointer;
+     }
+     .search-display{
+       display: none;
+     }
+   .searchDiv{
+       display: none;
+   }
+   .search-div-sideBar{
+       display:flex;
+
+   }
+   .search{
+       width: 200px;
+       display: block;  
+    }
+   
+  .dropdown{
+   display: none;
+  }
+  .hero{
+   display: flex;
+   flex-direction: column;
+   justify-content: start;
+   align-items: start;
+  }
+  .hero-text{
+   padding: 5px 0px 5px 0px;
+  }
+ .grid{
+       
+       grid-template-columns: repeat(1, minmax(0, 1fr));
+       margin-left: 20px;
+       gap: 10px;
+   }
+   
+}
+
+@media screen and (max-width:768px){
+  
+   
 }
