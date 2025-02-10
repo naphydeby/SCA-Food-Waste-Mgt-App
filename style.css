@@ -7,14 +7,14 @@
 body{
   background-color: whitesmoke;
 }
-.mobileview-nav{
+.mobileview-navbar{
   display: none;
 }
 nav{
   width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 10px 0px 10px 0px;
+    padding: 10px 10px 10px 0px;
     background-color: white;
     box-shadow: 0px 0px 5px rgba(0,0, 0, 0.1);
     position: fixed;
@@ -47,6 +47,9 @@ nav .list-content li{
     color: #ffff00;
     
 }
+.sidebar{
+  display: none;
+}
 
  /* **************************************************MAIN **************************************** */
  
@@ -56,7 +59,7 @@ nav .list-content li{
     background-image:url(image/charityBackground.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    margin-top: 8%;
+    margin-top: 4%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -252,6 +255,7 @@ button{
   height: 50px;
   background-color: white;
   color: #008000;
+  font-weight: 600;
   border: none;
   border-radius: 5px;
   outline: none;
@@ -318,12 +322,30 @@ button{
    margin-top: 10px; 
    font-size: 20px;
  }
- /* Donate */
+ /* Donate and request*/
+ .video-container{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  padding-top: 80px;
+  
+ }
+ .video-background{
+ position: absolute;
+ min-width: 100%;
+ }
+ .form-div{
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
  .form{
-  max-width: 50%;
+  min-width: 50%;
   background-color:black;
-  opacity: 50%;
-  margin-top: 120px;
+  opacity: 70%;
   margin-bottom: 10px;
   padding-bottom: 10px;
   display: flex;
@@ -331,7 +353,7 @@ button{
   justify-content: center;
   align-items: center;
  }
- .form input{
+ .form input, select{
  width: 70%;
  height: 40px;
  padding: 10px;
@@ -341,17 +363,38 @@ button{
  border-radius: 5px;
  font-size: 20px;
  }
+ .form textarea{
+  width: 70%;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  margin-top: 10px;
+  padding: 10px;
+ }
  .form button{
   width: 70%;
   margin-top: 10px;
   border-radius: 5px;
  }
- .form textarea{
-   border: none;
-   border-radius: 5px;
-   outline: none;
-  margin-top: 10px;
- }
+ 
+ /* ****************************************************SERVICES**************************************** */
+ .services-header{
+  width: 100%;
+  height: 100vh;
+  color: #008000;
+  background-image:url(image/donate.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+
 /* scrolling animation */
 @keyframes marquee {
   from {
@@ -409,132 +452,42 @@ footer{
   font-size: 15px;
 }
 
-
+/* Media Query */
 @media screen and (max-width:640px){
-   
-  .webview-nav{
-   display: none;
+  .mobileview-navbar{
+    display: block;
   }
-  .mobileview-nav{
-   display: block;
-   
+  .webview-navbar{
+    display: none;
+  }
+  nav .list-content{
+    display: none;
+  }
+  h1{
+    font-size: 30px;
+    color: #008000;
  }
-   nav{
-       width: 100%;
-       height: auto;
-       padding: 20px 0px 20px 0px;
-      
+ nav{
+  justify-content: space-around;
+ }
+    .sidebar{
+        display: block;
+        width: 80%;
+        height: 100vh;
+        background-color: white;
+        box-shadow: 0px 0px 0px 5px rgba(0, 0 , 0, 0.1);
+       padding: 40px;
+       color: gray;
+       font-size: 20px;
+       position: fixed;
+       top: 0;
+       left: -80%;
+       z-index:1000;  
+       transition: left 0.35s ease;
      }
-  
-   nav h1{
-       font-size: 30px;
-    }
-    ul{
-       list-style: none;
-       line-height:2.0;
-    }
-    ul a{
-           text-decoration: none;
-           color: grey;
-           font-weight: 400;
-           transition: 0.3s;
-    }
-    
-  
-   
-   .menu-btn{
-       display: block;
-       
-   }
-   .listContent{ 
-     display: none;
-   }
-    
-   .sidebar{
-       display: block;
-       width: 80%;
-       height: 100vh;
-       background-color: white;
-       box-shadow: 0px 0px 0px 5px rgba(0, 0 , 0, 0.1);
-      padding: 40px;
-      color: gray;
-      font-size: 20px;
-      position: fixed;
-      top: 0;
-      left: -80%;
-      z-index:1000;  
-      transition: left 0.35s ease;
-    }
-    .sidebar.active{
-       left:0;
-    }
-    h1{
-       font-size: 35px;
-       color: white;
-       text-shadow: 0px 0px 3px red;
-   }
-   .listIcon{
-       display: flex;
-       align-items: center;
-       justify-content: space-between;
-        
-   }
-   
-  
-   .collection-list-display{
-       display:none; 
-     background-color: white;
-       
-   }
-   .fa-angle-right{
-       
-       transition: transform 0.3s ease;
-       transform-origin: center;
-   }
-    .fa-angle-right.rotate { 
-       transform: rotate(90deg);
+     .sidebar.active{
+        left:0;
      }
-
-   .sideBarMenu {
-       font-size: 24px;
-       background: none;
-       border: none;
-       cursor: pointer;
-     }
-     .search-display{
-       display: none;
-     }
-   .searchDiv{
-       display: none;
-   }
-   .search-div-sideBar{
-       display:flex;
-
-   }
-   .search{
-       width: 200px;
-       display: block;  
-    }
-   
-  .dropdown{
-   display: none;
-  }
-  .hero{
-   display: flex;
-   flex-direction: column;
-   justify-content: start;
-   align-items: start;
-  }
-  .hero-text{
-   padding: 5px 0px 5px 0px;
-  }
- .grid{
-       
-       grid-template-columns: repeat(1, minmax(0, 1fr));
-       margin-left: 20px;
-       gap: 10px;
-   }
-   
 }
 
 @media screen and (max-width:768px){

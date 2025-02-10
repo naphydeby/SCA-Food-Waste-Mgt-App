@@ -16,7 +16,7 @@
       
           <ul class="list-content">
               <li><a href="index.html">Home</a></li>
-              <li><a href="donate.html">Donate-Food</a></li>
+              <li><a href="findfood.html">DonateFood</a></li>
               <li><a href="logout.html">Logout</a></li>
               
           </ul>
@@ -31,8 +31,8 @@
                </div>
                   <ul class="list-content">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="donate.html">Donate Food</a></li>
-                    <li><a href="logout.html">Logout</a></li>  
+                    <li><a href="findfood.html">view Request</a></li>
+                    <li><a href="logout.html">Logout</a></li>
                   </ul>
                   <h1>Food Salvage</h1>
                   <img src="/image/WhatsApp_Image_2025-02-06_at_10.12.19_90829287-removebg-preview.png" alt="">
@@ -40,9 +40,36 @@
   </div>
     <!-- ---------------------------------Main---------------------------- -->
      <main>
-       
-        
-     </main>
+       <section class="video-container">
+        <video autoplay muted loop class="video-background">
+          <source src="/image/requestfood.mp4" type="video/mp4" >
+        </video>
+       <div class="form-div">
+        <form class="form" >
+          <h3>Request food</h3>
+          <input type="text"  placeholder="Full name" >
+          <input type="text"  placeholder="Email address" >
+          <input type="date">
+          <input type="time" >
+          <select >
+            <option value="Pickup">Available Food</option>
+            <option value="Donation">Rice</option>
+            <option value="Donation">Beans</option>
+            <option value="Donation">Yam</option>
+            <option value="Donation">Bread</option>
+            <option value="Donation">Garri</option>
+          </select>
+          <input type="text"  placeholder=" pickup Location" >
+          <textarea  placeholder="Description"></textarea>
+          <button type="submit">SUBMIT REQUEST</button>
+          <!-- <div id="successMessage" class="success-message" style="display:none;">
+            Request Submitted Successfully! We'll get back to you shortly.
+          </div> -->
+      </form>
+       </div>
+
+       </section>  
+         </main>
      
  <!------------------------------------------------------- Footer ---------------------------------- -->
  <footer>

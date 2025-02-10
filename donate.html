@@ -16,7 +16,7 @@
       
           <ul class="list-content">
               <li><a href="index.html">Home</a></li>
-              <li><a href="findfood.html">Find-food</a></li>
+              <li><a href="findfood.html">FindFood</a></li>
               <li><a href="logout.html">Logout</a></li>
               
           </ul>
@@ -40,15 +40,27 @@
   </div>
     <!-- ---------------------------------Main---------------------------- -->
      <main>
-        <form class="form" >
+       <section class="video-container">
+        <video autoplay muted loop class="video-background">
+          <source src="/image/donationvideo.mp4" type="video/mp4" >
+        </video>
+        <div class="form-div">
+          <form class="form" >
             <h3>Donate food</h3>
-            <input type="text"  placeholder="Food Name" >
+            <input type="text"  placeholder="Food item name" >
             <input type="text"  placeholder="Quantity" >
-            <input type="date"  required>
-            <input type="text"  placeholder="Location" >
-            <textarea cols="65" rows="5" ></textarea>
+            <input type="date">
+            <input type="time" >
+            <input type="text"  placeholder=" pickup Location" >
+            <textarea  placeholder="Description"></textarea>
             <button type="submit">SUBMIT DONATION</button>
+            <!-- <div id="successMessage" class="success-message" style="display:none;">
+              Request Submitted Successfully! We'll get back to you shortly.
+            </div> -->
         </form>
+  
+        </div>
+         </section>
      </main>
      
  <!------------------------------------------------------- Footer ---------------------------------- -->
