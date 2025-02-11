@@ -196,8 +196,8 @@ button{
   transform: scale(1.1); 
 }
 .food-item button{
-  width: 30%;
-  height: 20px;
+  width: 35%;
+  height: 30px;
   font-size: 15px;
   margin-top: 10px;
  
@@ -466,10 +466,19 @@ footer{
   h1{
     font-size: 30px;
     color: #008000;
+    text-align: center;
  }
+ h2{
+  
+  text-align: center;
+}
  nav{
   justify-content: space-around;
  }
+ .menu-btn{
+  display: block;
+  
+}
     .sidebar{
         display: block;
         width: 80%;
@@ -485,9 +494,83 @@ footer{
        z-index:1000;  
        transition: left 0.35s ease;
      }
+     .sideBarMenu {
+      font-size: 24px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
      .sidebar.active{
         left:0;
      }
+     .buttonDiv{
+      width: 60%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      
+   }
+     button{
+      width: 60%;
+    }
+    .howItWorks-children {
+      width: 64%;
+        padding: 20px;   
+    }
+    .food-item {
+      width: 40%; 
+    }
+    .food-item img {
+      width: 100%; 
+    }
+    .food-item button{
+      width: 60%;  
+    }
+    .newsletter{
+     
+      display: flex;
+     flex-direction: column;
+     justify-content: center;
+      align-items: center;
+    }
+    .newsletter form{
+      margin-top: 20px;
+    }
+    .newsletter h2{
+      font-size: 20px;
+    }
+    .newsletter p{
+      font-size: 15px;
+      text-align: center;
+      margin-top: 2px;
+    }
+    .partner{
+      display: flex;
+      flex-direction: column;
+    }
+    .communityImpactDiv{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .testimonialContainer{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+    .testimonialCards{
+      width: 80%;   
+     }
+     .footerInfo{
+      display: flex;
+      flex-direction: column;
+    }
+    
+    
 }
 
 @media screen and (max-width:768px){
