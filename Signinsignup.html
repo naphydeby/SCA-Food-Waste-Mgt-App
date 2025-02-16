@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="images/ jpg" href="">
+    <title>Food Salvage</title>
+    <link rel="stylesheet" href="signupsignin.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section id="header">
+
+        <div class="navbar">
+
+            <div class="logo-container">
+                <img src="./images/WhatsApp_Image_2025-02-06_at_10.12.19_90829287-removebg-preview.png" alt="logo">
+            </div>
+
+            <div class="menu-links">
+                <ul class="list-content">
+                    <li><a href="/"></a></li>
+                    <li><a href="/About" class="active">About Us</a></li>
+                    <li><a href="/Hunger-in-Lagos">Hunger in Lagos</a></li>
+                    <div class="menu-and-icon">
+                        <li><a href="/How-We-Do-It">How We Do It</a></li> 
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </div>
+                    <li><a href="/contact">Contact</a></li>
+        
+                </ul>
+        
+            </div>
+            
+
+            <div class="signup-container">
+                <div class="signup-btn1">
+                    <button>Sign Up</button>
+                </div>
+                <div class="signup-btn2">
+                    <button>Sign In</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <div  class="form-section"> 
+
+        <div class="tabs">  
+            <div class="tab-button-div">
+                <button class="tab-button active" onclick="showTab('signIn')">Sign In</button>  
+            </div>
+            <div class="tab-button-div">
+                <button class="tab-button" onclick="showTab('signUp')">Sign Up</button>  
+            </div>
+            
+        </div>  
+         
+        <div id="signIn" class="tab-content active">
+            <form id="signIn-form">
+                <div class="form-heading">
+                    <h2>Welcome</h2> 
+                </div>
+
+                <div class="first-form-group">
+                    
+                    <div class="form-group">
+                        <div class="label">
+                            <label for="email">Email Address</label>
+                        </div>
+                        <div class="input">
+                            <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+                        </div>
+                        <!-- <p class="lastname-alert" id="lastname-alert"></p> -->
+                    </div> 
+
+                    <div class="form-group">
+                        <div class="label">
+                            <label for="password">Password</label>
+                        </div>
+                        <div class="input">
+                            <input type="password" id="password" name="password" placeholder="Enter a Password" required>
+                        </div>
+                        <!-- <p class="email" id="email-alert"></p> -->
+                    </div> 
+                </div> 
+
+                <div class="btn-container">
+                    <button type="submit">Login</button>
+                </div>
+                
+                <div class="alternate-sign">
+                    <h4>OR</h4> 
+                </div>
+
+                <div class="alternate-sign">
+                    <p>Forget Password <a href="">Click Here</a> </p>
+                </div>
+
+                <div class="alternate-sign">
+                    <p>Dont have an account <a href="">Sign Up</a> </p>
+                </div>
+            
+            </form>
+        </div>
+        
+        <div id="signUp" class="tab-content">
+            <form id="signUp-form">
+
+                <div className="header">
+                    <h2>Welcome</h2>
+                </div>
+
+                <div class="first-form-group">
+                    <div class="form-group">
+                        <div class="label">
+                            <label for="fullname">Full Name</label>
+                        </div>
+                        <div class="input">
+                            <input type="text" id="fullname" name="fullname" placeholder="Enter your Full name" required>
+                        </div>
+                        <!-- <p class="fi-alert" id="firstname-alert"></p> -->
+                    </div> 
+
+                    <div class="form-group">
+                        <div class="label">
+                            <label for="email">Email Address</label>
+                        </div>
+                        <div class="input">
+                            <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+                        </div>
+                        <!-- <p class="lastname-alert" id="lastname-alert"></p> -->
+                    </div> 
+
+                    <div class="form-group">
+                        <div class="label">
+                            <label for="phonenumber">Phone Number</label>
+                        </div>
+                        <div class="input">
+                            <input type="phonenumber" id="phonenumber" name="phonenumber" placeholder="Enter your Phone number" required>
+                        </div>
+                        <!-- <p class="email" id="email-alert"></p> -->
+                    </div> 
+    
+                    <div class="form-group">
+                        <div class="label">
+                            <label for="password">Password</label>
+                        </div>
+                        <div class="input">
+                            <input type="password" id="password" name="password" placeholder="Enter a Password" required>
+                        </div>
+                        <!-- <p class="email" id="email-alert"></p> -->
+                    </div> 
+                </div> 
+
+                <div class="btn-container">
+                    <button type="submit">Login</button>
+                </div>
+                
+                <div class="alternate-sign">
+                    <h4>OR</h4> 
+                </div>
+
+                <div class="alternate-container">
+                    <div class="alternate-sign">
+                        <p>Forget Password <a href="">Click Here</a> </p>
+                    </div>
+    
+                    <div class="alternate-sign">
+                        <p>Already have an account <a href="">Sign In</a> </p>
+                    </div>
+                </div>
+                
+            </form>
+        </div>
+        
+
+    </div>
+    <script src="./tab.js"></script>
+</body>
+</html>

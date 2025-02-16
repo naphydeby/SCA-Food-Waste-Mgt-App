@@ -1,61 +1,151 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family:"Montserrat", serif;
+    line-height: -0.75rem;
 }
-body{
-  background-color: whitesmoke;
+
+.main-container{
+    width: 100%;
+    height: auto;
+    /* margin: auto; */
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+.navbar{
+    width: 100%;
+    height: auto;
+    padding: 0rem 3rem;
+    background-color: #ecfce5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container, .aboutimage, .teamimage{
+    width: fit-content;
+    height: auto;
+}
+
+.logo-container img{
+    width: 150px;
+    height: 150px;
+}
+
+.menu-links{
+    width: 60%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+.list-content{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 500;
+    cursor: pointer;
+    list-style: none;
+    padding: 1rem;
+}
+
+.menu-and-icon{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    column-gap: 0.6rem;
+}
+
+.menu-links ul li a, i {
+    text-decoration: none;
+    color: #011800;
+}
+
+.menu-links ul li a:hover, i:hover {
+    color: red;
+    transition: 0.5s ease;
+}
+.menu-links ul li a.active, i.active {
+    color: red;
+    transition: 0.5s ease;
+}
+
+.signup-container{
+    width: 25%;
+    height: auto;
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    column-gap: 0.8rem;
+}
+.signup-btn{
+    width: fit-content;
+    height: auto;
+}
+.signup-btn1 button{
+    width: 100%;
+    height: auto;
+    padding: 0.8rem 1rem;
+    background-color: #011800;
+    color: #FAFFD1;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.signup-btn2 button{
+    width: 100%;
+    height: auto;
+    padding: 0.8rem 1rem;
+    background-color: #fffb0309;
+    color: #011800;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border: 2px solid #011800;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.signup-btn1 button:hover, .signup-btn2 button:hover{
+    background-color: #fffb25;
+    color: #011800;
+    transition: 0.3s ease;
+    font-size: 1.4rem;
+    outline: none;
+    border: none;
 }
 .mobileview-navbar{
   display: none;
 }
-nav{
-  width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 10px 10px 0px;
-    background-color: white;
-    box-shadow: 0px 0px 5px rgba(0,0, 0, 0.1);
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index:1000;
-    
-}
-nav img{
-   width: 5%;
-   height: 5%;
-}
-nav .list-content{
-    display: flex; 
-    align-items: center;
-    list-style: none;   
-    padding-right: 4%;
-    
-}
-nav .list-content li{
-    margin-left: 4%;
-    font-weight: 600;
-}
- .list-content li a{
-    text-decoration: none;
-    color: #008000;
-    transition: background-color 0.3s ease;
-}
- .list-content li a:hover{
-    color: #ffff00;
-    
-}
-.sidebar{
+
+/* .sidebar{
   display: none;
-}
+} */
 
  /* **************************************************MAIN **************************************** */
  
  .hero{
     width: 100%;
-    height: 70vh;
+    height: 100vh;
     background-image:url(image/charityBackground.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -65,146 +155,263 @@ nav .list-content li{
     justify-content: center;
     align-items: center;
     color: white; 
-    line-height: 1.6; 
+    row-gap: 2.5rem;
  }
- h1{
-    font-size: 50px;
+
+ .hero-heading-text, .hero-h2{
+  width: fit-content;
+  height: auto;
  }
- h2{
-    font-size: 16px;
+
+ .hero-heading-text h1{
+    font-size: 4rem;
+    font-weight: 800;
  }
- h3{
-    color: #008000;
-    font-weight: 600;
-    font-size: 30px;
+ .hero-h2 p{
+    font-size: 1.4rem;
+    font-weight: 500;
  }
- h4 {
-  color:  #ffff00;
-  font-size: 20px;
-}
- p{
-    font-size: 18px;
- }
+
  .buttonDiv{
-    width: 40%;
+    width: 60%;
+    height: auto;
+    padding: 2rem;
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    margin-top: 20px;
+    align-items: center;
+    column-gap: 1.5rem;
  }
+ .donateButton, .find-food{
+    width: fit-content;
+    height: auto;  
+ }
+
 button{
-  width: 30%;
-  height: 40px;
-  font-size: 20px;
+  width: 100%;
+  height: auto;
+  padding: 1.2rem 2.4rem;
+  font-size: 1.4rem;
   font-weight: 400;
   border: none;
-  border-radius:50px;
+  outline: none;
+  border-radius: 0.5rem;
   background-color: #008000;
   color: white;
 }
 .findFoodButton{
     background-color: #ffff00;
+    color: #008000;
     margin-left: 2%;
 }
 .donateButton:hover{
- color: #ffff00;
+    color: #ffff00;
+    font-size: 1.6rem;
+    font-weight: 500;
 }
 .findFoodButton:hover{
     color: #008000;
+    font-size: 1.6rem;
+    font-weight: 500;
 }
 .mission, .how-it-works, .available-food, .ourpartnersection{
-    
+    width: 100%;
+    height: auto;
+    padding: 3.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top:20px ;
-    text-align: center;  
+    row-gap: 1.2rem;
 }
-.mission p{
-    padding:1%;
+
+.mission-heading-text h3, .howitworks h3, .available-food-heading h3, .partners-heading h3, .communityimpact-heading h3{
+  font-size: 2.8rem;
+  color: #008000;
+  font-weight: 700;
+
 }
-  .howItWorks-div, .partner {
+.mission-paragraph {
+    width: 100%;
+    height: auto;
+    padding: 0rem 3.5rem;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 20px;
+    justify-content: center;
+}
+.mission-paragraph p{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #011800;
+    line-height: 2rem;
+  /* text-align: center; */
+}
+
+  .howItWorks-div, .partner {
+    width: 100%;
+    height: auto;
+    padding: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 1.5rem;
   }
 
   .howItWorks-children {
-    width: 32%;
-      padding: 20px;   
+    width: 33%;
+    height: auto;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+    padding-bottom: 1.4rem;
+    background-color: #ecfce5;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;  
+    row-gap: 1rem;
+    border-radius: 0.8rem; 
+  }
+  .share-food-title-and-text{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    row-gap: 0.9rem;
   }
   
   .howItWorks-children:hover {
     transform: translateY(-10px);
   }
    h4 {
-    color:  #ffff00;
-    font-size: 20px;
+    color:  #2e2e02;
+    font-size: 1.6rem;
   }
-  .howItWorks-children img {
-    width: 100%;
-    margin-top: 15px;
-  } 
-  .howItWorks-children p {
-    font-size: 16px;
-    margin-top: 15px;
+  .share-food p{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #011800;
+    line-height: 1.6rem;
   }
-  
+  .share-food-image{
+    width: fit-content;
+    height: auto;
+    padding: 8rem 11.6rem;
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
+    background-image:url(image/charityphoto.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .share-food-image2{
+    width: fit-content;
+    height: auto;
+    padding: 8rem 11.6rem;
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
+    background-image:url(image/donation2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .share-food-image3{
+    width: fit-content;
+    height: auto;
+    padding: 8rem 11.6rem;
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
+    background-image:url(image/food1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
 .availablefood-div {
   width: 100%;
+  height: auto;
   overflow: hidden; 
   padding: 15px 0;
   position: relative;
   margin-top: 20px;
 }
 
-
 .foodItems-div { 
+  width: 100%;
+  height: auto;
   display: flex;
-  gap: 30px; 
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  column-gap: 2rem; 
   animation: marquee 20s linear infinite; 
 }
 
 /* Food Item Styling */
 .food-item {
-  width: 20%; 
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
- flex-shrink: 0;
- padding: 10px 0px 10px 0px;
+  width: 25%; 
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 0rem 0px 1.5rem 0rem;
   background-color: white;
   box-shadow: 0px 0px 5px rgba(0,0, 0, 0.1);
+  row-gap: 0.8rem;
 }
 
-.food-item img {
-  width: 80%; 
-  margin-top: 10px;
-  border-radius: 10px;
+.fooditems-img, .food-item-name, .quantity .quantity-and-quantitymeasure, .quantity-number, .fooditems-button, .impact-number, .impacttext, .testimonial-img{
+  width: fit-content;
+  height: auto;
+}
+
+.fooditems-img img{
+  width: 300px; 
+  height: 300px;
+  border-radius: 0.8rem;
   transition: transform 0.3s ease;
 }
+.quantity-and-quantitymeasure{
+  width: 100%;
+  height: auto;
+  padding: 0rem 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  column-gap: 0.6rem;
+}
 
-.food-item h4  {
-  margin-top: 10px;
+.quantity p{
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.quantity-number p{
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 
 .food-item img:hover {
   transform: scale(1.1); 
 }
-.food-item button{
-  width: 35%;
-  height: 30px;
-  font-size: 15px;
-  margin-top: 10px;
- 
+.fooditems-button button{
+  width: 100%;
+  height: auto;
+  font-size: 1.2rem;
+  padding: 1rem 4rem;
+  font-weight: 500;
+  color: #ecfce5;
+  border: none;
+  outline: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
 }
-.food-item p {
-  margin-top: 10px;
+
+.food-item-name h4{
+  font-size: 1.8rem;
+  color: #a31402;
 }
+
 /* .team{
   display: flex;
   flex-direction: column;
@@ -226,97 +433,152 @@ button{
   transform: translateY(-10px);
 } */
 .newsletter{
+  width: 100%;
+  height: auto;
   background-color: #008000;
   color: white;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 40px 0 40px 0;
-  margin-top: 20px;
+  padding: 3.5rem;
 }
 .newsletter form{
-  width: 50%;
+  width: 40%;
 }
 .newsletter h2{
-  font-size: 30px;
+  font-size: 2.4rem;
   font-weight: 600;
 }
 .newsletter input{
   width: 100%;
-  height: 50px;
+  height: auto;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.4rem;
   outline: none;
-  font-size: 20px;
-  padding: 10px;
+  font-size: 1.3rem;
+  padding: 1rem;
 }
 .newsletter button{
   width: 100%;
-  height: 50px;
+  height: auto;
   background-color: white;
   color: #008000;
-  font-weight: 600;
+  font-weight: 500;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.4rem;
   outline: none;
-  font-size: 20px;
-  padding: 10px;
-  margin-top: 10px;
-}
-.community{
-  width: 100%;
-  background-color: white;
-  padding-bottom: 20px;
-  margin-top: 40px;
+  font-size: 1.2rem;
+  padding: 1rem;
+  margin-top: 0.9rem;
 }
 
-.communityImpact{
- display: flex;
- flex-direction: column;
- text-align: center;
- padding-top: 50px;
-}
-.communityImpactDiv{
+.partner{
+  width: 100%;
+  height: auto;
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  padding-top: 40px; 
+  column-gap: 2rem;
 }
-.communityImpact h2{ 
-  font-size: 30px;
-}
-.communityImpactDiv h3{ 
-  font-size: 50px;
-}
-.communityImpactDiv p{
-  margin-top: 10px; 
-  font-size: 20px;
-}
-.testimonial{
+
+.community{
+  width: 100%;
+  height: auto;
+  padding: 0rem 3.5rem 3.5rem 3.5rem;
   display: flex;
   flex-direction: column;
-  text-align: center;
-  padding-top: 50px;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1.2rem;
+}
+.impact-title-and-text{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.communityImpactDiv{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 3rem; 
+}
+.impact-number h3{ 
+  font-size: 2.6rem;
+}
+
+.impacttext p{
+  font-size: 1.4rem;
+}
+
+.testimonial{
+  width: 100%;
+  height: auto;
+  padding: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1.4rem;
  }
+
  .testimonialContainer{
+   width: 100%;
+   height: auto;
    display: flex;
-   justify-content: space-around;
+   padding: 2rem;
+   flex-direction: row;
+   justify-content: space-between;
    align-items: center;
-   padding-top: 40px; 
+   column-gap: 2.5rem;
  }
  .testimonialCards{
-  width: 40%;
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
   background-color: whitesmoke;
   box-shadow: 0px 0px 5px rgba(0,0, 0, 0.1);
-  padding: 20px;
+  padding: 1.4rem;
+  row-gap: 1.2rem;
  }
- .testimonial h2{ 
-   font-size: 20px;
+
+ .testimonialcard-text-and-persona{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  column-gap: 1.2rem;
  }
- .testimonialCards h4{ 
-   font-size: 15px;
+
+ .testimonial-img img{
+  width: 70px;
+  height: 70px;
+  border-radius: 70px;
+  background-color: #ecfce5;
+  border: 2px solid #c9c9c9;
+ }
+ .community-testimonial-heading h2{ 
+   font-size: 1.8rem;
+   color: #071800;
+ }
+ .testimonial-persona h4{ 
+   font-size: 1.2rem;
    color: #008000;
-   margin-top: 10px;
+ }
+ .testimonial-persona i{
+  font-weight: 400;
+  font-size: 1rem;
  }
  .communityImpactDiv p{
    margin-top: 10px; 
@@ -411,49 +673,149 @@ button{
 }
 
 /************************************************FOOTER ************************************************ */
-footer{
-  background-color: #008000;
-  color: white;
-  padding: 20px 40px 20px 40px;
-}
-.footerInfo{
+.footer{
+  width: 100%;
+  height: auto;
+  padding: 2rem 3.5rem;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  background-color: #008000;
+  color: #ecfce5;
 }
-.footerInfo h4{
-  color: white;
-  font-weight: 600;
-  margin-top: 40px;
+.footer-top{
+  width: 100%;
+  height: auto;
+  padding: 3.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #9b9b9b;
 }
-.footerInfo ul{
+.footer-mid, .footer-bottom{
+  width: 100%;
+  height: auto;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.foothead{
+  width: 35%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+.quicklinks{
+  width: 20%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  row-gap: 1.2rem;
+}
+.footercontact{
+  width: 20%;
+  height: auto;
+  padding-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  row-gap: 1.2rem;
+}
+.footerlinks ul, .socialsdiv{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  row-gap: 1.2rem;
   list-style: none;
-  margin-top: 5px;
 }
-.footerInfo ul li{
-  padding-top: 5px;
+
+.socials{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 4rem;
 }
-.footerInfo ul li a{
+
+.socials-icon{
+  width: 100%;
+  height: auto;
+  
+  padding: 1rem;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  column-gap: 1.2rem; 
+  font-size: 2rem;
+  background-color: #fffb25;
+  color: #011800;
+  border-radius: 50%;
+}
+
+.icon-and-socials, .icon-and-contact{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  column-gap: 1rem;
+}
+.socialicon i, .icon i{
+  font-size: 1.4rem;
+  color: #FAFFD1;
+}
+.social-name p{
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #FAFFD1;
+}
+.footerInfo h4, .contact-title h4, .footer-text h4{
+  color: #FAFFD1;
+  font-weight: 600;
+}
+
+.footerInfo ul li a, .contact-text p, .links li a{
   text-decoration: none;
-  color: white;
-  font: 600;
-  font-size: 15px;
+  color: #FAFFD1;
+  font-weight: 500;
+  font-size: 1.2rem;
 }
-.footerInfo p{
-  color: white;
-  font: 600;
-  margin-top: 10px;
-  font-size: 15px;
+.socials ul{
+  width: 100%;
+  height: auto;
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 3rem;
 }
+
 .copyright{
   text-align: center;
-  margin-top: 20px;
 }
 .copyright p{
-  font-size: 15px;
+  font-size: 1.4rem;
 }
 
 /* Media Query */
-@media screen and (max-width:640px){
+/* @media screen and (max-width:640px){
   .mobileview-navbar{
     display: block;
   }
@@ -576,4 +938,4 @@ footer{
 @media screen and (max-width:768px){
   
    
-}
+} */
