@@ -62,11 +62,11 @@ a{
     font-size: 1.4rem;
     color: #011800;
 }
- ul li a:hover, i:hover {
+.donatefoodmenu a:hover, i:hover {
     color: red;
     transition: 0.5s ease;
 }
-.donatefoodmenu ul li a.active, i.active {
+.donatefoodmenu a:active, i.active {
     color: red;
     transition: 0.5s ease;
 }
