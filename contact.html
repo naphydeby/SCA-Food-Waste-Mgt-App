@@ -3,202 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact Us | Food Salvage</title>
     <link rel="stylesheet" href="contact.css">
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <div class="main-container">
-       
         <div class="navbar">
-        
-              <div class="logo-container">
-                  <img src="/image/WhatsApp_Image_2025-02-06_at_10.12.19_90829287-removebg-preview.png" alt="">
-              </div>
-        
-              <div class="menu-links">
-                  <ul class="list-content">
-                      <li><a href="/"></a></li>
-                      <li><a href="/About">About Us</a></li>
-                      <li><a href="/Hunger-in-Lagos">Hunger in Lagos</a></li>
-                      <div class="menu-and-icon">
-                          <li><a href="/How-We-Do-It">How We Do It</a></li> 
-        
-                          <i class="fa-solid fa-chevron-down"></i>
-        
-                      </div>
-                      <li><a href="/contact" class="active">Contact</a></li>
-          
-                  </ul>
-          
-              </div>
-              
-        
-              <div class="signup-container">
-                  <div class="signup-btn1">
-                      <button>Sign Up</button>
-                  </div>
-                  <div class="signup-btn2">
-                      <button>Sign In</button>
-                  </div>
-              </div>
+            <a href="/index.html">
+                <div class="logo-container">
+                    <img src="/image/WhatsApp_Image_2025-02-06_at_10.12.19_90829287-removebg-preview.png" alt="Food Salvage Logo">
+                </div>
+            </a>
+            <div class="menu-links">
+                <ul class="list-content">
+                    <li><a href="/index.html"></a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/hunger.html">Hunger in Lagos</a></li>
+                    <div class="menu-and-icon">
+                        <li><a href="/How-We-Do-It">How We Do It</a></li>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <li><a href="/contact.html" class="active">Contact</a></li>
+                </ul>
+            </div>
+            <div class="signup-container">
+                <div class="signup-btn1"><button>Sign Up</button></div>
+                <div class="signup-btn2"><button>Sign In</button></div>
+            </div>
         </div>
-        
+
         <div class="content">
             <div class="first-question-div">
                 <div class="content-heading">
-                    <h1> How can we help you?</h1>
+                    <h1>How can we help you?</h1>
                 </div>
-                
                 <div class="need-help-container">
-                    <h2>NEED FOOD? Please Visit Our
-                        <span><a href="https://needfood.com" class="styled-link">“NEED FOOD” </a></span>Page.
-                    </h2>
+                    <h2>NEED FOOD? Please Visit Our <span><a href="https://needfood.com" class="styled-link">“NEED FOOD”</a></span> Page.</h2>
                 </div>
-                
-                <div class="question">
-                    <div class="content-1">
-                        <p>Have a question about volunteering? Please email 
-                        <span><a href="https://volunteers.com" class="styled-link1">volunteers@foodsalvage.org.</a></span>
-                        </p>
-                    </div>
-    
-                    <div class="content-1">
-                        <p>Are you a licensed food service establishment looking to donate food? Please email <br>
-                            <span><a href="https://volunteers.com" class="styled-link1">operations@foodsalvage.org.</a></span>
-                        </p>
-                    </div>
-        
-                    <div class="content-1">
-                        <p>Have a question about a monetary donation? Please email 
-                            <span><a href="https://development.com" class="styled-link1">development@foodsalvage.org.</a></span>
-                        </p>
-                    </div>
-        
-                    <div class="content-1">
-                        <p>You want to know us more? Please visit our 
-                            <span><a href="https://development.com" class="styled-link1">About Us </a></span>page. 
-                            If you still have unanswered questions
-                            please use the form below. For all other inquires please use the form below.
-                        </p>  
-                    </div>
-                </div>
-               
             </div>
 
             <div class="contact-right">
-                <form>
-
+                <form id="contactForm">
                     <div class="input-group">
                         <div class="form-group">
-                            <div class="label">
-                                <label for="fullname">Full Name</label>
-                            </div>
-    
-                            <div class="input">
-                                <input type="text" name="fullname" id="fullname" placeholder="Enter Your Full Name" required>
-                            </div>
+                            <label for="fullname">Full Name</label>
+                            <input type="text" id="fullname" placeholder="Enter Your Full Name" required>
                         </div>
-    
                         <div class="form-group">
-                            <div class="label">
-                                <label for="email">Email Address</label>
-                            </div>
-    
-                            <div class="input">
-                                <input type="email" name="email" id="email" placeholder="Enter Your Email address" required>
-                            </div>
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="Enter Your Email address" required>
                         </div>
-    
                         <div class="form-group">
-                            <div class="label">
-                                <label for="city">Location</label>
-                            </div>
-    
-                            <div class="input">
-                                <input type="text" name="city" id="city" placeholder= "Enter your current City/town/state">
-                            </div>
+                            <label for="email-subject">Email Subject</label>
+                            <input type="text" id="email-subject" placeholder="Email Subject" required>
                         </div>
-    
                         <div class="form-group">
-                            <div class="label">
-                                <label for="email-subject">Email Subject</label>
-                            </div>
-    
-                            <div class="input">
-                                <input type="text" name="email-subject" id="email-subject" placeholder="Email Subject" required>
-                            </div>
-                        </div>
-    
-                        
-                        <div class="form-group">
-                            <div class="label">
-                                <label for="message">Message</label>
-                            </div>
-    
-                            <div class="input">
-                                <textarea name="Message" id="message" rows="6" placeholder="Enter Your Message Here"></textarea>
-                            </div>
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="6" placeholder="Enter Your Message Here" required></textarea>
                         </div>
                     </div>
-                    
                     <div class="submit-button">
                         <button type="submit" class="btn btn2">Send</button>
                     </div>
-                    
+                    <p id="responseMessage"></p>
                 </form>
             </div>
         </div>
-
-        <div class="container">
-            <div class="column-1">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7929.180429393161!2d3.
-            3417331295665367!3d6.446626332135526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf4
-            cc8be5bb47%3A0xa100e775f73a58!2sLagos%20Island%2C%20Lagos!5e0!3m2!1sen!2sng!4v1739366461426!5m2!1sen!2sng"
-             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-
-             when-downgrade">
-                </iframe>
-            </div>
-
-            <div class="column2">
-                <div class="footercontact">
-                    <div class="contact-title">
-                      <h4>Contact</h4>
-                    </div>
-                
-                    <div class="socialsdiv">
-                      <div class="icon-and-contact">
-                        <div class="icon">
-                          <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-text">
-                          <p> info@foodsalvage.org</p>
-                        </div>
-                      </div>
-                
-                      <div class="icon-and-contact">
-                        <div class="icon">
-                          <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-text">
-                          <p>+234 8034781290</p>
-                        </div>
-                      </div>
-                
-                      <div class="icon-and-contact">
-                        <div class="icon">
-                          <i class="fa-solid fa-globe"></i>
-                        </div>
-                        <div class="contact-text">
-                          <p>www.foodsalvage.com</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-            </div>
-        </div>
-             
     </div>
+
+    <!--fetch data for contact form -->
+    <script>
+        const form = document.getElementById('contactForm');
+        const responseMessage = document.getElementById('responseMessage');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault(); // 
+
+            const name = document.getElementById('fullname').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('email-subject').value;
+            const message = document.getElementById('message').value;
+
+            try {
+                const response = await fetch('https://food-salvage-api.onrender.com/api/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        name,
+                        email,
+                        subject,
+                        message
+                    })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    responseMessage.style.color = 'green';
+                    responseMessage.textContent = 'Your message has been sent successfully!';
+                    form.reset();
+                } else {
+                    responseMessage.style.color = 'red';
+                    responseMessage.textContent = ` Failed to send: ${data.message || 'Please try again later.'}`;
+                }
+            } catch (error) {
+                responseMessage.style.color = 'red';
+                responseMessage.textContent = ' An error occurred. Please try again later.';
+                console.error('Fetch Error:', error);
+            }
+        });
+    </script>
 </body>
 </html>
