@@ -340,6 +340,14 @@ button{
   margin-top: 20px;
 }
 
+.availablefood-div2 {
+  width: 100%;
+  height: auto;
+  overflow: hidden; 
+  padding: 15px 4rem;
+  position: relative;
+  margin-top: 20px;
+}
 .foodItems-div { 
   width: 100%;
   height: auto;
@@ -351,9 +359,37 @@ button{
   animation: marquee 20s linear infinite; 
 }
 
+.foodItems-div2 { 
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* column-gap: 2rem;  */
+  flex-wrap: wrap;
+  row-gap: 3rem;
+
+  /* animation: marquee 20s linear infinite;  */
+}
+
 /* Food Item Styling */
 .food-item {
   width: 25%; 
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 0rem 0px 1.5rem 0rem;
+  background-color: white;
+  box-shadow: 0px 0px 5px rgba(0,0, 0, 0.1);
+  row-gap: 0.8rem;
+}
+
+.food-item {
+  width: 30%; 
   height: auto;
   display: flex;
   flex-direction: column;
@@ -411,6 +447,11 @@ button{
   outline: none;
   border-radius: 0.6rem;
   cursor: pointer;
+}
+
+.fooditems-button button:hover{
+  background-color: rgba(83, 223, 2, 0.867);
+  transition: 0.3s ease;
 }
 
 .food-item-name h4{
