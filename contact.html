@@ -35,15 +35,48 @@
             </div>
         </div>
 
-        <div class="content">
-            <div class="first-question-div">
-                <div class="content-heading">
-                    <h1>How can we help you?</h1>
+         <div class="content">
+                <div class="first-question-div">
+                    <div class="content-heading">
+                        <h1> How can we help you?</h1>
+                    </div>
+                    
+                    <div class="need-help-container">
+                        <h2>NEED FOOD? Please Visit Our
+                            <span><a href="https://needfood.com" class="styled-link">“NEED FOOD” </a></span>Page.
+                        </h2>
+                    </div>
+                    
+                    <div class="question">
+                        <div class="content-1">
+                            <p>Have a question about volunteering? Please email 
+                            <span><a href="https://volunteers.com" class="styled-link1">volunteers@foodsalvage.org.</a></span>
+                            </p>
+                        </div>
+        
+                        <div class="content-1">
+                            <p>Are you a licensed food service establishment looking to donate food? Please email <br>
+                                <span><a href="https://volunteers.com" class="styled-link1">operations@foodsalvage.org.</a></span>
+                            </p>
+                        </div>
+            
+                        <div class="content-1">
+                            <p>Have a question about a monetary donation? Please email 
+                                <span><a href="https://development.com" class="styled-link1">development@foodsalvage.org.</a></span>
+                            </p>
+                        </div>
+            
+                        <div class="content-1">
+                            <p>You want to know us more? Please visit our 
+                                <span><a href="https://development.com" class="styled-link1">About Us </a></span>page. 
+                                If you still have unanswered questions
+                                please use the form below. For all other inquires please use the form below.
+                            </p>  
+                        </div>
+                    </div>
+                   
                 </div>
-                <div class="need-help-container">
-                    <h2>NEED FOOD? Please Visit Our <span><a href="https://needfood.com" class="styled-link">“NEED FOOD”</a></span> Page.</h2>
-                </div>
-            </div>
+    
 
             <div class="contact-right">
                 <form id="contactForm">
@@ -55,6 +88,15 @@
                         <div class="form-group">
                             <label for="email">Email Address</label>
                             <input type="email" id="email" placeholder="Enter Your Email address" required>
+                        </div>
+                        <div class="form-group">
+                            <div class="label">
+                                <label for="location">Location</label>
+                            </div>
+    
+                            <div class="input">
+                                <input type="text" name="city" id="location" placeholder= "Enter your current City/town/state">
+                            </div>
                         </div>
                         <div class="form-group">
                             <label for="email-subject">Email Subject</label>
@@ -70,11 +112,61 @@
                     </div>
                     <p id="responseMessage"></p>
                 </form>
+                </div>
+              </div>
+              <div class="container">
+                <div class="column-1">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7929.180429393161!2d3.
+                3417331295665367!3d6.446626332135526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf4
+                cc8be5bb47%3A0xa100e775f73a58!2sLagos%20Island%2C%20Lagos!5e0!3m2!1sen!2sng!4v1739366461426!5m2!1sen!2sng"
+                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-
+                 when-downgrade">
+                    </iframe>
+                </div>
+    
+                <div class="column2">
+                    <div class="footercontact">
+                        <div class="contact-title">
+                          <h4>Contact</h4>
+                        </div>
+                    
+                        <div class="socialsdiv">
+                          <div class="icon-and-contact">
+                            <div class="icon">
+                              <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                              <p> info@foodsalvage.org</p>
+                            </div>
+                          </div>
+                    
+                          <div class="icon-and-contact">
+                            <div class="icon">
+                              <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                              <p>+234 8034781290</p>
+                            </div>
+                          </div>
+                    
+                          <div class="icon-and-contact">
+                            <div class="icon">
+                              <i class="fa-solid fa-globe"></i>
+                            </div>
+                            <div class="contact-text">
+                              <p>www.foodsalvage.com</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
             </div>
-        </div>
-    </div>
+                 
+    
+            </div>
 
-    <!--fetch data for contact form -->
+
+
     <script>
         const form = document.getElementById('contactForm');
         const responseMessage = document.getElementById('responseMessage');
@@ -86,6 +178,7 @@
             const email = document.getElementById('email').value;
             const subject = document.getElementById('email-subject').value;
             const message = document.getElementById('message').value;
+            const location = document.getElementById('location').value
 
             try {
                 const response = await fetch('https://food-salvage-api.onrender.com/api/contact', {
@@ -97,7 +190,8 @@
                         name,
                         email,
                         subject,
-                        message
+                        message,
+                        location
                     })
                 });
 
@@ -119,9 +213,13 @@
         });
     </script>
 
-    <title>Document</title>
+
+
+
+
+    <!-- <title>Document</title>
     <link rel="stylesheet" href="contact.css">
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"> -->
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
 </head>
 <body>
@@ -317,4 +415,4 @@
              
     </div>
 </body>
-</html>
+</html> -->
