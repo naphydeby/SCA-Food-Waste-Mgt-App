@@ -21,6 +21,8 @@
                 <a href="user-orders.html"><i class="material-icons">shopping_cart</i>Orders</a>
                 <a href="user-schedule.html"><i class="material-icons">schedule</i>Schedule</a>
                 <a href="user-profile.html"><i class="material-icons">person</i>Profile</a>
+                <!-- Logout Link -->
+                <a href="#" id="logout-link"><i class="material-icons">logout</i>Logout</a>
             </nav>
           
         </aside>
@@ -43,16 +45,26 @@
                 </div>
             </header>
 
-            <section class="food-categories">
-                <div class="category active">All</div>
-                <div class="category">Breakfast</div>
-                <div class="category">Lunch</div>
-                <div class="category">Dinner</div>
-                <div class="category">Snacks</div>
-            </section>
-
-            <section class="food-grid">
-                <!-- Food items will be populated by JavaScript -->
+           
+            <section class="donation-requests">
+                <h2>User Requests</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Recipient</th>
+                                <th>Address</th>
+                                <th>Items</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="donation-table-body">
+                            <!-- Donation requests will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
             </section>
         </main>
 

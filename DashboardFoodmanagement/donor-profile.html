@@ -13,7 +13,7 @@
         <aside class="sidebar">
           <div class="logo">
             <img src="/images/image/WhatsApp_Image_2025-02-06_at_10.12.19_90829287-removebg-preview.png" alt="FoodSavage Logo">
-            <h2>Food Savage </h2>
+            <h2>Food Savage</h2>
         </div>
           <nav class="sidebar-nav">
               <a href="donor-dashboard.html"><i class="material-icons">dashboard</i>Dashboard</a>
@@ -21,6 +21,8 @@
               <a href="donor-history.html"><i class="material-icons">history</i>History</a>
               <a href="donor-analytics.html"><i class="material-icons">analytics</i>Analytics</a>
               <a href="donor-profile.html"><i class="material-icons">person</i>Profile</a>
+              <!-- Logout Link -->
+              <a href="#" id="logout-link"><i class="material-icons">logout</i>Logout</a>
           </nav>
          
       </aside>
@@ -36,12 +38,70 @@
             <div class="profile-details">
                 <h3>Organization Information</h3>
                 <form id="donor-profile-form">
-                    <!-- Add form fields for organization name, contact person, phone, etc. -->
+                    <div class="form-group">
+                        <label for="org-name">Organization Name</label>
+                        <input type="text" id="org-name" name="org-name" value="Food for All" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-person">Contact Person</label>
+                        <input type="text" id="contact-person" name="contact-person" value="Jane Smith" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="org-email">Organization Email</label>
+                        <input type="email" id="org-email" name="org-email" value="info@foodforall.org" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="org-phone">Organization Phone</label>
+                        <input type="tel" id="org-phone" name="org-phone" value="+1234567890" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="org-address">Organization Address</label>
+                        <textarea id="org-address" name="org-address" rows="3" required>123 Charity St, City, Country</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="org-website">Organization Website</label>
+                        <input type="url" id="org-website" name="org-website" value="https://www.foodforall.org" required>
+                    </div>
+                    
                 </form>
             </div>
             <div class="donation-preferences">
                 <h3>Donation Preferences</h3>
-                <!-- Add options for preferred donation types, frequency, etc. -->
+                <form id="donation-preferences-form">
+                    <div class="form-group">
+                        <label for="donation-type">Preferred Donation Type</label>
+                        <select id="donation-type" name="donation-type" required>
+                            <option value="food">Food</option>
+                            <option value="money">Money</option>
+                            <option value="both">Both Food and Money</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="donation-frequency">Donation Frequency</label>
+                        <select id="donation-frequency" name="donation-frequency" required>
+                            <option value="one-time">One-Time</option>
+                            <option value="weekly">Weekly</option>
+                            <option value="monthly">Monthly</option>
+                            <option value="quarterly">Quarterly</option>
+                            <option value="yearly">Yearly</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="preferred-categories">Preferred Food Categories</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="preferred-categories" value="fresh-produce"> Fresh Produce</label>
+                            <label><input type="checkbox" name="preferred-categories" value="non-perishable"> Non-Perishable</label>
+                            <label><input type="checkbox" name="preferred-categories" value="dairy"> Dairy</label>
+                            <label><input type="checkbox" name="preferred-categories" value="baked-goods"> Baked Goods</label>
+                            <label><input type="checkbox" name="preferred-categories" value="frozen-foods"> Frozen Foods</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="special-instructions">Special Instructions</label>
+                        <textarea id="special-instructions" name="special-instructions" rows="3">Please deliver donations before 5 PM.</textarea>
+                    </div>
+                   
+                </form>
             </div>
         </main>
     </div>

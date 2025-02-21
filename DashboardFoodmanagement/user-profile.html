@@ -20,6 +20,8 @@
             <a href="user-orders.html"><i class="material-icons">shopping_cart</i>Orders</a>
             <a href="user-schedule.html"><i class="material-icons">schedule</i>Schedule</a>
             <a href="user-profile.html"><i class="material-icons">person</i>Profile</a>
+            <!-- Logout Link -->
+            <a href="#" id="logout-link"><i class="material-icons">logout</i>Logout</a>
         </nav>
      
     </aside>
@@ -36,12 +38,69 @@
             <div class="profile-details">
                 <h3>Personal Information</h3>
                 <form id="profile-form">
-                    <!-- Add form fields for name, email, phone, etc. -->
+                    <div class="form-group">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="full-name" name="full-name" value="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" value="john.doe@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" value="+1234567890" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <textarea id="address" name="address" rows="3" required>123 Main St, City, Country</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" name="dob" value="1990-01-01" required>
+                    </div>
+                    
                 </form>
             </div>
             <div class="preferences">
                 <h3>Dietary Preferences</h3>
-                <!-- Add checkboxes or dropdown for dietary preferences -->
+                <form id="dietary-form">
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="vegetarian" value="vegetarian"> Vegetarian
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="vegan" value="vegan"> Vegan
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="gluten-free" value="gluten-free"> Gluten-Free
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="dairy-free" value="dairy-free"> Dairy-Free
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="nut-free" value="nut-free"> Nut-Free
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="halal" value="halal"> Halal
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="kosher" value="kosher"> Kosher
+                        </label>
+                    </div>
+                    
+                </form>
             </div>
         </main>
     </div>
