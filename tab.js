@@ -69,7 +69,7 @@ document.getElementById("signIn-form").addEventListener("submit", async (e) => {
           password,
       });
       alert("Login successful! Redirecting...");
-      setTimeout(() => window.location.href = "/DashboardFoodManagement/dashboard/user-dashboard.html", 1500);
+      setTimeout(() => window.location.href = "DashboardFoodmanagement/user-dashboard.html", 1500);
   } catch (error) {
       console.error("Login failed:", error);
       const message = error.response?.data?.message || "Login failed. Please check your credentials.";

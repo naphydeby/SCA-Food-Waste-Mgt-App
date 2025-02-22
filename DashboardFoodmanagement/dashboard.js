@@ -458,7 +458,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Perform logout actions (e.g., clear session, redirect to login page)
             alert("Press Ok if you are sure you want to logout"); // Optional: Show a confirmation message
-            window.location.href = "login.html"; // Redirect to the login page
+            window.location.href = "../Signinsignup.html"; // Redirect to the login page
         });
     }
 });
