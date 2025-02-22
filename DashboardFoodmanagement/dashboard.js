@@ -4,41 +4,41 @@ const foodItems = [
     {
         id: 1,
         name: "Bread",
-        price: 0.00,
+    
         category: "Snacks",
-        image: "/images/foodimages/bread.jpg"
+        image: "/DashboardFoodmanagement/images/foodimages/bread.jpg"
     },
     {
         id: 2,
         name: "Rice",
-        price: 0.00,
+        
         category: "FreshFood",
-        image: "/images/foodimages/garri.jpg"
+        image: "/DashboardFoodmanagement/images/foodimages/rice.jpg"
     },
     {
         id: 3,
         name: "Provisions",
-        price: 0.00,
+        
         category: "Canned food",
-        image: "/images/foodimages/donation2.jpg"
+        image: "/DashboardFoodmanagement/images/foodimages/canned food.jpg"
     },
     
    
     {
         id: 6,
-        name: "Spaghetti Bolognese",
-        price: 10.99,
+        name: "beans",
+        
         category: "RawFood",
-        image: "/images/foodimages/vegetables.jpg"
+        image: "/DashboardFoodmanagement/images/foodimages/beans.jpg"
     },
     
    
     {
         id: 9,
         name: "Yam",
-        price: 9.99,
+        
         category: "Dinner",
-        image: "/images/foodimages/yam.jpg"
+        image: "/DashboardFoodmanagement/images/foodimages/yam.jpg"
     },
   
   ];
@@ -149,14 +149,19 @@ function createFoodCard(item) {
       <div class="food-card-content">
           <div class="food-card-title">
               <h3>${item.name}</h3>
-              <span class="food-card-price">$${item.price.toFixed(2)}</span>
+              
           </div>
           <div class="food-card-footer">
               <span class="food-card-category">${item.category}</span>
-              <button class="order-button">Order</button>
+              <button class="order-button">claim</button>
+              
           </div>
       </div>
   `;
+  const claimButton = card.querySelector('.order-button');
+  claimButton.addEventListener('click', () => {
+    window.location.href = "user-dashboard.html"; // Redirect with item ID
+  });
   return card;
 }
 
