@@ -34,71 +34,102 @@
 // end of linda's code
 
 
+// Function to toggle between Sign In and Sign Up tabs
+function showTab(tabId) {
+  const tabs = document.querySelectorAll(".tab-content");
+  const buttons = document.querySelectorAll(".tab-button");
 
-// Wait for the DOM to load before running scripts
-document.addEventListener('DOMContentLoaded', () => {
+  tabs.forEach((tab) => tab.classList.remove("active"));
+  buttons.forEach((btn) => btn.classList.remove("active"));
 
-    // Handle Tab Switching
-    function showTab(tabName) {
-        const tabs = document.querySelectorAll('.tab-content');
-        const buttons = document.querySelectorAll('.tab-button');
+  document.getElementById(tabId).classList.add("active");
+  document
+    .querySelector(`[onclick="showTab('${tabId}')"]`)
+    .classList.add("active");
+}
 
-        // Hide all tabs and remove active class
-        tabs.forEach(tab => tab.classList.remove('active'));
-        buttons.forEach(button => button.classList.remove('active'));
+// Handle Sign In form submission
+document.getElementById("signIn-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const email = document.getElementById("signIn-email").value;
+  const password = document.getElementById("signIn-password").value;
 
-        // Show the selected tab and activate the button
-        document.getElementById(tabName).classList.add('active');
-        const activeButton = Array.from(buttons).find(
-            button => button.textContent.trim() === tabName.charAt(0).toUpperCase() + tabName.slice(1)
-        );
-        if (activeButton) activeButton.classList.add('active');
-    }
-    const signUpApi = 'https://food-salvage-api.onrender.com/api/users/signup';
-    const signInApi = 'https://food-salvage-api.onrender.com/api/users/signin';
-   
+  if (!email || !password) {
+      alert("Please fill in all fields.");
+      return;
+  }
 
-    // Handle Sign In Form Submission (POST Request)
-    const signInForm = document.getElementById('signInForm');
-    if (signInForm) {
-        signInForm.addEventListener('submit', async (event) => {
-            event.preventDefault();
-            const formData = {
-                email: signInForm.querySelector('input[name="email"]').value,
-                password: signInForm.querySelector('input[name="password"]').value,
-            };
-            try {
-                const response = await axios.post(signInApi, formData);
-                console.log('Sign-in success:', response.data);
-                alert('Sign-in successful!');
-            } catch (error) {
-                console.error('Sign-in error:', error.response?.data || error.message);
-                alert('Sign-in failed. Please try again.');
-            }
-        });
-    }
+  const signInBtn = e.target.querySelector('button[type="submit"]');
+  signInBtn.disabled = true;
+  signInBtn.textContent = "Logging in...";
 
-    // Handle Sign Up Form Submission (POST Request)
-    const signUpForm = document.getElementById('signUpForm');
-    if (signUpForm) {
-        signUpForm.addEventListener('submit', async (event) => {
-            event.preventDefault();
-            const formData = {
-                name: signUpForm.querySelector('input[name="name"]').value,
-                email: signUpForm.querySelector('input[name="email"]').value,
-                password: signUpForm.querySelector('input[name="password"]').value,
-            };
-            try {
-                const response = await axios.post(signUpApi, formData);
-                console.log('Sign-up success:', response.data);
-                alert('Sign-up successful!');
-            } catch (error) {
-                console.error('Sign-up error:', error.response?.data || error.message);
-                alert('Sign-up failed. Please try again.');
-            }
-        });
-    }
+  try {
+      const response = await axios.post("https://food-salvage-api.onrender.com/api/users/signin", {
+          email,
+          password,
+      });
+      alert("Login successful! Redirecting...");
+      setTimeout(() => window.location.href = "DashboardFoodmanagement/user-dashboard.html", 1500);
+  } catch (error) {
+      console.error("Login failed:", error);
+      const message = error.response?.data?.message || "Login failed. Please check your credentials.";
+      alert(message);
+  } finally {
+      signInBtn.disabled = false;
+      signInBtn.textContent = "Login";
+  }
+});
 
-    // Attach tab switching globally
-    window.showTab = showTab;
+// Handle Sign Up form submission
+document.getElementById("signUp-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const firstName = document.getElementById("firstName").value;
+  const lastName = document.getElementById("lastName").value;
+  const email = document.getElementById("signUp-email").value;
+  const location = document.getElementById("location").value;
+  const password = document.getElementById("signUp-password").value;
+
+  if (!firstName || !lastName || !email || !location || !password) {
+      alert("Please fill in all fields.");
+      return;
+  }
+
+  if (password.length < 6) {
+      alert("Password must be at least 6 characters long.");
+      return;
+  }
+
+  const signUpBtn = e.target.querySelector('button[type="submit"]');
+  signUpBtn.disabled = true;
+  signUpBtn.textContent = "Signing up...";
+
+  try {
+      const response = await axios.post("https://food-salvage-api.onrender.com/api/users/signup", {
+          firstName,
+          lastName,
+          email,
+          location,
+          password,
+      });
+      alert("Sign Up successful! Please sign in.");
+      showTab("signIn");
+  } catch (error) {
+      console.error("Sign Up failed:", error);
+      const message = error.response?.data?.message || "Sign Up failed. Please try again.";
+      alert(message);
+  } finally {
+      signUpBtn.disabled = false;
+      signUpBtn.textContent = "Signup";
+  }
+});
+
+// Handle "Forget Password" link clicks
+document.querySelectorAll(".alternate-sign a").forEach((link) => {
+  link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const text = e.target.textContent.trim();
+      if (text === "Sign Up") showTab("signUp");
+      else if (text === "Sign In") showTab("signIn");
+      else alert("Password reset functionality coming soon!");
+  });
 });
