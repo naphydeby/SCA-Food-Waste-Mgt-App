@@ -24,7 +24,7 @@
                     <li><a href="/hunger.html">Hunger in Lagos</a></li>
                     <div class="menu-and-icon">
                         <li><a href="/How-We-Do-It">How We Do It</a></li>
-                        <i class="fa-solid fa-chevron-down"></i>
+                        <i class="fa-solid fa-chevron-down" id="dropdown"></i>
                     </div>
                     <li><a href="/contact.html" class="active">Contact</a></li>
                 </ul>
@@ -179,6 +179,13 @@
 
 
     <script>
+        
+        const dropdown = document.getElementById('dropdown');
+  dropdown.addEventListener('click', () => {
+    window.location.href = "navbardropdownmenu.html"
+  });
+
+    
         const form = document.getElementById('contactForm');
         const responseMessage = document.getElementById('responseMessage');
 

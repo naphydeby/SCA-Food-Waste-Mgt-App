@@ -1,3 +1,8 @@
+
+             
+
+
+
 async function renderLandingPage() {
     // Hero Section elements
     const heroTitle = document.getElementById('hero-title');
