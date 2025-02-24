@@ -27,7 +27,7 @@ async function renderLandingPage() {
             heroImageContainer.style.backgroundImage = `url('./image/default-hero.jpg')`; 
         }
 
-        Render Community Testimonials Section
+        // Render Community Testimonials Section
         testimonialsContainer.innerHTML = ''; 
         landingData.testimonials.forEach(testimonial => {
             const testimonialCard = document.createElement('div');
@@ -48,7 +48,7 @@ async function renderLandingPage() {
             `;
             testimonialsContainer.appendChild(testimonialCard);
         });
-      
+
     } catch (error) {
         console.error(' Error fetching landing page data:', error);
         heroTitle.textContent = 'Failed to load content';
