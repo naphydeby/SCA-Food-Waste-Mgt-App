@@ -26,7 +26,7 @@ async function renderLandingPage() {
         // Map backend names to local images
         const localImageMap = {
             "Lisa": "lisa.jpg",
-            "Amina": "amina.jpg"
+            "Amina": "Little Man Photography Test.jpeg"
         };
 
         // Render Community Testimonials Section
