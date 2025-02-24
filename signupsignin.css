@@ -17,13 +17,14 @@
     flex-direction: column;
     justify-content: start;
     align-items: start;
+     position: relative; 
 }
 .navbar{
     width: 100%;
     height: auto;
     padding: 0rem 3rem;
     background-color: #ecfce5;
-    position: relative; 
+/*     position: relative;  */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
