@@ -25,7 +25,7 @@ async function renderLandingPage() {
 
         // Map backend names to local images
         const localImageMap = {
-            "Lisa": "lisa.jpg",
+            "Lisa": "lisa.jpeg",
             "Amina": "Little Man Photography Test.jpeg"
         };
 
