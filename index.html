@@ -26,7 +26,36 @@
               <div class="menu-and-icon">
                   <li><a href="/How-We-Do-It">How We Do It</a></li> 
 
-                  <i class="fa-solid fa-chevron-down" id="dropdown" ></i>
+                  <i class="fa-solid fa-chevron-down"></i>
+
+                  <div class="dropdownmenu-container">
+
+                    <ul class="list-content">
+                        
+                      <div class="dropdown-div">
+                        <div class="findfood-container">
+                          <div class="icon">
+                              <i class="fa-solid fa-carrot"></i>
+                          </div>
+                          <div class="donatefoodmenu">
+                              <li><a href="/Donate">Donate Food</a></li>
+                          </div>
+                          
+                      </div>
+          
+                      <div class="findfood-container2">
+                          <div class="icon">
+                              <i class="fa-solid fa-fish"></i>
+                          </div>
+                          <div class="donatefoodmenu">
+                              <li><a href="/Find Food">Find Food</a></li>
+                          </div>
+                      
+                      </div>
+                      </div>
+                        
+                    </ul>
+                </div>
 
               </div>
               <li><a href="/contact.html">Contact</a></li>
@@ -48,57 +77,43 @@
                 <button>Sign In</button>
             </div>
         </a>
+
         
     </div>
 
   </div>
    <!-- ----------------------------MobileView------------------ -->
-           <div class="mobileview-navbar">
-            <div class="navbar">
+           <!-- <div class="mobileview-navbar">
+            <nav>
               <div>
                 <i class="fa-solid fa-bars" id="btn"  class="menu-btn" ></i>
                </div>
                   <ul class="list-content">
-                        <li><a href="/"></a></li>
-              <li><a href="/About" class="active">About Us</a></li>
-              <li><a href="/Hunger-in-Lagos">Hunger in Lagos</a></li>
-              <div class="menu-and-icon">
-                  <li><a href="/How-We-Do-It">How We Do It</a></li> 
-
-                  <i class="fa-solid fa-chevron-down" id="dropdown" ></i>
-
-              </div>
-              
-              <li><a href="/contact">Contact</a></li>
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="about.html">About</a></li>
+                      <li><a href="service.html">Services</a></li>
+                      <li><a href="contact.html">Contact</a></li>   
                   </ul>
                   <h1>Food Salvage</h1>
-                  <div class="logo-container">
-                    <img src="/image/WhatsApp_Image_2025-02-06_at_10.12.19_90829287-removebg-preview.png" alt="">
-                </div>
-              </div>
+                  <img src="/image/WhatsApp_Image_2025-02-06_at_10.12.19_90829287-removebg-preview.png" alt="">
+                </nav>
   </div>
 
-   <!-- -------------------------------------------------------------webview-sidebar -------------------------------------------- -->
-   <div class="sidebar" id="sideBar">
-    <div class="cancel-div" >
-      <h1>Food Salvage</h1>
-      <i class="fa-solid fa-xmark" id="sideBarMenu" style="margin-top: 10px; color: green;"></i>
-     </div>
-    
-    <ul class="sidebar-list-content" >
-      <li><a href="/"></a></li>
-      <li><a href="/About" class="active">About Us</a></li>
-      <li><a href="/Hunger-in-Lagos">Hunger in Lagos</a></li>
-      <div class="menu-and-icon">
-          <li><a href="/How-We-Do-It">How We Do It</a></li> 
+   ---------------------------------Mobileview-sidebar -------------------
+      <div class="sidebar">
+        <div >
+          <h1>Food Salvage</h1>
+          <i class="fa-solid fa-xmark"  id="sideBarMenu"></i>
+         </div>
+        </div>
+        <ul class="list-content">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>   
+        </ul>
 
-          <i class="fa-solid fa-chevron-down"></i>
-
-      </div>
-      <li><a href="/contact">Contact</a></li>  
-    </ul>
-
- </div>
+     </div> -->
 
     <!-- ---------------------------------Main---------------------------- -->
      <main>
@@ -254,7 +269,7 @@
           <div class="food-item" id="food-items-container" ></div>
           <div class="food-item">
             <div class="fooditems-img">
-              <img src="/image/Milk.jpg" alt="Milk">
+              <img src="/image/bread-removebg-preview.png" alt="Milk">
             </div>
             
             <div class="food-item-name">
@@ -925,12 +940,5 @@
 
  </div>
    <script src="script.js"></script>
-   <script>
-    const dropdown = document.getElementById('dropdown');
-dropdown.addEventListener('click', () => {
-window.location.href = "navbardropdownmenu.html"
-});
-
-   </script>
 </body>
 </html>
