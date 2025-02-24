@@ -21,7 +21,6 @@
     width: 100%;
     height: auto;
     padding: 0rem 3rem;
-    position: relative;
     background-color: #ecfce5;
     display: flex;
     flex-direction: row;
@@ -69,6 +68,7 @@
     justify-content: start;
     align-items: center;
     column-gap: 0.6rem;
+     position: relative;
 }
 
 .menu-links ul li a, i {
