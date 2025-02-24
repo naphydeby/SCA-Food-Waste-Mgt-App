@@ -27,9 +27,6 @@
     justify-content: space-between;
     align-items: center;
 }
-.mobileview-navbar{
-  display: none;
-}
 
 .logo-container, .aboutimage, .teamimage{
     width: fit-content;
@@ -71,8 +68,8 @@
     justify-content: start;
     align-items: center;
     column-gap: 0.6rem;
+    position: relative;
 }
-
 .menu-links ul li a, i {
     text-decoration: none;
     color: #011800;
@@ -85,6 +82,78 @@
 .menu-links ul li a.active, i.active {
     color: red;
     transition: 0.5s ease;
+}
+
+.dropdownmenu-container{
+  width: 18vw;
+  height: auto;
+  background-color: #b0ee9a;
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  row-gap: 0.8rem;
+  border-radius: 0.4rem; 
+  top: 1.8rem;
+}
+
+.dropdown-div{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  row-gap: 0.6rem;
+}
+
+.menu-and-icon:hover .dropdownmenu-container {
+  display: block;
+}
+
+.findfood-container{
+  width: 100%;
+  height: auto;
+  padding-bottom: 0.9rem;
+  background-color: #b0ee9a;
+  border-bottom: 1px solid #1d3812;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+.findfood-container2{
+  width: 100%;
+  height: auto;
+  padding-top: 0.4rem;
+  background-color: #b0ee9a;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+.icon-container{
+  width: fit-content;
+  height: auto;
+}
+a{
+  text-decoration: none;
+  color: #011800;
+}
+.icon i {
+  font-size: 1.4rem;
+  color: #011800;
+}
+.donatefoodmenu a:hover, i:hover {
+  color: red;
+  transition: 0.5s ease;
+}
+.donatefoodmenu a:active, i.active {
+  color: red;
+  transition: 0.5s ease;
 }
 
 .signup-container{
@@ -139,10 +208,9 @@
   display: none;
 }
 
-.sidebar{
+/* .sidebar{
   display: none;
-}
-
+} */
 
  /* **************************************************MAIN **************************************** */
  
@@ -885,7 +953,7 @@ button{
 }
 .socialicon i, .icon i{
   font-size: 1.4rem;
-  color: #FAFFD1;
+  color: #083f01;
 }
 .social-name p{
   font-size: 1.3rem;
@@ -922,16 +990,14 @@ button{
 }
 
 /* Media Query */
-
-@media screen and (max-width:640px){
+/* @media screen and (max-width:640px){
   .mobileview-navbar{
     display: block;
   }
   .webview-navbar{
     display: none;
   }
- 
-   .list-content{
+  nav .list-content{
     display: none;
   }
   h1{
@@ -951,144 +1017,52 @@ button{
   
 }
     .sidebar{
-      display: block;
-      width: 70%;
-      height: 50vh;
-      background-color: white;
-      box-shadow: 0px 0px 0px 5px rgba(0, 0 , 0, 0.1);
-     padding: 40px;
-     color: gray;
-     font-size: 20px;
-     position: fixed;
-     top: 0;
-     left: -80%;
-     z-index:1000;  
-     transition: left 0.35s ease;
-     border-top-right-radius: 10px;
-     border-bottom-right-radius: 10px;
+        display: block;
+        width: 80%;
+        height: 100vh;
+        background-color: white;
+        box-shadow: 0px 0px 0px 5px rgba(0, 0 , 0, 0.1);
+       padding: 40px;
+       color: gray;
+       font-size: 20px;
+       position: fixed;
+       top: 0;
+       left: -80%;
+       z-index:1000;  
+       transition: left 0.35s ease;
      }
-     
+     .sideBarMenu {
+      font-size: 24px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
      .sidebar.active{
         left:0;
      }
-     .cancel-div{
-      display: flex;
-      justify-content: space-between;
-     }
-     .hero-heading-text h1{
-      font-size: 2.5rem;
-      font-weight: 800;
-      text-align: center;
-   }
-   .sidebar-list-content{
-    display: block;
-    justify-content: center; 
-    align-items: center;
-    list-style: none;   
-    padding:20px 0px 20px 40px;
-      
-}
-.sidebar-list-content li{
-  margin-top: 4%;
-  font-weight: 600;
-  font-size: 20px;
-
-}
-.sidebar-list-content li a{
-  text-decoration: none;
-  color: #008000;
-  transition: background-color 0.3s ease;
-}
-.sidebar-list-content li a:hover{
-  color: #ffff00;
-  
-}
-.menu-and-icon{
-  column-gap: 0.6rem;
-}
-   .hero-h2 p{
-      font-size: 1.2rem;
-      font-weight: 500;
-      text-align: center;
-   }
-    
-  
-    .buttonDiv{
-      width: 80%;
-      height: auto;
-      padding: 2rem;
-      display: flex;
+     .buttonDiv{
+      width: 60%;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      row-gap: 1.0rem;
+      gap: 10px;
+      
    }
-   .donateButton, .find-food{
-      width: fit-content;
-      height: auto;  
-   }
-  
-  button{
-    width: 100%;
-    height: auto;
-    padding: 1.0rem ;
-    font-size: 1.0rem;
-    font-weight: 400;
-    border: none;
-    outline: none;
-    border-radius: 0.3rem;
-    
-  }
-  .findFoodButton{
-      background-color: #ffff00;
-      color: #008000;
-      margin-left: 0%;
-  }
-  .donateButton:hover{
-      color: #ffff00;
-      font-size: 1.1rem;
-      font-weight: 500;
-  }
-  .findFoodButton:hover{
-      color: #008000;
-      font-size: 1.1rem;
-      font-weight: 500;
-  }
-  .howItWorks-div {
-    width: 100%;
-    height: auto;
-    padding: 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    row-gap: 2.5rem;
-  }
+     button{
+      width: 60%;
+    }
     .howItWorks-children {
-      width: 100%;
+      width: 64%;
         padding: 20px;   
     }
-   
     .food-item {
-      width: 100%; 
+      width: 40%; 
     }
-    
-    .fooditems-img img{
+    .food-item img {
       width: 100%; 
-     
-    }
-    .quantity-and-quantitymeasure{
-      width: 100%;
-      height: auto;
-      padding: 0rem 1rem;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      row-gap: 0.2rem;
     }
     .food-item button{
-      width: 80%;  
+      width: 60%;  
     }
     .newsletter{
      
@@ -1139,4 +1113,4 @@ button{
 @media screen and (max-width:768px){
   
    
-}
+} */
