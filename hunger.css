@@ -11,6 +11,7 @@
 .navbar {
     width: 100%;
     height: auto;
+    position: relative;
     padding: 0rem 2rem;
     background-color: #ecfce5;
     display: flex;
