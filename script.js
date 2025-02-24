@@ -40,7 +40,7 @@ async function renderLandingPage() {
                 </div>
                 <div class="testimonialcard-text-and-persona">
                     <div class="testimonial-img">
-                        <img src="${testimonial.image || './image/default-avatar.png'}" alt="avatar">
+                        <img src="${testimonial.imageUrl || './image/default-avatar.png'}" alt="avatar">
                     </div>
                     <div class="testimonial-persona">
                         <h4>— ${testimonial.name}, <i>${testimonial.role || 'Community Member'}</i></h4>
