@@ -16,6 +16,7 @@
     flex-direction: column;
     justify-content: start;
     align-items: start;
+    row-gap: 2rem;
 }
 .navbar{
     width: 100%;
