@@ -96,6 +96,7 @@
   row-gap: 0.8rem;
   border-radius: 0.4rem; 
   top: 1.8rem;
+    z-index: 1
 }
 
 .dropdown-div{
