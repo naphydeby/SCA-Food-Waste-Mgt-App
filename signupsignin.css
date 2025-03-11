@@ -362,7 +362,7 @@ a:hover{
     color: red;
     transition: 0.5s ease;
 }
-.alternate-container{
+.alternate-container, .tab-content{
     width: 100%;
     height: auto;
     display: flex;
