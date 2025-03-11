@@ -86,6 +86,8 @@
 
 .dropdownmenu-container{
   width: 16vw;
+
+  width: 16vw;
   height: auto;
   background-color: #b0ee9a;
   display: none;
@@ -960,6 +962,11 @@ button{
     align-items: center;
     column-gap: 1rem;
 }
+
+.socialicon i, .icon i{
+  font-size: 1.4rem;
+  color: #ecfce5;
+
 
 .socialicon i,
 .icon i {

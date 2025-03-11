@@ -6,10 +6,16 @@
     box-sizing: border-box;
     font-family:"Montserrat", serif;
     line-height: -0.75rem;
+    
 }
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #f7fff4;
 
+}
 .dropdownmenu-container{
-    width: 20%;
+    width: 100%;
     height: auto;
     background-color: #f7fff4;
     display: flex;
@@ -68,4 +74,5 @@ a{
 .donatefoodmenu a:active, i.active {
     color: red;
     transition: 0.5s ease;
-} */
+
+

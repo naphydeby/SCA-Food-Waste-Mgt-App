@@ -16,6 +16,7 @@
     flex-direction: column;
     justify-content: start;
     align-items: start;
+    row-gap: 2rem;
 }
 .navbar{
   width: 100%;
@@ -156,6 +157,79 @@ color: red;
 transition: 0.5s ease;
 }
 
+.dropdownmenu-container{
+  width: 18vw;
+  height: auto;
+  background-color: #b0ee9a;
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  row-gap: 0.8rem;
+  border-radius: 0.4rem; 
+  top: 1.8rem;
+    z-index: 1000
+}
+
+.dropdown-div{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  row-gap: 0.6rem;
+}
+
+.menu-and-icon:hover .dropdownmenu-container {
+  display: block;
+}
+
+.findfood-container{
+  width: 100%;
+  height: auto;
+  padding-bottom: 0.9rem;
+  background-color: #b0ee9a;
+  border-bottom: 1px solid #1d3812;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+.findfood-container2{
+  width: 100%;
+  height: auto;
+  padding-top: 0.4rem;
+  background-color: #b0ee9a;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+.icon-container{
+  width: fit-content;
+  height: auto;
+}
+a{
+  text-decoration: none;
+  color: #011800;
+}
+.icon i {
+  font-size: 1.4rem;
+  color: #011800;
+}
+.donatefoodmenu a:hover, i:hover {
+  color: red;
+  transition: 0.5s ease;
+}
+.donatefoodmenu a:active, i.active {
+  color: red;
+  transition: 0.5s ease;
+}
+
 .signup-container{
   width: 23%;
   height: auto;
@@ -237,6 +311,148 @@ transition: 0.5s ease;
 }
 
 
+
+
+.footer{
+    width: 100%;
+    height: auto;
+    padding: 2rem 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    background-color: #008000;
+    color: #ecfce5;
+  }
+  .footer-top{
+    width: 100%;
+    height: auto;
+    padding: 3.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #9b9b9b;
+  }
+  .footer-mid, .footer-bottom{
+    width: 100%;
+    height: auto;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .foothead{
+    width: 35%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
+  .quicklinks{
+    width: 20%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    row-gap: 1.2rem;
+  }
+  .footercontact{
+    width: 20%;
+    height: auto;
+    padding-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    row-gap: 1.2rem;
+  }
+  .footerlinks ul, .socialsdiv{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    row-gap: 1.2rem;
+    list-style: none;
+  }
+  
+  .socials{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 4rem;
+  }
+  
+  .socials-icon{
+    width: 100%;
+    height: auto;
+    
+    padding: 1rem;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    column-gap: 1.2rem; 
+    font-size: 2rem;
+    background-color: #fffb25;
+    color: #011800;
+    border-radius: 50%;
+  }
+  
+  .icon-and-socials, .icon-and-contact{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    column-gap: 1rem;
+  }
+  .socialicon i, .icon i{
+    font-size: 1.4rem;
+    color: #FAFFD1;
+  }
+  .social-name p{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #FAFFD1;
+  }
+  .footerInfo h4, .contact-title h4, .footer-text h4{
+    color: #ecfce5;
+    font-weight: 600;
+  }
+  
+  .footerInfo ul li a, .contact-text p, .links li a{
+    text-decoration: none;
+    color: #ecfce5;
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+  .socials ul{
+    width: 100%;
+    height: auto;
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 3rem;
+  }
+  
+  .copyright{
+    text-align: center;
+  }
+  .copyright p{
+    font-size: 1.4rem;
+  }
 
 .footer {
   width: 100%;

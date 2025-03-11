@@ -12,7 +12,7 @@ async function renderLandingPage() {
         const response = await axios.get('https://food-salvage-api.onrender.com/api/landing');
         const landingData = response.data.data;
 
-        //  Render Hero Section (with dynamic background image)
+        // Render Hero Section (with dynamic background image)
         heroTitle.textContent = landingData.hero.title;
         heroSubtitle.textContent = landingData.hero.subtitle;
 
@@ -23,9 +23,17 @@ async function renderLandingPage() {
             heroImageContainer.style.backgroundImage = `url('./image/default-hero.jpg')`; 
         }
 
+        // Map backend names to local images
+        const localImageMap = {
+            "Lisa": "lisa.jpeg",
+            "Amina": "Little Man Photography Test.jpeg"
+        };
+
         // Render Community Testimonials Section
         testimonialsContainer.innerHTML = ''; 
         landingData.testimonials.forEach(testimonial => {
+            const imagePath = `./image/${localImageMap[testimonial.name] || 'default-avatar.png'}`;
+
             const testimonialCard = document.createElement('div');
             testimonialCard.className = 'testimonialCards';
 
@@ -35,7 +43,7 @@ async function renderLandingPage() {
                 </div>
                 <div class="testimonialcard-text-and-persona">
                     <div class="testimonial-img">
-                        <img src="${testimonial.imageUrl || './image/default-avatar.png'}" alt="avatar">
+                        <img src="${imagePath}" alt="avatar">
                     </div>
                     <div class="testimonial-persona">
                         <h4>— ${testimonial.name}, <i>${testimonial.role || 'Community Member'}</i></h4>
@@ -44,7 +52,7 @@ async function renderLandingPage() {
             `;
             testimonialsContainer.appendChild(testimonialCard);
         });
-
+      
     } catch (error) {
         console.error(' Error fetching landing page data:', error);
         heroTitle.textContent = 'Failed to load content';
