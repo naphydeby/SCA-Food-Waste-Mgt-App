@@ -8,10 +8,12 @@
     line-height: -0.75rem;
 }
 
-.navbar {
+.navbar{
     width: 100%;
     height: auto;
-    padding: 1rem 2rem 4rem 2rem;
+    padding: 1rem 2rem 4rem 5rem;
+
+    padding: 2rem 2rem 2rem 5rem;
     background-color: #ecfce5;
     display: flex;
     flex-direction: row;
@@ -19,28 +21,26 @@
     align-items: center;
 }
 
-.logo-container,
-.aboutimage,
-.teamimage {
+.logo-container, .aboutimage, .teamimage{
     width: fit-content;
     height: auto;
 }
 
-.logo-container img {
-    width: 150px;
-    height: 150px;
+.logo-container img{
+    width: 70px;
+    height: 70px;
 }
 
-.menu-links {
+.menu-links{
     width: 60%;
     height: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: center;    
 }
 
-.list-content {
+.list-content{
     width: 100%;
     height: auto;
     display: flex;
@@ -48,42 +48,41 @@
     justify-content: space-between;
     align-items: center;
     text-decoration: none;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 500;
     cursor: pointer;
     list-style: none;
     padding: 1rem;
 }
 
-.menu-and-icon {
+.menu-and-icon{
     display: flex;
     flex-direction: row;
     justify-content: start;
     align-items: center;
     column-gap: 0.6rem;
-     position: relative;
-}
+    position: relative;
 
-.menu-links ul li a,
-i {
+    position: relative;
+}
+.menu-links ul li a, i {
     text-decoration: none;
     color: #011800;
 }
 
-.menu-links ul li a:hover,
-i:hover {
+.menu-links ul li a:hover, i:hover {
     color: red;
     transition: 0.5s ease;
 }
-
-.menu-links ul li a.active,
-i.active {
+.menu-links ul li a.active, i.active {
     color: red;
     transition: 0.5s ease;
 }
 
 .dropdownmenu-container{
-  width: 18vw;
+  width: 16vw;
+
+  width: 16vw;
   height: auto;
   background-color: #b0ee9a;
   display: none;
@@ -155,21 +154,20 @@ a{
 }
 
 .signup-container{
-    width: 22%;
+    width: 23%;
     height: auto;
+    padding: 0.8rem;
     display: flex;
     flex-direction: row;
     justify-content: start;
     align-items: center;
-    column-gap: 0.8rem;
+    column-gap: 0.4rem;
 }
-
-.signup-btn {
+.signup-btn{
     width: fit-content;
     height: auto;
 }
-
-.signup-btn1 button {
+.signup-btn1 button{
     width: 100%;
     height: auto;
     padding: 0.8rem 1rem;
@@ -182,11 +180,10 @@ a{
     border-radius: 8px;
     cursor: pointer;
 }
-
-.signup-btn2 button {
+.signup-btn2 button{
     width: 100%;
     height: auto;
-    padding: 0.8rem 1rem;
+    padding: 0.7rem 1rem;
     background-color: #fffb0309;
     color: #011800;
     font-size: 1.2rem;
@@ -196,7 +193,6 @@ a{
     border-radius: 8px;
     cursor: pointer;
 }
-
 .signup-btn1 button:hover,
 .signup-btn2 button:hover {
     background-color: #fffb25;
@@ -387,7 +383,7 @@ a{
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    background-color: #008000;
+    background-color: #013f01;
     color: #ecfce5;
 }
 
@@ -420,6 +416,7 @@ a{
     flex-direction: column;
     justify-content: start;
     align-items: start;
+    row-gap: 3rem;
 }
 
 .quicklinks {
@@ -494,19 +491,19 @@ a{
 .socialicon i,
 .icon i {
     font-size: 1.4rem;
-    color: #FAFFD1;
+    color: #ecfce5;
 }
 
 .social-name p {
     font-size: 1.3rem;
     font-weight: 500;
-    color: #FAFFD1;
+    color: #ecfce5;
 }
 
 .footerInfo h4,
 .contact-title h4,
 .footer-text h4 {
-    color: #FAFFD1;
+    color: #ecfce5;
     font-weight: 600;
 }
 
@@ -514,7 +511,7 @@ a{
 .contact-text p,
 .links li a {
     text-decoration: none;
-    color: #FAFFD1;
+    color: #ecfce5;
     font-weight: 500;
     font-size: 1.2rem;
 }
