@@ -257,7 +257,8 @@ a{
 }  
 
 .tab-content.active {  
-    display: block;  
+    display: block; 
+    justify-content: center
 }  
 
 form{
@@ -362,7 +363,7 @@ a:hover{
     color: red;
     transition: 0.5s ease;
 }
-.alternate-container, .tab-content{
+.alternate-container{
     width: 100%;
     height: auto;
     display: flex;
