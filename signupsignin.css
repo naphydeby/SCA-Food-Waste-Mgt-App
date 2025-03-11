@@ -348,6 +348,13 @@ button:hover{
 }
 p{
     font-size: 1.2rem;
+
+.alternate-container{
+    width:  100%;
+    height: auto;
+    display: flex;
+    flex
+}
     font-weight: 400;
     color: #000200;
     text-align: center;
@@ -360,4 +367,13 @@ a{
 a:hover{
     color: red;
     transition: 0.5s ease;
+}
+.alternate-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
 }
