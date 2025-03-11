@@ -18,48 +18,49 @@
     align-items: start;
 }
 .navbar{
-  width: 100%;
-  height: auto;
-  padding: 2rem 2rem 2rem 5rem;
-  background-color: #ecfce5;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 0rem 3rem;
+    background-color: #ecfce5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo-container, .aboutimage, .teamimage{
-  width: fit-content;
-  height: auto;
+    width: fit-content;
+    height: auto;
 }
 
 .logo-container img{
-  width: 70px;
-  height: 70px;
+  margin-top: 10px;
+    width: 70px;
+    height: 70px;
 }
 
 .menu-links{
-  width: 60%;
-  height: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;    
+    width: 60%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;    
 }
 
 .list-content{
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  text-decoration: none;
-  font-size: 1.3rem;
-  font-weight: 500;
-  cursor: pointer;
-  list-style: none;
-  padding: 1rem;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 500;
+    cursor: pointer;
+    list-style: none;
+    padding: 1rem;
 }
 
 .menu-and-icon{
@@ -68,99 +69,21 @@
     justify-content: start;
     align-items: center;
     column-gap: 0.6rem;
-    position: relative;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
-  column-gap: 0.6rem;
-  position: relative;
+     position: relative;
 }
+
 .menu-links ul li a, i {
-  text-decoration: none;
-  color: #011800;
+    text-decoration: none;
+    color: #011800;
 }
 
 .menu-links ul li a:hover, i:hover {
-  color: red;
-  transition: 0.5s ease;
+    color: red;
+    transition: 0.5s ease;
 }
 .menu-links ul li a.active, i.active {
-  color: red;
-  transition: 0.5s ease;
-}
-
-.dropdownmenu-container{
-width: 16vw;
-height: auto;
-background-color: #b0ee9a;
-display: none;
-position: absolute;
-flex-direction: column;
-justify-content: start;
-align-items: center;
-row-gap: 0.8rem;
-border-radius: 0.4rem; 
-top: 1.8rem;
-}
-
-.dropdown-div{
-width: 100%;
-height: auto;
-display: flex;
-flex-direction: column;
-justify-content: start;
-align-items: center;
-row-gap: 0.6rem;
-}
-
-.menu-and-icon:hover .dropdownmenu-container {
-display: block;
-}
-
-.findfood-container{
-width: 100%;
-height: auto;
-padding-bottom: 0.9rem;
-background-color: #b0ee9a;
-border-bottom: 1px solid #1d3812;
-display: flex;
-flex-direction: row;
-justify-content: start;
-align-items: center;
-column-gap: 0.5rem;
-}
-.findfood-container2{
-width: 100%;
-height: auto;
-padding-top: 0.4rem;
-background-color: #b0ee9a;
-display: flex;
-flex-direction: row;
-justify-content: start;
-align-items: center;
-column-gap: 0.5rem;
-}
-.icon-container{
-width: fit-content;
-height: auto;
-}
-a{
-text-decoration: none;
-color: #011800;
-}
-.icon i {
-font-size: 1.4rem;
-color: #011800;
-}
-.donatefoodmenu a:hover, i:hover {
-color: red;
-transition: 0.5s ease;
-}
-.donatefoodmenu a:active, i.active {
-color: red;
-transition: 0.5s ease;
+    color: red;
+    transition: 0.5s ease;
 }
 
 .dropdownmenu-container{
@@ -238,44 +161,44 @@ a{
     display: none;
 }
 .signup-container{
-  width: 23%;
-  height: auto;
-  padding: 0.8rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
-  column-gap: 0.4rem;
+    width: 25%;
+    height: auto;
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    column-gap: 0.8rem;
 }
 .signup-btn{
-  width: fit-content;
-  height: auto;
+    width: fit-content;
+    height: auto;
 }
 .signup-btn1 button{
-  width: 100%;
-  height: auto;
-  padding: 0.8rem 1rem;
-  background-color: #011800;
-  color: #FAFFD1;
-  font-size: 1.2rem;
-  font-weight: 500;
-  border: none;
-  outline: none;
-  border-radius: 8px;
-  cursor: pointer;
+    width: 100%;
+    height: auto;
+    padding: 0.8rem 1rem;
+    background-color: #011800;
+    color: #FAFFD1;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
 }
 .signup-btn2 button{
-  width: 100%;
-  height: auto;
-  padding: 0.7rem 1rem;
-  background-color: #fffb0309;
-  color: #011800;
-  font-size: 1.2rem;
-  font-weight: 500;
-  border: 2px solid #011800;
-  outline: none;
-  border-radius: 8px;
-  cursor: pointer;
+    width: 100%;
+    height: auto;
+    padding: 0.8rem 1rem;
+    background-color: #fffb0309;
+    color: #011800;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border: 2px solid #011800;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
 }
 .signup-btn1 button:hover, .signup-btn2 button:hover{
     background-color: #fffb25;
@@ -685,5 +608,3 @@ font-weight: 600;
         }
     }
     
-
-      }      
