@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>food salvage</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+      <aside class="sidebar">
+        <div class="logo">
+          <img src="/images/image/WhatsApp_Image_2025-02-06_at_10.12.19_90829287-removebg-preview.png" alt="FoodSavage Logo">
+          <h2>Food Savage</h2>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="user-dashboard.html"><i class="material-icons">home</i>Home</a>
+        <a href="user-menu.html"><i class="material-icons">restaurant_menu</i>Menu</a>
+        <a href="user-orders.html"><i class="material-icons">shopping_cart</i>Orders</a>
+        <a href="user-schedule.html"><i class="material-icons">schedule</i>Schedule</a>
+        <a href="user-profile.html"><i class="material-icons">person</i>Profile</a>
+        <!-- Logout Link -->
+        <a href="#" id="logout-link"><i class="material-icons">logout</i>Logout</a>
+    </nav>
+        
+    </aside>
+        <!-- Include the user-left-sidebar.html content here -->
+        <main class="main-content">
+            <header class="top-bar">
+                <h1>Your Claim</h1>
+            </header>
+            <div class="order-tabs">
+                <button class="tab-btn active">Active claims</button>
+                <button class="tab-btn">Past claims</button>
+            </div>
+            <div class="orders-list">
+                <!-- Order items will be populated here by JavaScript -->
+            </div>
+        </main>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>
