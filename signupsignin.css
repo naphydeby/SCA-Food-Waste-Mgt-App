@@ -349,12 +349,6 @@ button:hover{
 p{
     font-size: 1.2rem;
 
-.alternate-container{
-    width:  100%;
-    height: auto;
-    display: flex;
-    flex
-}
     font-weight: 400;
     color: #000200;
     text-align: center;
