@@ -21,7 +21,7 @@
 .navbar{
     width: 100%;
     height: auto;
-    padding: 2rem 2rem 2rem 5rem;
+    padding: 0rem 3rem;
     background-color: #ecfce5;
     display: flex;
     flex-direction: row;
@@ -56,7 +56,7 @@
     justify-content: space-between;
     align-items: center;
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: 500;
     cursor: pointer;
     list-style: none;
@@ -69,12 +69,9 @@
     justify-content: start;
     align-items: center;
     column-gap: 0.6rem;
-
-    position: relative;
-
-    position: relative;
-
+     position: relative;
 }
+
 .menu-links ul li a, i {
     text-decoration: none;
     color: #011800;
@@ -90,10 +87,7 @@
 }
 
 .dropdownmenu-container{
-
-  width: 16vw;
-  width: 16vw;
-
+  width: 18vw;
   height: auto;
   background-color: #b0ee9a;
   display: none;
@@ -165,14 +159,14 @@ a{
 }
 
 .signup-container{
-    width: 23%;
+    width: 25%;
     height: auto;
     padding: 0.8rem;
     display: flex;
     flex-direction: row;
     justify-content: start;
     align-items: center;
-    column-gap: 0.4rem;
+    column-gap: 0.8rem;
 }
 .signup-btn{
     width: fit-content;
@@ -194,7 +188,7 @@ a{
 .signup-btn2 button{
     width: 100%;
     height: auto;
-    padding: 0.7rem 1rem;
+    padding: 0.8rem 1rem;
     background-color: #fffb0309;
     color: #011800;
     font-size: 1.2rem;
@@ -432,7 +426,7 @@ a{
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    background-color: #013f01;
+    background-color: #008000;
     color: #ecfce5;
 }
 
@@ -465,7 +459,6 @@ a{
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    row-gap: 3rem;
 }
 
 .quicklinks {
@@ -542,19 +535,19 @@ a{
 .socialicon i,
 .icon i {
     font-size: 1.4rem;
-    color: #ecfce5;
+    color: #FAFFD1;
 }
 
 .social-name p {
     font-size: 1.3rem;
     font-weight: 500;
-    color: #ecfce5;
+    color: #FAFFD1;
 }
 
 .footerInfo h4,
 .contact-title h4,
 .footer-text h4 {
-    color: #ecfce5;
+    color: #FAFFD1;
     font-weight: 600;
 }
 
@@ -562,7 +555,7 @@ a{
 .contact-text p,
 .links li a {
     text-decoration: none;
-    color: #ecfce5;
+    color: #FAFFD1;
     font-weight: 500;
     font-size: 1.2rem;
 }
@@ -585,7 +578,6 @@ a{
 .copyright p {
     font-size: 1.4rem;
 }
-
 @media (max-width: 768px) {
        
     .list-content{
@@ -760,3 +752,4 @@ a{
    
 }
 }
+
