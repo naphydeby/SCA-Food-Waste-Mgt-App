@@ -1,4 +1,22 @@
 
+const btn = document.getElementById('btn');
+const sideBar = document.getElementById('sideBar');
+const closeBtn = document.getElementById('sideBarMenu');
+
+btn.addEventListener('click', () => {
+    sideBar.classList.toggle('active');
+});
+
+closeBtn.addEventListener('click', () => {
+    sideBar.classList.remove('active');
+});
+
+// Optional: Close sidebar when clicking outside
+document.addEventListener('click', (event) => {
+    if (!sideBar.contains(event.target) && event.target !== btn) {
+        sideBar.classList.remove('active');
+    }
+});
 
 // Function to toggle between Sign In and Sign Up tabs
 function showTab(tabId) {
