@@ -428,7 +428,7 @@ a{
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    background-color: #008000;
+    background-color: #013f01;
     color: #ecfce5;
 }
 
@@ -461,6 +461,7 @@ a{
     flex-direction: column;
     justify-content: start;
     align-items: start;
+    row-gap: 3rem;
 }
 
 .quicklinks {
@@ -482,7 +483,6 @@ a{
     justify-content: start;
     align-items: start;
     row-gap: 1.2rem;
-    
 }
 
 .footerlinks ul,
@@ -495,7 +495,6 @@ a{
     align-items: start;
     row-gap: 1.2rem;
     list-style: none;
-
 }
 
 .socials {
@@ -534,22 +533,27 @@ a{
     column-gap: 1rem;
 }
 
+.socialicon i, .icon i{
+  font-size: 1.4rem;
+  color: #ecfce5;
+
+}
 .socialicon i,
 .icon i {
     font-size: 1.4rem;
-    color: #FAFFD1;
+    color: #ecfce5;
 }
 
 .social-name p {
     font-size: 1.3rem;
     font-weight: 500;
-    color: #FAFFD1;
+    color: #ecfce5;
 }
 
 .footerInfo h4,
 .contact-title h4,
 .footer-text h4 {
-    color: #FAFFD1;
+    color: #ecfce5;
     font-weight: 600;
 }
 
@@ -557,7 +561,7 @@ a{
 .contact-text p,
 .links li a {
     text-decoration: none;
-    color: #FAFFD1;
+    color: #ecfce5;
     font-weight: 500;
     font-size: 1.2rem;
 }
@@ -580,6 +584,7 @@ a{
 .copyright p {
     font-size: 1.4rem;
 }
+
 @media (max-width: 768px) {
        
     .list-content{
