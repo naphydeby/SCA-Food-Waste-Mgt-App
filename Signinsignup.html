@@ -13,27 +13,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <section id="header">
+     <!------------------------------webview -------------------->
+  
+  <div class="webview-navbar">
+    <div class="navbar">
+        <a href="/index.html">
+      <div class="logo-container">
+          <img src="/image/Logo.png" alt="Food Salvage logo">
+      </div>
+    </a>
+      <div class="menu-links">
+          <ul class="list-content">
 
-        <div class="navbar">
+              <li><a href="/index.html" class="active">Home</a></li>
 
-            <a href="/index.html">
-                <div class="logo-container">
-                    <img src="/image/Logo.png" alt="Food Salvage logo">
-                </div>
-              </a>
+              <li><a href="/about.html">About Us</a></li>
+              <li><a href="/hunger.html">Hunger in Lagos</a></li>
+              <div class="menu-and-icon">
+                  <li>How We Do It</li> 
 
-            <div class="menu-links">
-                <ul class="list-content">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="/about.html">About Us</a></li>
-                    <li><a href="/hunger.html">Hunger in Lagos</a></li>
-                    <div class="menu-and-icon">
-                        <li><a href="/How-We-Do-It">How We Do It</a></li> 
+                  <i class="fa-solid fa-chevron-down"></i>
 
-                        <i class="fa-solid fa-chevron-down"></i>
-
-                         <div class="dropdownmenu-container">
+                  <div class="dropdownmenu-container">
 
                     <ul class="list-content">
                         
@@ -62,26 +63,97 @@
                     </ul>
                 </div>
 
-                    </div>
-                    <li><a href="/contact.html">Contact</a></li>
-        
-                </ul>
-        
+              </div>
+              <li><a href="/contact.html">Contact</a></li>
+  
+          </ul>
+  
+      </div>
+      
+
+      <div class="signup-container">
+        <a href="Signinsignup.html">
+            <div class="signup-btn1">
+                <button>Sign Up</button>
             </div>
+        </a>
+       
+        <a href="Signinsignup.html">
+            <div class="signup-btn2">
+                <button>Sign In</button>
+            </div>
+        </a>
+
+        
+    </div>
+    <div class="menu-btn">
+      <i class="fa-solid fa-bars" id="btn"   ></i>
+     </div>
+
+  </div>
+<!-- -------------------------------------------------------------mobileview-sidebar -------------------------------------------- -->
+<div class="sidebar" id="sideBar">
+<div class="cancel-div" >
+  <h1 class="h1-text">Food Salvage</h1>
+<i class="fa-solid fa-xmark" id="sideBarMenu" style="margin-top: 10px; color: green;"></i>
+</div>
+
+<ul class="sidebar-list-content" >
+  <li><a href="/index.html">Home</a></li>
+  <li><a href="/about.html">About Us</a></li>
+  <li><a href="/hunger.html">Hunger in Lagos</a></li>
+  <div class="menu-and-icon">
+      <li>How We Do It</li>
+      <i class="fa-solid fa-chevron-down" id="dropdown"></i>
+      <div class="dropdownmenu-container">
+
+          <ul class="sidebar-list-content">
+              
+            <div class="dropdown-div">
+              <div class="findfood-container">
+                <div class="icon">
+                    <i class="fa-solid fa-carrot"></i>
+                </div>
+                <div class="donatefoodmenu">
+                    <li><a href="/donate.html">Donate Food</a></li>
+                </div>
+                
+            </div>
+
+            <div class="findfood-container2">
+                <div class="icon">
+                    <i class="fa-solid fa-fish"></i>
+                </div>
+                <div class="donatefoodmenu">
+                    <li><a href="/findfood.html">Find Food</a></li>
+                </div>
             
+            </div>
+            </div>
+              
+          </ul>
+      </div>
+  </div>
+  <li><a href="/contact.html" class="active">Contact</a></li>
+</ul>
 
-            <!-- <div class="signup-container">
-                <div class="signup-btn1">
-                    <button>Sign Up</button>
-                </div>
-                <div class="signup-btn2">
-                    <button>Sign In</button>
-                </div>
-            </div> -->
-        </div>
-    </section>
-
+          <a href="Signinsignup.html">
+              <div class="signup-btn1">
+                  <button>Sign Up</button>
+              </div>
+          </a>
+         
+          <a href="Signinsignup.html">
+              <div class="signup-btn2">
+                  <button>Sign In</button>
+              </div>
+          </a> 
+      
     
+
+</div>
+
+    <!-- --------------------------------------------Main------------------------- -->
 
     <div  class="form-section"> 
 
@@ -226,6 +298,8 @@
 
     </div>
     <script src="./tab.js"></script>
+   
+    
    
 </body>
 </html>
