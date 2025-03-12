@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,85 +12,147 @@
 </head>
 
 <body>
-
-    <div class="main-container">
-
-        <!------------------------------webview --------------->
-
-       
-
-        <div class="navbar">
-          <a href="/index.html">
-        <div class="logo-container">
-            <img src="/image/Logo.png" alt="Food Salvage logo">
-        </div>
-      </a>
-        <div class="menu-links">
-            <ul class="list-content">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/about.html">About Us</a></li>
-                <li><a href="/hunger.html" class="active">Hunger in Lagos</a></li>
-                <div class="menu-and-icon">
-                    <li><a href="/How-We-Do-It">How We Do It</a></li> 
+ <!------------------------------webview -------------------->
   
-                    <i class="fa-solid fa-chevron-down"></i>
-  
-                    <div class="dropdownmenu-container">
-  
-                      <ul class="list-content">
-                          
-                        <div class="dropdown-div">
-                          <div class="findfood-container">
-                            <div class="icon">
-                                <i class="fa-solid fa-carrot"></i>
-                            </div>
-                            <div class="donatefoodmenu">
-                                <li><a href="/donate.html">Donate Food</a></li>
-                            </div>
-                            
-                        </div>
-            
-                        <div class="findfood-container2">
-                            <div class="icon">
-                                <i class="fa-solid fa-fish"></i>
-                            </div>
-                            <div class="donatefoodmenu">
-                                <li><a href="/findfood.html">Find Food</a></li>
-                            </div>
-                        
-                        </div>
-                        </div>
-                          
-                      </ul>
-                  </div>
-  
-                </div>
-                <li><a href="/contact.html">Contact</a></li>
-    
-            </ul>
-    
-        </div>
-        
-  
-        <div class="signup-container">
-          <a href="Signinsignup.html">
-              <div class="signup-btn1">
-                  <button>Sign Up</button>
-              </div>
-          </a>
-         
-          <a href="Signinsignup.html">
-              <div class="signup-btn2">
-                  <button>Sign In</button>
-              </div>
-          </a>
-  
-          
-      </div>
-  
+ <div class="webview-navbar">
+  <div class="navbar">
+      <a href="/index.html">
+    <div class="logo-container">
+        <img src="/image/Logo.png" alt="Food Salvage logo">
     </div>
+  </a>
+    <div class="menu-links">
+        <ul class="list-content">
 
-        <!----------------------------------------------- MAIN ------------------------------------------>
+            <li><a href="/index.html" class="active">Home</a></li>
+
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/hunger.html">Hunger in Lagos</a></li>
+            <div class="menu-and-icon">
+                <li>How We Do It</li> 
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+                <div class="dropdownmenu-container">
+
+                  <ul class="list-content">
+                      
+                    <div class="dropdown-div">
+                      <div class="findfood-container">
+                        <div class="icon">
+                            <i class="fa-solid fa-carrot"></i>
+                        </div>
+                        <div class="donatefoodmenu">
+                            <li><a href="/donate.html">Donate Food</a></li>
+                        </div>
+                        
+                    </div>
+        
+                    <div class="findfood-container2">
+                        <div class="icon">
+                            <i class="fa-solid fa-fish"></i>
+                        </div>
+                        <div class="donatefoodmenu">
+                            <li><a href="/findfood.html">Find Food</a></li>
+                        </div>
+                    
+                    </div>
+                    </div>
+                      
+                  </ul>
+              </div>
+
+            </div>
+            <li><a href="/contact.html">Contact</a></li>
+
+        </ul>
+
+    </div>
+    
+
+    <div class="signup-container">
+      <a href="Signinsignup.html">
+          <div class="signup-btn1">
+              <button>Sign Up</button>
+          </div>
+      </a>
+     
+      <a href="Signinsignup.html">
+          <div class="signup-btn2">
+              <button>Sign In</button>
+          </div>
+      </a>
+
+      
+  </div>
+  <div class="menu-btn">
+    <i class="fa-solid fa-bars" id="btn"   ></i>
+   </div>
+
+</div>
+<!-- -------------------------------------------------------------mobileview-sidebar -------------------------------------------- -->
+<div class="sidebar" id="sideBar">
+<div class="cancel-div" >
+<h1 class="h1-text">Food Salvage</h1>
+<i class="fa-solid fa-xmark" id="sideBarMenu" style="margin-top: 10px; color: green;"></i>
+</div>
+
+<ul class="sidebar-list-content" >
+<li><a href="/index.html">Home</a></li>
+<li><a href="/about.html">About Us</a></li>
+<li><a href="/hunger.html">Hunger in Lagos</a></li>
+<div class="menu-and-icon">
+    <li>How We Do It</li>
+    <i class="fa-solid fa-chevron-down" id="dropdown"></i>
+    <div class="dropdownmenu-container">
+
+        <ul class="sidebar-list-content">
+            
+          <div class="dropdown-div">
+            <div class="findfood-container">
+              <div class="icon">
+                  <i class="fa-solid fa-carrot"></i>
+              </div>
+              <div class="donatefoodmenu">
+                  <li><a href="/donate.html">Donate Food</a></li>
+              </div>
+              
+          </div>
+
+          <div class="findfood-container2">
+              <div class="icon">
+                  <i class="fa-solid fa-fish"></i>
+              </div>
+              <div class="donatefoodmenu">
+                  <li><a href="/findfood.html">Find Food</a></li>
+              </div>
+          
+          </div>
+          </div>
+            
+        </ul>
+    </div>
+</div>
+<li><a href="/contact.html" class="active">Contact</a></li>
+</ul>
+
+        <a href="Signinsignup.html">
+            <div class="signup-btn1">
+                <button>Sign Up</button>
+            </div>
+        </a>
+       
+        <a href="Signinsignup.html">
+            <div class="signup-btn2">
+                <button>Sign In</button>
+            </div>
+        </a> 
+    
+  
+
+</div>
+
+          <!----------------------------------------------- MAIN ------------------------------------------>
         <div id="hunger1">
             <h1>Hunger in Lagos</h1>
         </div>
@@ -158,7 +221,7 @@
         
             <div class="statText2">
 
-                <div class="T11" id="ST01">
+                <div class="T1" id="ST01">
                     <div class="stat-number">
                         <h2>37%</h2> 
                     </div> 
@@ -339,8 +402,20 @@
         </div>
     </div>
     <script>
+     const btn = document.getElementById('btn');
+const sideBar = document.getElementById('sideBar');
+const closeBtn = document.getElementById('sideBarMenu');
+
+btn.addEventListener('click', () => {
+    sideBar.classList.toggle('active');
+});
+
+closeBtn.addEventListener('click', () => {
+    sideBar.classList.remove('active');
+});
+
              
-             const dropdown = document.getElementById('dropdown');
+ const dropdown = document.getElementById('dropdown');
   dropdown.addEventListener('click', () => {
     window.location.href = "navbardropdownmenu.html"
   });
