@@ -35,6 +35,7 @@
 }
 
 .logo-container img{
+  margin-top: 10px;
     width: 70px;
     height: 70px;
 }
@@ -61,6 +62,7 @@
     cursor: pointer;
     list-style: none;
     padding: 1rem;
+    color:  #008000;
 }
 
 .menu-and-icon{
@@ -96,7 +98,7 @@
   align-items: center;
   row-gap: 0.8rem;
   border-radius: 0.4rem; 
-  top: 1.8rem;
+  top: 3rem;
 }
 
 .dropdown-div{
@@ -205,6 +207,7 @@ a{
     outline: none;
     border: none;
 }
+
 .menu-btn{
     display: none;
 }
@@ -425,7 +428,7 @@ a{
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    background-color: #013f01;
+    background-color: #008000;
     color: #ecfce5;
 }
 
@@ -458,7 +461,6 @@ a{
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    row-gap: 3rem;
 }
 
 .quicklinks {
@@ -535,19 +537,19 @@ a{
 .socialicon i,
 .icon i {
     font-size: 1.4rem;
-    color: #ecfce5;
+    color: #FAFFD1;
 }
 
 .social-name p {
     font-size: 1.3rem;
     font-weight: 500;
-    color: #ecfce5;
+    color: #FAFFD1;
 }
 
 .footerInfo h4,
 .contact-title h4,
 .footer-text h4 {
-    color: #ecfce5;
+    color: #FAFFD1;
     font-weight: 600;
 }
 
@@ -555,7 +557,7 @@ a{
 .contact-text p,
 .links li a {
     text-decoration: none;
-    color: #ecfce5;
+    color: #FAFFD1;
     font-weight: 500;
     font-size: 1.2rem;
 }
@@ -578,7 +580,6 @@ a{
 .copyright p {
     font-size: 1.4rem;
 }
-
 @media (max-width: 768px) {
        
     .list-content{
@@ -601,10 +602,10 @@ a{
         display: block;
         width: 70%;
         height: 100vh;
-        background-color: white;
+        background-color: #ecfce5;
         box-shadow: 0px 0px 0px 5px rgba(0, 0 , 0, 0.1);
        padding: 10px;
-       color: gray;
+       color:  #008000;
        font-size: 20px;
        position: fixed;
        top: 0;
@@ -653,9 +654,16 @@ a{
         width: 100%;  
     }
     .dropdownmenu-container{
-      width: 50vw;
+      width: 60vw;
       top: 3rem;
+      left: -2rem;
+      justify-content: center;
+      
     }
+    .icon i {
+        font-size: 1rem;
+        
+      }
     .name {
         padding: 8rem 1.5rem;
         text-align: center;
@@ -753,3 +761,4 @@ a{
    
 }
 }
+
