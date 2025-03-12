@@ -8,7 +8,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <div class="dashboard-container">
+     <div class="dashboard-container">
+        <button id="menu-btn" class="menu-btn">☰</button>
         <!-- Sidebar -->
         <aside class="sidebar">
             <div class="logo">
@@ -17,8 +18,8 @@
             </div>
             <nav class="sidebar-nav">
                 <a href="user-dashboard.html"><i class="material-icons">home</i>Home</a>
-                <a href="user-menu.html"><i class="material-icons">restaurant_menu</i>Menu</a>
-                <a href="user-orders.html"><i class="material-icons">shopping_cart</i>Orders</a>
+                <a href="user-menu.html"><i class="material-icons">restaurant_menu</i>Available Claims</a>
+                <a href="user-orders.html"><i class="material-icons">shopping_cart</i>Claims</a>
                 <a href="user-schedule.html"><i class="material-icons">schedule</i>Schedule</a>
                 <a href="user-profile.html"><i class="material-icons">person</i>Profile</a>
                 <!-- Logout Link -->
@@ -39,7 +40,7 @@
                     <input type="text" placeholder="Search your food...">
                 </div>
                 <div class="user-profile">
-                    <img src="/images/foodimages/donate.jpg" alt="Profile" class="avatar">
+                    <img src="/DashboardFoodmanagement//images/foodimages/volunteer1.jpg" alt="Profile" class="avatar">
                     
                    
                 </div>
@@ -67,17 +68,24 @@
                 </div>
             </section>
         </main>
+        <div class="dashboard-modal" id="donation-modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2>Donation Details</h2>
+                <div id="donation-summary"></div>
+            </div>
+        </div>
 
         <!-- Right Sidebar -->
         <aside class="right-sidebar">
             <div class="meal-plan">
-                <h3>Your meal plan</h3>
+                <h3>Your Claims plan</h3>
                 <div class="date-picker">
-                    <span>Today, 15 Feb 2025</span>
+                    <span>Today, 15 March 2025</span>
                     <i class="material-icons">calendar_today</i>
                 </div>
                 <div class="meal-list">
-                    <!-- Meal items will be populated by JavaScript -->
+                    <!-- Claim items will be populated by JavaScript -->
                 </div>
             </div>
         </aside>
