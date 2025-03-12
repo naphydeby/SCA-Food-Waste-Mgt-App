@@ -11,6 +11,7 @@
 </head>
 <body>
   <!------------------------------webview -------------------->
+  
   <div class="webview-navbar">
     <div class="navbar">
         <a href="/index.html">
@@ -26,7 +27,7 @@
               <li><a href="/about.html">About Us</a></li>
               <li><a href="/hunger.html">Hunger in Lagos</a></li>
               <div class="menu-and-icon">
-                  <li><a href="/How-We-Do-It">How We Do It</a></li> 
+                  <li>How We Do It</li> 
 
                   <i class="fa-solid fa-chevron-down"></i>
 
@@ -82,41 +83,72 @@
 
         
     </div>
+    <div class="menu-btn">
+      <i class="fa-solid fa-bars" id="btn"   ></i>
+     </div>
 
   </div>
-   <!-- ----------------------------MobileView------------------ -->
-           <!-- <div class="mobileview-navbar">
-            <nav>
-              <div>
-                <i class="fa-solid fa-bars" id="btn"  class="menu-btn" ></i>
-               </div>
-                  <ul class="list-content">
-                      <li><a href="index.html">Home</a></li>
-                      <li><a href="about.html">About</a></li>
-                      <li><a href="service.html">Services</a></li>
-                      <li><a href="contact.html">Contact</a></li>   
-                  </ul>
-                  <h1>Food Salvage</h1>
-                  <img src="/image/WhatsApp_Image_2025-02-06_at_10.12.19_90829287-removebg-preview.png" alt="">
-                </nav>
+<!-- -------------------------------------------------------------mobileview-sidebar -------------------------------------------- -->
+<div class="sidebar" id="sideBar">
+<div class="cancel-div" >
+  <h1 class="h1-text">Food Salvage</h1>
+<i class="fa-solid fa-xmark" id="sideBarMenu" style="margin-top: 10px; color: green;"></i>
+</div>
+
+<ul class="sidebar-list-content" >
+  <li><a href="/index.html">Home</a></li>
+  <li><a href="/about.html">About Us</a></li>
+  <li><a href="/hunger.html">Hunger in Lagos</a></li>
+  <div class="menu-and-icon">
+      <li>How We Do It</li>
+      <i class="fa-solid fa-chevron-down" id="dropdown"></i>
+      <div class="dropdownmenu-container">
+
+          <ul class="sidebar-list-content">
+              
+            <div class="dropdown-div">
+              <div class="findfood-container">
+                <div class="icon">
+                    <i class="fa-solid fa-carrot"></i>
+                </div>
+                <div class="donatefoodmenu">
+                    <li><a href="/donate.html">Donate Food</a></li>
+                </div>
+                
+            </div>
+
+            <div class="findfood-container2">
+                <div class="icon">
+                    <i class="fa-solid fa-fish"></i>
+                </div>
+                <div class="donatefoodmenu">
+                    <li><a href="/findfood.html">Find Food</a></li>
+                </div>
+            
+            </div>
+            </div>
+              
+          </ul>
+      </div>
   </div>
+  <li><a href="/contact.html" class="active">Contact</a></li>
+</ul>
 
-   ---------------------------------Mobileview-sidebar -------------------
-      <div class="sidebar">
-        <div >
-          <h1>Food Salvage</h1>
-          <i class="fa-solid fa-xmark"  id="sideBarMenu"></i>
-         </div>
-        </div>
-        <ul class="list-content">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="service.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>   
-        </ul>
+          <a href="Signinsignup.html">
+              <div class="signup-btn1">
+                  <button>Sign Up</button>
+              </div>
+          </a>
+         
+          <a href="Signinsignup.html">
+              <div class="signup-btn2">
+                  <button>Sign In</button>
+              </div>
+          </a> 
+      
+    
 
-     </div> -->
-
+</div>
     <!-- ---------------------------------Main---------------------------- -->
      <main>
       <section class="hero" >
@@ -146,33 +178,6 @@
            
         </div>
     </section>
-
-
-
-        <!-- <section class="hero">
-          <div class="hero-title">
-            <div class="hero-heading-text">
-              <h1>Welcome To Food Salvage</h1>
-            </div>
-  
-            <div class="hero-h2">
-              <p>Join our community in reducing food waste and helping those in need.</p>
-            </div>
-          </div>
-         
-        <div class="buttonDiv">
-
-          <div class="donateButton">
-            <button class="donateButton">Donate</button>
-          </div>
-            
-          <div class="find-food">
-            <button class="findFoodButton">Find Food</button>
-          </div>
-            
-        </div>
-
-      </section> -->
 
 
       <section class="mission">
@@ -811,136 +816,133 @@
  <!------------------------------------------------------- Footer ---------------------------------- -->
  <div class="footer">
 
-    <div class="footer-top">
-      <div class="foothead">
+  <div class="footer-top">
+    <div class="foothead">
         <div class="title">
-          <img src="/image/Logo.png" alt=" " style="width: 100px; height: 100px;">
-        </div>
-          
-        <div class="icon-and-socials">
-          <div class="socialicon">
-              <i class="fa-solid fa-location-dot"></i>
+            <img src="/image/Logo.png" alt=" " style="width: 100px; height: 100px;">
           </div>
-          <div class="social-name">
-            <p> FOOD SALVAGE Headquarters
-                123 Harvest Lane, Food Haven District, Greensville, Earth 
-            </p>
-          </div>
-        </div>      
-      </div>
-    
-      <div class="quicklinks">
-        <div class="footer-text">
-          <h4>Quick Links</h4>
+      <div class="icon-and-socials">
+        <div class="socialicon">
+            <i class="fa-solid fa-location-dot"></i>
         </div>
-        
-        <div class="footerlinks">
-          <ul>
-            <div class="links">
-              <li><a href="index.html">Home</a></li>
-            </div>
-    
-            <div class="links">
-              <li><a href="about.html">About </a></li>
-            </div>
-    
-            <div class="links">
-              <li><a href="hunger.html">Hunger In Lagos</a></li>
-            </div>
-    
-            <div class="links">
-              <li><a href="contact.html">How We Do It</a></li>
-            </div>
-            
-            <div class="links">
-              <li><a href="contact.html">Contact</a></li>
-            </div>
-          </ul>
+        <div class="social-name">
+          <p> FOOD SALVAGE Headquarters
+              123 Harvest Lane, Food Haven District, Greensville, Earth 
+          </p>
         </div>
-      </div>
-    
-      <div class="footercontact">
-        <div class="contact-title">
-          <h4>Contact</h4>
-        </div>
-    
-        <div class="socialsdiv">
-          <div class="icon-and-contact">
-            <div class="icon">
-              <i class="fas fa-envelope"></i>
-            </div>
-            <div class="contact-text">
-              <p> info@foodsalvage.org</p>
-            </div>
-          </div>
-    
-          <div class="icon-and-contact">
-            <div class="icon">
-              <i class="fas fa-phone"></i>
-            </div>
-            <div class="contact-text">
-              <p>+234 8034781290</p>
-            </div>
-          </div>
-    
-          <div class="icon-and-contact">
-            <div class="icon">
-              <i class="fa-solid fa-globe"></i>
-            </div>
-            <div class="contact-text">
-              <p>www.foodsalvage.com</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      </div>      
     </div>
-    
-    <div class="footer-mid">
-      <div class="socials">
+  
+    <div class="quicklinks">
+      <div class="footer-text">
+        <h4>Quick Links</h4>
+      </div>
+      
+      <div class="footerlinks">
         <ul>
+          <div class="links">
+            <li><a href="index.html">Home</a></li>
+          </div>
+  
+          <div class="links">
+            <li><a href="about.html">About </a></li>
+          </div>
+  
+          <div class="links">
+            <li><a href="hunger.html">Hunger In Lagos</a></li>
+          </div>
+  
+          <div class="links">
+            <li><a href="contact.html">How We Do It</a></li>
+          </div>
           
-          <li>
-            <div class="socials-icon">
-              <i class="fa-brands fa-instagram"><a href=""></a></i>
-            </div>   
-          </li>
-    
-          <li>
-            <div class="socials-icon">
-              <img src="./image/new-twitter.svg" alt="">
-            </div>
-          </li>
-    
-          <li>
-            <div class="socials-icon">
-              <i class="fa-brands fa-facebook"><a href=""></a></i>
-            </div>
-          </li>
-    
-          <li>
-              <div class="socials-icon">
-                <i class="fa-brands fa-linkedin-in"><a href=""></a></i>
-              </div>
-          </li>
-    
-          <li>
-            <div class="socials-icon">
-              <i class="fa-brands fa-tiktok"><a href=""></a></i>
-            </div>  
-          </li>
+          <div class="links">
+            <li><a href="contact.html">Contact</a></li>
+          </div>
         </ul>
-          
       </div>
     </div>
   
-    <div class="footer-bottom">
-      <div class="copyright">
-        <p>&copy; 2025 Food Salvage Community. All Rights Reserved.She Code Africa - BD/FD GROUP 1</p>
+    <div class="footercontact">
+      <div class="contact-title">
+        <h4>Contact</h4>
       </div>
-    </div>
   
-  
+      <div class="socialsdiv">
+        <div class="icon-and-contact">
+          <div class="icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-text">
+            <p> info@foodsalvage.org</p>
+          </div>
         </div>
+  
+        <div class="icon-and-contact">
+          <div class="icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contact-text">
+            <p>+234 8034781290</p>
+          </div>
+        </div>
+  
+        <div class="icon-and-contact">
+          <div class="icon">
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <div class="contact-text">
+            <p>www.foodsalvage.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-mid">
+    <div class="socials">
+      <ul>
+        
+        <li>
+          <div class="socials-icon">
+            <i class="fa-brands fa-instagram"><a href=""></a></i>
+          </div>   
+        </li>
+  
+        <li>
+          <div class="socials-icon">
+            <img src="./image/new-twitter.svg" alt="">
+          </div>
+        </li>
+  
+        <li>
+          <div class="socials-icon">
+            <i class="fa-brands fa-facebook"><a href=""></a></i>
+          </div>
+        </li>
+  
+        <li>
+            <div class="socials-icon">
+              <i class="fa-brands fa-linkedin-in"><a href=""></a></i>
+            </div>
+        </li>
+  
+        <li>
+          <div class="socials-icon">
+            <i class="fa-brands fa-tiktok"><a href=""></a></i>
+          </div>  
+        </li>
+      </ul>
+        
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="copyright">
+      <p>&copy; 2025 Food Salvage Community. All Rights Reserved.She Code Africa - BD/FD GROUP 1</p>
+    </div>
+  </div>
+
 
  </div>
    <script src="script.js"></script>
