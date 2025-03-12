@@ -34,6 +34,7 @@
 }
 
 .logo-container img{
+margin-top: 10px;
   width: 70px;
   height: 70px;
 }
@@ -60,16 +61,10 @@
   cursor: pointer;
   list-style: none;
   padding: 1rem;
+  color:  #008000;
 }
 
 .menu-and-icon{
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
-    column-gap: 0.6rem;
-    position: relative;
-
   display: flex;
   flex-direction: row;
   justify-content: start;
@@ -92,6 +87,8 @@
 }
 
 .dropdownmenu-container{
+
+
 width: 16vw;
 height: auto;
 background-color: #b0ee9a;
@@ -102,7 +99,7 @@ justify-content: start;
 align-items: center;
 row-gap: 0.8rem;
 border-radius: 0.4rem; 
-top: 1.8rem;
+top: 3rem;
 }
 
 .dropdown-div{
@@ -163,80 +160,6 @@ color: red;
 transition: 0.5s ease;
 }
 
-.dropdownmenu-container{
-  width: 16vw;
-  height: auto;
-  background-color: #b0ee9a;
-  display: none;
-  position: absolute;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-  row-gap: 0.8rem;
-  border-radius: 0.4rem; 
-  top: 1.8rem;
-}
-
-.dropdown-div{
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-  row-gap: 0.6rem;
-}
-
-.menu-and-icon:hover .dropdownmenu-container {
-  display: block;
-}
-
-.findfood-container{
-  width: 100%;
-  height: auto;
-  padding-bottom: 0.9rem;
-  background-color: #b0ee9a;
-  border-bottom: 1px solid #1d3812;
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
-  column-gap: 0.5rem;
-}
-.findfood-container2{
-  width: 100%;
-  height: auto;
-  padding-top: 0.4rem;
-  background-color: #b0ee9a;
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
-  column-gap: 0.5rem;
-}
-.icon-container{
-  width: fit-content;
-  height: auto;
-}
-a{
-  text-decoration: none;
-  color: #011800;
-}
-.icon i {
-  font-size: 1.4rem;
-  color: #011800;
-}
-.donatefoodmenu a:hover, i:hover {
-  color: red;
-  transition: 0.5s ease;
-}
-.donatefoodmenu a:active, i.active {
-  color: red;
-  transition: 0.5s ease;
-}
-.h1-text{
-    display: none;
-}
 .signup-container{
   width: 23%;
   height: auto;
@@ -278,13 +201,14 @@ a{
   cursor: pointer;
 }
 .signup-btn1 button:hover, .signup-btn2 button:hover{
-    background-color: #fffb25;
-    color: #011800;
-    transition: 0.3s ease;
-    font-size: 1.4rem;
-    outline: none;
-    border: none;
+  background-color: #fffb25;
+  color: #011800;
+  transition: 0.3s ease;
+  font-size: 1.4rem;
+  outline: none;
+  border: none;
 }
+
 
 .menu-btn{
     display: none;
@@ -606,10 +530,10 @@ font-weight: 600;
             display: block;
             width: 70%;
             height: 100vh;
-            background-color: white;
+            background-color: #ecfce5;
             box-shadow: 0px 0px 0px 5px rgba(0, 0 , 0, 0.1);
            padding: 10px;
-           color: gray;
+           color:  #008000;
            font-size: 20px;
            position: fixed;
            top: 0;
@@ -658,8 +582,10 @@ font-weight: 600;
             width: 100%;  
         }
         .dropdownmenu-container{
-          width: 50vw;
-          top: 3rem;
+          width: 60vw;
+           top: 3rem;
+           left: -2rem;
+           justify-content: center;
         }
         .container {
             flex-direction: column; 
@@ -685,5 +611,3 @@ font-weight: 600;
         }
     }
     
-
-      }      
