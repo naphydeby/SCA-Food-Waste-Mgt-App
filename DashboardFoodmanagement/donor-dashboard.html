@@ -9,11 +9,14 @@
 </head>
 <body>
     <div class="dashboard-container">
+       
+        <button id="menu-btn" class="menu-btn">☰</button>
         <!-- Sidebar -->
         <aside class="sidebar">
+           
             <div class="logo">
                 <img src="/image/Logo.png" alt="Food Salvage logo">
-                <h2>Food Salvage </h2>
+                <h2>Food Salvage</h2>
             </div>
             <nav class="sidebar-nav">
                 <a href="donor-dashboard.html"><i class="material-icons">dashboard</i>Dashboard</a>
@@ -24,11 +27,6 @@
                 <!-- Logout Link -->
                 <a href="#" id="logout-link"><i class="material-icons">logout</i>Logout</a>
             </nav>
-            <!-- <div class="sidebar-footer">
-                <a href="#"><i class="material-icons">settings</i>Settings</a>
-                <a href="#"><i class="material-icons">help</i>Help Center</a>
-                <a href="#"><i class="material-icons">logout</i>Logout</a>
-            </div> -->
         </aside>
 
         <!-- Main Content -->
@@ -43,7 +41,7 @@
                     <input type="text" placeholder="Search donations...">
                 </div>
                 <div class="user-profile">
-                    <img src="/images/foodimages/glovo.png" alt="Profile" class="avatar">
+                    <img src="/DashboardFoodmanagement/images/foodimages/my-pic.jpg" alt="Profile" class="avatar">
                 </div>
             </header>
 
@@ -93,12 +91,21 @@
             </section>
         </main>
 
-         <!-- Right Sidebar -->
-         <aside class="right-sidebar">
+        <!-- Donation Modal (Moved Outside of Table) -->
+        <div class="dashboard-modal" id="donation-modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2>Donation Details</h2>
+                <div id="donation-summary"></div>
+            </div>
+        </div>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
             <div class="donor-plan">
-                <h3>Your Donation plan</h3>
+                <h3>Your Donation Plan</h3>
                 <div class="date-picker">
-                    <span>Today, 15 Feb 2025</span>
+                    <span>Today, 15 March, 2025</span>
                     <i class="material-icons">calendar_today</i>
                 </div>
                 <div class="donor-list">
@@ -107,6 +114,7 @@
             </div>
         </aside>
     </div>
+
     <script src="dashboard.js"></script>
 </body>
 </html>
