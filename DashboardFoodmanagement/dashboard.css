@@ -918,3 +918,199 @@ th {
   background-color: #F44336; /* Red for denied */
   color: white;
 }
+
+<li className="px-4">
+            <Link to="/grocery">Report</Link>
+          </li>
+
+@media (max-width: 430px) {
+  .menu-categories, .order-tabs, .donation-tabs {
+      flex-wrap: wrap;
+  }
+
+  .analytics-grid {
+      grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 430px) {
+  .dashboard-container {
+      grid-template-columns: 1fr;
+  }
+  
+  .sidebar {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 250px;
+      height: 100vh;
+      background: #c8e6c9; /* Change color as needed */
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease-in-out;
+  }
+
+  /* Show sidebar when toggled */
+  .sidebar.show-sidebar {
+      display: block;
+  }
+
+  .top-bar {
+      flex-direction: column;
+      gap: 1rem;
+  }
+
+  .search-bar {
+      width: 50%;
+      margin-left: 8rem;
+  }
+
+  .stats-grid {
+      grid-template-columns: 1fr;
+  }
+
+  /* Hamburger menu button */
+  .menu-btn {
+      display: block;
+      position: fixed;
+      top: 2rem;
+      right: 5px;
+      background: #4caf50;
+      color: white;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 1000;
+  }
+}
+
+
+/* order meal style */
+.meal-item {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.calendar-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* profile input details */
+/* Form Styling */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+/* Checkbox Styling */
+.form-group label {
+  display: flex;
+  align-items: center;
+}
+
+.form-group input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Button Styling */
+.save-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  display: block;
+  margin-top: 15px;
+}
+
+.save-btn:hover {
+  background-color: #45a049;
+}
+
+
+
+
+/* logout button */
+
+#logout-link {
+  color: #ff4444; /* Red color for logout link */
+}
+
+#logout-link:hover {
+  background-color: #ffdddd; /* Light red background on hover */
+}
+/* Style for View Details button */
+.view-details-btn {
+  background-color: #4CAF50; /* Green background */
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.view-details-btn:hover {
+  background-color: #8BC34A; /* Light green on hover */
+}
+
+/* Status badge styles */
+.status-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status-pending {
+  background-color: #9E9E9E; /* Grey for pending */
+  color: white;
+}
+
+.status-completed {
+  background-color: #4CAF50; /* Green for completed */
+  color: white;
+}
+
+.status-denied {
+  background-color: #F44336; /* Red for denied */
+  color: white;
+}
+
+<li className="px-4">
+            <Link to="/grocery">Report</Link>
+          </li>
+
