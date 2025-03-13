@@ -587,7 +587,7 @@ a{
 }
 
 @media (max-width: 1024px) {
-    
+   
     .menu-links {
         display: none; 
     }
@@ -599,13 +599,14 @@ a{
         display: block; 
     }
     .sidebar{
-        display: block;
+          display: block;
         width: 70%;
         height: 100vh;
         background-color: #ecfce5;
         box-shadow: 0px 0px 0px 5px rgba(0, 0 , 0, 0.1);
        padding: 10px;
        color: #011800;
+       font-size: 30px;
        position: fixed;
        top: 0;
        left: -80%;
@@ -614,12 +615,17 @@ a{
        border-top-right-radius: 10px;
        border-bottom-right-radius: 10px;
        }
-    .sidebar {
-        width: 60%; 
-        left: -100%; 
-    }
+   
     .sidebar.active {
         left: 0; 
+    }
+    .sidebar-list-content{
+        display: block;
+        justify-content: center; 
+        align-items: start;
+        list-style: none;   
+        padding:20px 0px 20px 40px;
+          
     }
     .sidebar-list-content li{
         margin-top: 4%;
@@ -627,6 +633,29 @@ a{
         font-size: 30px;
       
       }
+      .dropdownmenu-container{
+        width: 50vw;
+        top: 5rem;
+        left: 2rem;
+        justify-content: center;
+        
+      }
+      .signup-btn2 button{
+        margin-top: 20px;
+     }
+     .cancel-div{
+        display: flex;
+        justify-content: space-between;
+       }
+       .cancel-div i{
+        margin-top: 20px;
+       }
+       .menu-and-icon{
+        column-gap: 2.6rem;
+    }
+    .menu-and-icon i{
+        margin-top: 20px;
+    }
     /* Hero Section */
     .name {
         padding: 10rem 2rem;
@@ -738,15 +767,11 @@ a{
     .sidebar-list-content li{
       margin-top: 4%;
       font-weight: 600;
-      font-size: 20px;
+      font-size: 15px;
     
     }
     
-    .sidebar-list-content li a{
-      text-decoration: none;
-      color: #011800;
-      transition: background-color 0.3s ease;
-    }
+    
     .sidebar-list-content li a:hover{
         color:  #008000;
       
@@ -758,6 +783,9 @@ a{
         display: flex;
         justify-content: space-between;
        }
+       .cancel-div i{
+        margin-top: 20px;
+       }
     .contact-right {
         width: 100%;  
     }
@@ -768,10 +796,12 @@ a{
       justify-content: center;
       
     }
-    .icon i {
-        font-size: 1rem;
-        
-      }
+    .menu-and-icon{
+        column-gap: 2.6rem;
+    }
+    .menu-and-icon i{
+        margin-top: 5px;
+    }
     .name {
         padding: 6rem 1rem;
         text-align: center;
@@ -878,4 +908,6 @@ a{
    
 }
 }
+
+
 
