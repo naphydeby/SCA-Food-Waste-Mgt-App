@@ -62,7 +62,7 @@
     cursor: pointer;
     list-style: none;
     padding: 1rem;
-    color:  #008000;
+    color: #011800;
 }
 
 .menu-and-icon{
@@ -80,7 +80,7 @@
 }
 
 .menu-links ul li a:hover, i:hover {
-    color: red;
+    color:  #008000;
     transition: 0.5s ease;
 }
 .menu-links ul li a.active, i.active {
@@ -369,32 +369,26 @@ a:hover{
 .sidebar{
     display: none;
   }
-@media (max-width: 768px) {
-       
-    .list-content{
-         display: none;
+  @media (max-width: 1024px) {
+   
+    .menu-links {
+        display: none; 
     }
-    .h1-text{
-        display: flex;
-        font-size: 25px;
-        font-weight: 800;
-        color: #007600;
+    .signup-container {
+        display: none; 
     }
-    .signup-container{
-        display: none;
-       
-    }
-    .menu-btn{
-        display: block;
+    
+    .menu-btn {
+        display: block; 
     }
     .sidebar{
-        display: block;
+          display: block;
         width: 70%;
         height: 100vh;
         background-color: #ecfce5;
         box-shadow: 0px 0px 0px 5px rgba(0, 0 , 0, 0.1);
        padding: 10px;
-       color:  #008000;
+       color: #011800;
        font-size: 20px;
        position: fixed;
        top: 0;
@@ -404,11 +398,11 @@ a:hover{
        border-top-right-radius: 10px;
        border-bottom-right-radius: 10px;
        }
-       
-       .sidebar.active{
-          left:0;
-       }
-       .sidebar-list-content{
+   
+    .sidebar.active {
+        left: 0; 
+    }
+    .sidebar-list-content{
         display: block;
         justify-content: center; 
         align-items: start;
@@ -417,38 +411,124 @@ a:hover{
           
     }
     .sidebar-list-content li{
-      margin-top: 4%;
-      font-weight: 600;
-      font-size: 20px;
-    
-    }
-    
-    .sidebar-list-content li a{
-      text-decoration: none;
-      color: #008000;
-      transition: background-color 0.3s ease;
-    }
-    .sidebar-list-content li a:hover{
-      color: #ffff00;
+        margin-top: 4%;
+        font-weight: 600;
+        font-size: 20px;
       
-    }
-    .signup-btn2 button{
-       margin-top: 20px;
-    }
-       .cancel-div{
+      }
+      .dropdownmenu-container{
+        width: 50vw;
+        top: 5rem;
+        left: 2rem;
+        justify-content: center;
+        
+      }
+      .signup-btn2 button{
+        margin-top: 20px;
+     }
+     .cancel-div{
         display: flex;
         justify-content: space-between;
        }
-    .contact-right {
-        width: 100%;  
+       .cancel-div i{
+        margin-top: 20px;
+       }
+       .menu-and-icon{
+        column-gap: 2.6rem;
     }
-    .dropdownmenu-container{
-        width: 60vw;
-        top: 3rem;
-        left: -2rem;
-        justify-content: center;
+    .menu-and-icon i{
+        margin-top: 20px;
     }
-    .form-section {
+   
+    
+}
+
+
+@media (max-width: 768px) {
+    .list-content{
+        display: none;
+   }
+   .h1-text{
+       display: flex;
+       font-size: 25px;
+       font-weight: 800;
+       color: #011800;
+   }
+   .signup-container{
+       display: none;
+      
+   }
+   .menu-btn{
+       display: block;
+   }
+   .sidebar{
+       display: block;
+       width: 70%;
+       height: 100vh;
+       background-color: #ecfce5;
+       box-shadow: 0px 0px 0px 5px rgba(0, 0 , 0, 0.1);
+      padding: 10px;
+      color: #011800;
+      font-size: 20px;
+      position: fixed;
+      top: 0;
+      left: -80%;
+      z-index:1000;  
+      transition: left 0.35s ease;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      }
+      
+      .sidebar.active{
+         left:0;
+      }
+      .sidebar-list-content{
+       display: block;
+       justify-content: center; 
+       align-items: start;
+       list-style: none;   
+       padding:20px 0px 20px 40px;
+         
+   }
+   .sidebar-list-content li{
+     margin-top: 4%;
+     font-weight: 600;
+     font-size: 15px;
+   
+   }
+   
+   
+   .sidebar-list-content li a:hover{
+       color:  #008000;
+     
+   }
+   .signup-btn2 button{
+      margin-top: 20px;
+   }
+      .cancel-div{
+       display: flex;
+       justify-content: space-between;
+      }
+      .cancel-div i{
+       margin-top: 10px;
+      }
+   .contact-right {
+       width: 100%;  
+   }
+   .dropdownmenu-container{
+     width: 60vw;
+     top: 3rem;
+     left: -2rem;
+     justify-content: center;
+     
+   }
+   .menu-and-icon{
+       column-gap: 2.6rem;
+   }
+   .menu-and-icon i{
+       margin-top: 5px;
+   }     
+      .form-section {
         padding: 1rem;
        
     }
@@ -462,4 +542,6 @@ a:hover{
        
     }  
 }
+
+
 
