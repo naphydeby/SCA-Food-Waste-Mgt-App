@@ -9,7 +9,7 @@
 </head>
 <body>
    <div class="dashboard-container">
-        <button id="menu-btn" class="menu-btn">☰</button>
+        
       <aside class="sidebar">
         <div class="logo">
           <img src="/image/Logo.png" alt="FoodSalvage Logo">
@@ -29,7 +29,13 @@
         <!-- Include the user-left-sidebar.html content here -->
         <main class="main-content">
             <header class="top-bar">
-                <h1>Your Claim</h1>
+                <div class="welcome-text-menu-container">
+                    <div class="welcome-text">
+                        <h1>Your Claim</h1>
+                    </div>
+                    <button id="menu-btn" class="menu-btn">☰</button>
+                </div>
+                
             </header>
             <div class="order-tabs">
                 <button class="tab-btn active">Active claims</button>
@@ -43,3 +49,4 @@
     <script src="dashboard.js"></script>
 </body>
 </html>
+
