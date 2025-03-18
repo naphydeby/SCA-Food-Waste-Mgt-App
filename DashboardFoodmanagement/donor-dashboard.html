@@ -10,7 +10,7 @@
 <body>
     <div class="dashboard-container">
        
-        <button id="menu-btn" class="menu-btn">☰</button>
+      
         <!-- Sidebar -->
         <aside class="sidebar">
            
@@ -32,12 +32,19 @@
         <!-- Main Content -->
         <main class="main-content">
             <header class="top-bar">
-                <div class="welcome-text">
-                    <h1>Donor Dashboard</h1>
-                    <p>Manage your donations</p>
+                <div class="welcome-text-menu-container">
+                    <div class="welcome-text">
+                        <h1>Donor Dashboard</h1>
+                        <p>Manage your donations</p>
+                    </div>
+                    <button id="menu-btn" class="menu-btn">☰</button>
                 </div>
+                
                 <div class="search-bar">
-                    <i class="material-icons">search</i>
+                    <div>
+                        <i class="material-icons">search</i>
+                    </div>
+                    
                     <input type="text" placeholder="Search donations...">
                 </div>
                 <div class="user-profile">
