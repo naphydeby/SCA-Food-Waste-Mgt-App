@@ -9,7 +9,7 @@
 </head>
 <body>
    <div class="dashboard-container">
-        <button id="menu-btn" class="menu-btn">☰</button>
+    
         <!-- Include the donor-left-sidebar.html content here -->
         <aside class="sidebar">
           <div class="logo">
@@ -29,11 +29,19 @@
       </aside>
         <main class="main-content">
             <header class="top-bar">
-                <h1>Donation Analytics</h1>
-                <div class="time-period-selector">
-                    <!-- Add time period selector component here -->
+
+                <div class="welcome-text-menu-container">
+                    <div class="welcome-text">
+                        <h1>Donation Analytics</h1>
+                        <div class="time-period-selector">
+                            <!-- Add time period selector component here -->
+                        </div>
+                    </div>
+                    <button id="menu-btn" class="menu-btn">☰</button>
                 </div>
+                
             </header>
+           
             <div class="analytics-grid">
                 <div class="chart-container">
                     <h3>Donations Over Time</h3>
@@ -57,3 +65,4 @@
     <script src="dashboard.js"></script>
 </body>
 </html>
+
