@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="dashboard-container">
-        <button id="menu-btn" class="menu-btn">☰</button>
+        
         <!-- Include the donor-left-sidebar.html content here -->
         <aside class="sidebar">
           <div class="logo">
@@ -29,11 +29,17 @@
       </aside>
         <main class="main-content">
             <header class="top-bar">
-                <h1>Donation History</h1>
-                <div class="date-range-picker">
-                    <!-- Add date range picker component here -->
+                <div class="welcome-text-menu-container">
+                    <div class="welcome-text">
+                        <h1>Donation History</h1>
+                        <div class="date-range-picker">
+                            <!-- Add date range picker component here -->
+                        </div>
+                    </div>
+                    <button id="menu-btn" class="menu-btn">☰</button>
                 </div>
             </header>
+            
             <div class="history-table">
                 <table>
                     <thead>
@@ -55,3 +61,4 @@
     <script src="dashboard.js"></script>
 </body>
 </html>
+
