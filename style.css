@@ -199,7 +199,7 @@ a{
     cursor: pointer;
 }
 .signup-btn1 button:hover, .signup-btn2 button:hover{
-    background-color: #fffb25;
+    background-color: #ED7A00;
     color: #011800;
     transition: 0.3s ease;
     font-size: 1.4rem;
@@ -226,7 +226,7 @@ a{
  .hero{
     width: 100%;
     height: 100vh;
-    background-image:url(image/charityBackground.jpg);
+    background-image:url(image/heroimage.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: 4%;
@@ -280,8 +280,8 @@ button{
   color: white;
 }
 .findFoodButton{
-    background-color: #ffff00;
-    color: #008000;
+    background-color: #ED7A00;
+    color: #ffffff;
     margin-left: 2%;
 }
 .donateButton:hover{
@@ -967,7 +967,7 @@ button{
   font-size: 1.4rem;
   color: #ecfce5;
 
-
+}
 .socialicon i,
 .icon i {
     font-size: 1.4rem;
