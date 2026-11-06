@@ -1,4 +1,3 @@
-/* Reset and base styles */
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 * {
   margin: 0;
@@ -92,21 +91,9 @@ footer {
   color: #666;
 }
 
-@media (max-width: 480px) {
-  .login-container {
-      padding: 1.5rem;
-  }
 
-  .logo h1 {
-      font-size: 1.5rem;
-  }
 
-  h2 {
-      font-size: 1.2rem;
-  }
-}
-
-/* Dashboard Layout Donor */
+/* Dashboard Layout Donor  analytic*/
 .dashboard-container {
   display: grid;
   grid-template-columns: 250px 1fr 300px;
@@ -170,6 +157,8 @@ footer {
 .main-content {
   padding: 2rem;
   background-color: #ffffff;
+
+  width: 90%;
 }
 
 .top-bar {
@@ -190,24 +179,26 @@ footer {
 }
 
 .search-bar {
-  position: relative;
-  width: 300px;
-}
-
-.search-bar input {
-  width: 100%;
-  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  display: flex;
+  width: 50%;
+  height: 40px;
   border: 1px solid #eee;
   border-radius: 8px;
   font-size: 0.875rem;
+  padding: 2px;
+}
+
+.search-bar input {
+border: none;
+outline: none;
+margin-left: 5px;
+ 
 }
 
 .search-bar i {
-  position: absolute;
-  left: 0.75rem;
-  top: 50%;
-  transform: translateY(-50%);
   color: #666;
+  margin-top: 5px;
+  
 }
 
 .user-profile .avatar {
@@ -424,6 +415,7 @@ th {
   border-radius: 20px;
   font-size: 0.875rem;
   font-weight: 500;
+  
 }
 
 .status-pending {
@@ -441,16 +433,7 @@ th {
   color: #2563eb;
 }
 
-/* Responsive Design */
-@media (max-width: 1200px) {
-  .dashboard-container {
-      grid-template-columns: 250px 1fr;
-  }
-  
-  .right-sidebar {
-      display: none;
-  }
-}
+
 
 /* Add these styles to your existing styles.css file */
 
@@ -571,6 +554,119 @@ th {
   background-color: #388e3c; /* Darker green */
 }
 
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+#donation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+/* Labels */
+#donation-form label {
+  font-weight: bold;
+  text-align: left;
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Input Fields */
+#donation-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+#donation-form input:focus {
+  border-color: #007bff;
+}
+
+/* Dashboard Modal Styles */
+.dashboard-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard-modal .modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.dashboard-modal .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.dashboard-modal .close-btn:hover {
+  color: red;
+}
+
+/* Style for View Details button */
+.view-details-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.view-details-btn:hover {
+  background-color: #0056b3;
+}
+
+
+
 .history-table {
   background-color: #fff;
   border-radius: 8px;
@@ -606,40 +702,11 @@ th {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 1rem;
 }
-
-/* Responsive styles */
-@media (max-width: 768px) {
-  .menu-categories, .order-tabs, .donation-tabs {
-      flex-wrap: wrap;
-  }
-
-  .analytics-grid {
-      grid-template-columns: 1fr;
-  }
+.menu-btn {
+  display: none;
+ 
 }
 
-@media (max-width: 768px) {
-  .dashboard-container {
-      grid-template-columns: 1fr;
-  }
-  
-  .sidebar {
-      display: none;
-  }
-  
-  .top-bar {
-      flex-direction: column;
-      gap: 1rem;
-  }
-  
-  .search-bar {
-      width: 100%;
-  }
-  
-  .stats-grid {
-      grid-template-columns: 1fr;
-  }
-}
 
 /* order meal style */
 .meal-item {
@@ -697,19 +764,24 @@ th {
 }
 
 /* Button Styling */
-.save-button {
+.save-btn {
   background-color: #4CAF50;
   color: white;
   padding: 10px 20px;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  display: block;
+  margin-top: 15px;
 }
 
-.save-button:hover {
+.save-btn:hover {
   background-color: #45a049;
 }
+
+
+
 
 /* logout button */
 
@@ -720,3 +792,323 @@ th {
 #logout-link:hover {
   background-color: #ffdddd; /* Light red background on hover */
 }
+/* Style for View Details button */
+.view-details-btn {
+  background-color: #4CAF50; /* Green background */
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.view-details-btn:hover {
+  background-color: #8BC34A; /* Light green on hover */
+}
+
+/* Status badge styles */
+.status-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status-pending {
+  background-color: #9E9E9E; /* Grey for pending */
+  color: white;
+}
+
+.status-completed {
+  background-color: #4CAF50; /* Green for completed */
+  color: white;
+}
+
+.status-denied {
+  background-color: #F44336; /* Red for denied */
+  color: white;
+}
+
+
+/* order meal style */
+.meal-item {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.calendar-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* profile input details */
+/* Form Styling */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+/* Checkbox Styling */
+.form-group label {
+  display: flex;
+  align-items: center;
+}
+
+.form-group input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+
+
+
+
+/* logout button */
+
+#logout-link {
+  color: #ff4444; /* Red color for logout link */
+}
+
+#logout-link:hover {
+  background-color: #ffdddd; /* Light red background on hover */
+}
+/* Style for View Details button */
+.view-details-btn {
+  background-color: #4CAF50; /* Green background */
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.view-details-btn:hover {
+  background-color: #8BC34A; /* Light green on hover */
+}
+
+/* Status badge styles */
+.status-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status-pending {
+  background-color: #9E9E9E; /* Grey for pending */
+  color: white;
+}
+
+.status-completed {
+  background-color: #4CAF50; /* Green for completed */
+  color: white;
+}
+
+.status-denied {
+  background-color: #F44336; /* Red for denied */
+  color: white;
+}
+    /* Responsive styles */
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .dashboard-container {
+      grid-template-columns: 250px 1fr;
+  }
+  
+  .right-sidebar {
+      display: none;
+  }
+}
+
+
+          @media (max-width: 768px) {
+            .login-container {
+                padding: 1.5rem;
+            }
+          
+            .logo h1 {
+                font-size: 1.5rem;
+            }
+          
+            h2 {
+                font-size: 1rem;
+            }
+            .dashboard-container {
+              grid-template-columns: 1fr;
+          }
+          
+          .sidebar {
+              display: none;
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 250px;
+              height: 100vh;
+              background: #c8e6c9; /* Change color as needed */
+              box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+              transition: transform 0.3s ease-in-out;
+          }
+        
+          /* Show sidebar when toggled */
+          .sidebar.show-sidebar {
+              display: block;
+          }
+        
+          .top-bar {
+              flex-direction: column;
+              gap: 1rem;
+              justify-content: space-evenly;
+            
+          }
+        
+          .search-bar {
+              width: 50%;
+              margin-left: 0rem;
+          }
+          .main-content {
+            padding: 1rem;
+            width: 100%;
+          }
+          .stats-grid {
+              grid-template-columns: 1fr;
+              width: 100%;
+          }
+          .stat-card {
+            width: 90%;
+          }
+        .welcome-text-menu-container{
+          width: 90%;
+          display: flex;
+          justify-content: space-evenly;
+          
+        }
+          /* Hamburger menu button */
+          .menu-btn {
+            width: 40px;
+            height: 40px;
+              display: block;
+              background: #4caf50;
+              color: white;
+              padding: 0rem;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+              margin-left: 10px;
+             
+          }
+          .food-categories {
+            width: 80%;
+            display: grid;
+            gap: 1rem;
+            margin-bottom: 2rem;
+          }
+          .food-grid {
+           
+            grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+            column-gap: 1rem;
+            
+          }
+          
+          
+          .food-card-content {
+            padding: 0.5rem;
+          }
+          
+          
+          .food-card-price {
+            font-weight: bold;
+            color: #2e7d32; /* Dark green */
+          }
+          
+          .food-card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+          
+          .food-card-category {
+            font-size: 0.875rem;
+            color: #666;
+          }
+          
+          .menu-categories, .order-tabs, .donation-tabs {
+            flex-wrap: wrap;
+        }
+        th, td {
+          padding: 0.6rem; /* Reduce padding for better fit */
+          font-size: 0.85rem; /* Adjust font size for smaller screens */
+        }
+      
+        /* Stack table rows as blocks for smaller screens */
+        table, thead, tbody, th, td, tr {
+          display: block;
+          width: 100%;
+        }
+      
+        /* Hide table headers (they will be replaced by pseudo-elements) */
+        thead {
+          display: none;
+        }
+      
+        tr {
+          margin-bottom: 1rem;
+          border: 1px solid #eee;
+          border-radius: 8px;
+          padding: 0.8rem;
+          background: #fff;
+        }
+      
+        td {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0.6rem;
+          border-bottom: none;
+        }
+      
+        /* Use pseudo-elements to display column names */
+        td::before {
+          content: attr(data-label);
+          font-weight: 500;
+          color: #333;
+          text-transform: uppercase;
+          margin-right: 10px;
+        }
+        .analytics-grid {
+            grid-template-columns: 1fr;
+        }
+          }
+

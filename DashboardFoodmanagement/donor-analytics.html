@@ -8,12 +8,13 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <div class="dashboard-container">
+   <div class="dashboard-container">
+    
         <!-- Include the donor-left-sidebar.html content here -->
         <aside class="sidebar">
           <div class="logo">
-            <img src="/images/image/WhatsApp_Image_2025-02-06_at_10.12.19_90829287-removebg-preview.png" alt="FoodSavage Logo">
-            <h2>Food Savage</h2>
+            <img src="/image/Logo.png" alt="FoodSalvage Logo">
+            <h2>Food Salvage</h2>
         </div>
         <nav class="sidebar-nav">
             <a href="donor-dashboard.html"><i class="material-icons">dashboard</i>Dashboard</a>
@@ -28,11 +29,19 @@
       </aside>
         <main class="main-content">
             <header class="top-bar">
-                <h1>Donation Analytics</h1>
-                <div class="time-period-selector">
-                    <!-- Add time period selector component here -->
+
+                <div class="welcome-text-menu-container">
+                    <div class="welcome-text">
+                        <h1>Donation Analytics</h1>
+                        <div class="time-period-selector">
+                            <!-- Add time period selector component here -->
+                        </div>
+                    </div>
+                    <button id="menu-btn" class="menu-btn">☰</button>
                 </div>
+                
             </header>
+           
             <div class="analytics-grid">
                 <div class="chart-container">
                     <h3>Donations Over Time</h3>
@@ -56,3 +65,4 @@
     <script src="dashboard.js"></script>
 </body>
 </html>
+

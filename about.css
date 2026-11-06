@@ -35,6 +35,7 @@
 }
 
 .logo-container img{
+  margin-top: 10px;
     width: 70px;
     height: 70px;
 }
@@ -61,6 +62,8 @@
     cursor: pointer;
     list-style: none;
     padding: 1rem;
+    color: #011800;
+   
 }
 
 .menu-and-icon{
@@ -69,11 +72,7 @@
     justify-content: start;
     align-items: center;
     column-gap: 0.6rem;
-
     position: relative;
-
-    position: relative;
-
 }
 .menu-links ul li a, i {
     text-decoration: none;
@@ -81,7 +80,7 @@
 }
 
 .menu-links ul li a:hover, i:hover {
-    color: red;
+    color:  #008000;
     transition: 0.5s ease;
 }
 .menu-links ul li a.active, i.active {
@@ -90,10 +89,7 @@
 }
 
 .dropdownmenu-container{
-
   width: 16vw;
-  width: 16vw;
-
   height: auto;
   background-color: #b0ee9a;
   display: none;
@@ -103,7 +99,7 @@
   align-items: center;
   row-gap: 0.8rem;
   border-radius: 0.4rem; 
-  top: 1.8rem;
+  top: 3rem;
 }
 
 .dropdown-div{
@@ -212,6 +208,7 @@ a{
     outline: none;
     border: none;
 }
+
 .menu-btn{
     display: none;
 }
@@ -487,7 +484,6 @@ a{
     justify-content: start;
     align-items: start;
     row-gap: 1.2rem;
-    
 }
 
 .footerlinks ul,
@@ -500,7 +496,6 @@ a{
     align-items: start;
     row-gap: 1.2rem;
     list-style: none;
-
 }
 
 .socials {
@@ -539,6 +534,11 @@ a{
     column-gap: 1rem;
 }
 
+.socialicon i, .icon i{
+  font-size: 1.4rem;
+  color: #ecfce5;
+
+}
 .socialicon i,
 .icon i {
     font-size: 1.4rem;
@@ -586,6 +586,137 @@ a{
     font-size: 1.4rem;
 }
 
+@media (max-width: 1024px) {
+   
+    .menu-links {
+        display: none; 
+    }
+    .signup-container {
+        display: none; 
+    }
+    
+    .menu-btn {
+        display: block; 
+    }
+    .sidebar{
+          display: block;
+        width: 70%;
+        height: 100vh;
+        background-color: #ecfce5;
+        box-shadow: 0px 0px 0px 5px rgba(0, 0 , 0, 0.1);
+       padding: 10px;
+       color: #011800;
+       font-size: 20px;
+       position: fixed;
+       top: 0;
+       left: -80%;
+       z-index:1000;  
+       transition: left 0.35s ease;
+       border-top-right-radius: 10px;
+       border-bottom-right-radius: 10px;
+       }
+   
+    .sidebar.active {
+        left: 0; 
+    }
+    .sidebar-list-content{
+        display: block;
+        justify-content: center; 
+        align-items: start;
+        list-style: none;   
+        padding:20px 0px 20px 40px;
+          
+    }
+    .sidebar-list-content li{
+        margin-top: 4%;
+        font-weight: 600;
+        font-size: 20px;
+      
+      }
+      .dropdownmenu-container{
+        width: 50vw;
+        top: 5rem;
+        left: 2rem;
+        justify-content: center;
+        
+      }
+      .signup-btn2 button{
+        margin-top: 20px;
+     }
+     .cancel-div{
+        display: flex;
+        justify-content: space-between;
+       }
+       .cancel-div i{
+        margin-top: 20px;
+       }
+       .menu-and-icon{
+        column-gap: 2.6rem;
+    }
+    .menu-and-icon i{
+        margin-top: 20px;
+    }
+    /* Hero Section */
+    .name {
+        padding: 10rem 2rem;
+        text-align: center;
+    }
+    .aboutheading-text h1 {
+        font-size: 2.5rem; 
+    }
+
+    /*  About Section */
+    .aboutintro {
+        flex-direction: column;
+        padding: 3rem 4rem;
+        text-align: center;
+    }
+    .aboutus-container {
+        width: 100%;
+        align-items: center;
+    }
+    .aboutimage img {
+        width: 90%; 
+        height: auto;
+    }
+
+    /*  Mission Section */
+    .missioncard-container {
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+    }
+    .card {
+        width: 45%; 
+        padding: 1.5rem;
+    }
+
+    /*  Team Section */
+    .profilecard {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .teamprofile {
+        width: 45%;
+    }
+
+    /*  Footer Adjustments */
+    .footer-top, .footer-mid, .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .quicklinks, .footercontact, .foothead {
+        width: 100%;
+        align-items: flex-start;
+        text-align: left;         
+    }
+    .quicklinks ul {
+        padding-left: 0; 
+    }
+}
+
+
 @media (max-width: 768px) {
        
     .list-content{
@@ -595,7 +726,7 @@ a{
         display: flex;
         font-size: 25px;
         font-weight: 800;
-        color: #007600;
+        color: #011800;
     }
     .signup-container{
         display: none;
@@ -608,10 +739,10 @@ a{
         display: block;
         width: 70%;
         height: 100vh;
-        background-color: white;
+        background-color: #ecfce5;
         box-shadow: 0px 0px 0px 5px rgba(0, 0 , 0, 0.1);
        padding: 10px;
-       color: gray;
+       color: #011800;
        font-size: 20px;
        position: fixed;
        top: 0;
@@ -636,17 +767,13 @@ a{
     .sidebar-list-content li{
       margin-top: 4%;
       font-weight: 600;
-      font-size: 20px;
+      font-size: 15px;
     
     }
     
-    .sidebar-list-content li a{
-      text-decoration: none;
-      color: #008000;
-      transition: background-color 0.3s ease;
-    }
+    
     .sidebar-list-content li a:hover{
-      color: #ffff00;
+        color:  #008000;
       
     }
     .signup-btn2 button{
@@ -656,15 +783,27 @@ a{
         display: flex;
         justify-content: space-between;
        }
+       .cancel-div i{
+        margin-top: 10px;
+       }
     .contact-right {
         width: 100%;  
     }
     .dropdownmenu-container{
-      width: 50vw;
+      width: 60vw;
       top: 3rem;
+      left: -2rem;
+      justify-content: center;
+      
+    }
+    .menu-and-icon{
+        column-gap: 2.6rem;
+    }
+    .menu-and-icon i{
+        margin-top: 5px;
     }
     .name {
-        padding: 8rem 1.5rem;
+        padding: 6rem 1rem;
         text-align: center;
     }
     .aboutheading-text h1 {
@@ -675,8 +814,10 @@ a{
     }
     /* introductory info */
     .aboutintro {
-        flex-direction: column;
+    
         padding: 3rem 2rem;
+         flex-direction: column;
+        align-items: center;
         text-align: center;
     }
     .aboutus-container {
@@ -693,6 +834,7 @@ a{
     }
     .missioncard-container{
         flex-direction: column;
+        
     }
     .missionsection{
         padding: 1rem 3rem 1.5rem 3rem;
@@ -701,6 +843,7 @@ a{
         width: 100%;
         padding: 1rem;
         margin-top: 20px;
+        margin-bottom: 1rem;
        
     }
     /* section introducing team member */
@@ -709,11 +852,12 @@ a{
         align-items: center;
     }
     .profilecard {
-       
+        row-gap: 1rem;
         flex-direction: column;
     }
     .teamprofile{
         width: 100%;
+        
     }
     .teamheading h2{
         font-size: 1.5rem;
@@ -721,6 +865,7 @@ a{
     }
    /* footer */
    .footer-top, .footer-mid, .footer-bottom {
+    width: 100%;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -728,9 +873,12 @@ a{
 
 .quicklinks, .footercontact, .foothead {
     width: 100%;
+    align-items: flex-start;
+    text-align: left;         
 }
-
-
+.quicklinks ul {
+    padding-left: 0; 
+}
 .socials-icon {
     padding: 1rem;
     column-gap: 1rem;
@@ -760,3 +908,8 @@ a{
    
 }
 }
+
+
+
+
+

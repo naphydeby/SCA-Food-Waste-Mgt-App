@@ -21,7 +21,7 @@
 .navbar{
     width: 100%;
     height: auto;
-    padding: 2rem 4rem 2rem 5rem;
+    padding: 2rem 2rem 2rem 5rem;
     background-color: #ecfce5;
     display: flex;
     flex-direction: row;
@@ -35,12 +35,13 @@
 }
 
 .logo-container img{
+    margin-top: 10px;
     width: 70px;
     height: 70px;
 }
 
 .menu-links{
-    width: 70%;
+    width: 60%;
     height: auto;
     display: flex;
     flex-direction: row;
@@ -56,11 +57,12 @@
     justify-content: space-between;
     align-items: center;
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: 500;
     cursor: pointer;
     list-style: none;
     padding: 1rem;
+    color: #011800;
 }
 
 .menu-and-icon{
@@ -78,7 +80,7 @@
 }
 
 .menu-links ul li a:hover, i:hover {
-    color: red;
+    color:  #008000;
     transition: 0.5s ease;
 }
 .menu-links ul li a.active, i.active {
@@ -159,7 +161,7 @@ a{
 }
 
 .signup-container{
-    width: 23%;
+    width: 25%;
     height: auto;
     padding: 0.8rem;
     display: flex;
@@ -188,7 +190,7 @@ a{
 .signup-btn2 button{
     width: 100%;
     height: auto;
-    padding: 0.7rem 1rem;
+    padding: 0.8rem 1rem;
     background-color: #fffb0309;
     color: #011800;
     font-size: 1.2rem;
@@ -361,3 +363,185 @@ a:hover{
     color: red;
     transition: 0.5s ease;
 }
+.menu-btn{
+    display: none;
+}
+.sidebar{
+    display: none;
+  }
+  @media (max-width: 1024px) {
+   
+    .menu-links {
+        display: none; 
+    }
+    .signup-container {
+        display: none; 
+    }
+    
+    .menu-btn {
+        display: block; 
+    }
+    .sidebar{
+          display: block;
+        width: 70%;
+        height: 100vh;
+        background-color: #ecfce5;
+        box-shadow: 0px 0px 0px 5px rgba(0, 0 , 0, 0.1);
+       padding: 10px;
+       color: #011800;
+       font-size: 20px;
+       position: fixed;
+       top: 0;
+       left: -80%;
+       z-index:1000;  
+       transition: left 0.35s ease;
+       border-top-right-radius: 10px;
+       border-bottom-right-radius: 10px;
+       }
+   
+    .sidebar.active {
+        left: 0; 
+    }
+    .sidebar-list-content{
+        display: block;
+        justify-content: center; 
+        align-items: start;
+        list-style: none;   
+        padding:20px 0px 20px 40px;
+          
+    }
+    .sidebar-list-content li{
+        margin-top: 4%;
+        font-weight: 600;
+        font-size: 20px;
+      
+      }
+      .dropdownmenu-container{
+        width: 50vw;
+        top: 5rem;
+        left: 2rem;
+        justify-content: center;
+        
+      }
+      .signup-btn2 button{
+        margin-top: 20px;
+     }
+     .cancel-div{
+        display: flex;
+        justify-content: space-between;
+       }
+       .cancel-div i{
+        margin-top: 20px;
+       }
+       .menu-and-icon{
+        column-gap: 2.6rem;
+    }
+    .menu-and-icon i{
+        margin-top: 20px;
+    }
+   
+    
+}
+
+
+@media (max-width: 768px) {
+    .list-content{
+        display: none;
+   }
+   .h1-text{
+       display: flex;
+       font-size: 25px;
+       font-weight: 800;
+       color: #011800;
+   }
+   .signup-container{
+       display: none;
+      
+   }
+   .menu-btn{
+       display: block;
+   }
+   .sidebar{
+       display: block;
+       width: 70%;
+       height: 100vh;
+       background-color: #ecfce5;
+       box-shadow: 0px 0px 0px 5px rgba(0, 0 , 0, 0.1);
+      padding: 10px;
+      color: #011800;
+      font-size: 20px;
+      position: fixed;
+      top: 0;
+      left: -80%;
+      z-index:1000;  
+      transition: left 0.35s ease;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      }
+      
+      .sidebar.active{
+         left:0;
+      }
+      .sidebar-list-content{
+       display: block;
+       justify-content: center; 
+       align-items: start;
+       list-style: none;   
+       padding:20px 0px 20px 40px;
+         
+   }
+   .sidebar-list-content li{
+     margin-top: 4%;
+     font-weight: 600;
+     font-size: 15px;
+   
+   }
+   
+   
+   .sidebar-list-content li a:hover{
+       color:  #008000;
+     
+   }
+   .signup-btn2 button{
+      margin-top: 20px;
+   }
+      .cancel-div{
+       display: flex;
+       justify-content: space-between;
+      }
+      .cancel-div i{
+       margin-top: 10px;
+      }
+   .contact-right {
+       width: 100%;  
+   }
+   .dropdownmenu-container{
+     width: 60vw;
+     top: 3rem;
+     left: -2rem;
+     justify-content: center;
+     
+   }
+   .menu-and-icon{
+       column-gap: 2.6rem;
+   }
+   .menu-and-icon i{
+       margin-top: 5px;
+   }     
+      .form-section {
+        padding: 1rem;
+       
+    }
+    
+    .tabs {  
+        width: 100%;
+       
+    }  
+    .tab-content {  
+        width: 100%;
+       
+    }  
+}
+
+
+

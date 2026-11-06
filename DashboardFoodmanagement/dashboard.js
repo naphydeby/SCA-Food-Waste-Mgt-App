@@ -1,71 +1,35 @@
 // Sample data for food items
-// Sample data for food items
 const foodItems = [
     {
         id: 1,
         name: "Bread",
-    
         category: "Snacks",
         image: "/DashboardFoodmanagement/images/foodimages/bread.jpg"
     },
     {
         id: 2,
         name: "Rice",
-        
         category: "FreshFood",
         image: "/DashboardFoodmanagement/images/foodimages/rice.jpg"
     },
     {
         id: 3,
         name: "Provisions",
-        
         category: "Canned food",
         image: "/DashboardFoodmanagement/images/foodimages/canned food.jpg"
     },
-    
-   
     {
         id: 6,
         name: "beans",
-        
         category: "RawFood",
         image: "/DashboardFoodmanagement/images/foodimages/beans.jpg"
     },
-    
-   
     {
         id: 9,
         name: "Yam",
-        
         category: "Dinner",
         image: "/DashboardFoodmanagement/images/foodimages/yam.jpg"
     },
-  
-  ];
-
-// Sample data for donation requests
-const donationRequests = [
-  {
-      id: "DON-123",
-      recipient: "Sarah Johnson",
-      address: "123 Main St",
-      items: "Vegetables, Bread",
-      status: "Pending"
-  },
-  {
-      id: "DON-124",
-      recipient: "Mike Smith",
-      address: "456 Oak Ave",
-      items: "Canned Goods",
-      status: "Completed"
-  },
-  {
-      id: "DON-125",
-      recipient: "Emma Davis",
-      address: "789 Pine Rd",
-      items: "Fresh food",
-      status: "Denied"
-  }
 ];
 
 // Initialize the dashboards when the DOM is loaded
@@ -107,16 +71,161 @@ function initializeUserDashboard() {
   });
 }
 
+// Sample donation requests data
+const donationRequests = [
+    { id: 1, recipient: "John Doe", address: "123 Food Street", items: "Rice, Beans, Oil", status: "Pending" },
+    { id: 2, recipient: "Jane Smith", address: "456 Health Ave", items: "Canned Food, Milk", status: "Completed" },
+    { id: 3, recipient: "Robert Johnson", address: "789 Charity Blvd", items: "Vegetables, Fruits", status: "Denied" },
+];
+
+// Function to create table rows for donations
+function createDonationRow(request) {
+    const row = document.createElement("tr");
+    
+    // Determine the status class
+    let statusClass = "";
+    switch(request.status.toLowerCase()) {
+        case "pending":
+            statusClass = "status-pending";
+            break;
+        case "completed":
+            statusClass = "status-completed";
+            break;
+        case "denied":
+            statusClass = "status-denied";
+            break;
+        default:
+            statusClass = "status-pending";
+    }
+
+    row.innerHTML = `
+        <td>${request.id}</td>
+        <td>${request.recipient}</td>
+        <td>${request.address}</td>
+        <td>${request.items}</td>
+        <td><span class="status-badge ${statusClass}">${request.status}</span></td>
+        <td><button class="view-details-btn" data-id="${request.id}">View Details</button></td>
+    `;
+
+    return row;
+}
+
+// Function to initialize the donor dashboard
 function initializeDonorDashboard() {
-  const donationTable = document.getElementById('donation-table-body');
-  
-  if (donationTable) {
-      // Populate donation requests table
-      donationRequests.forEach(request => {
-          const row = createDonationRow(request);
-          donationTable.appendChild(row);
-      });
-  }
+    const donationTable = document.getElementById("donation-table-body");
+    const modal = document.getElementById("donation-modal");
+    const modalContent = document.getElementById("donation-summary");
+    const closeModal = document.querySelector(".close-btn");
+
+    if (donationTable) {
+        // Populate donation requests table
+        donationRequests.forEach(request => {
+            const row = createDonationRow(request);
+            donationTable.appendChild(row);
+        });
+
+        // Add click event listeners to all view details buttons
+        const viewButtons = document.querySelectorAll(".view-details-btn");
+        viewButtons.forEach(button => {
+            button.addEventListener("click", function() {
+                const requestId = this.getAttribute("data-id");
+                const request = donationRequests.find(req => req.id == requestId);
+
+                if (request) {
+                    modalContent.innerHTML = `
+                        <p><strong>Recipient:</strong> ${request.recipient}</p>
+                        <p><strong>Address:</strong> ${request.address}</p>
+                        <p><strong>Items:</strong> ${request.items}</p>
+                        <p><strong>Status:</strong> <span class="status-badge status-${request.status.toLowerCase()}">${request.status}</span></p>
+                    `;
+
+                    modal.style.display = "flex"; // Show modal
+                }
+            });
+        });
+
+        // Also use event delegation for dynamically created buttons
+        document.addEventListener("click", function(event) {
+            if (event.target.classList.contains("view-details-btn")) {
+                const requestId = event.target.getAttribute("data-id");
+                const request = donationRequests.find(req => req.id == requestId);
+
+                if (request) {
+                    modalContent.innerHTML = `
+                        <p><strong>Recipient:</strong> ${request.recipient}</p>
+                        <p><strong>Address:</strong> ${request.address}</p>
+                        <p><strong>Items:</strong> ${request.items}</p>
+                        <p><strong>Status:</strong> <span class="status-badge status-${request.status.toLowerCase()}">${request.status}</span></p>
+                    `;
+
+                    modal.style.display = "flex"; // Show modal
+                }
+            }
+        });
+
+        // Close modal when clicking the close button
+        if (closeModal) {
+            closeModal.addEventListener("click", function() {
+                modal.style.display = "none";
+            });
+        }
+
+        // Close modal when clicking outside the modal content
+        window.addEventListener("click", function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    }
+}
+
+function createFoodCard(item) {
+  const card = document.createElement('div');
+  card.className = 'food-card';
+  card.innerHTML = `
+      <img src="${item.image}" alt="${item.name}">
+      <div class="food-card-content">
+          <div class="food-card-title">
+              <h3>${item.name}</h3>
+          </div>
+          <div class="food-card-footer">
+              <span class="food-card-category">${item.category}</span>
+              <button class="order-button">claim</button>
+          </div>
+      </div>
+  `;
+  const claimButton = card.querySelector('.order-button');
+  claimButton.addEventListener('click', () => {
+    window.location.href = "user-dashboard.html"; // Redirect with item ID
+  });
+  return card;
+}
+
+function createMealItem(item) {
+  const mealItem = document.createElement('div');
+  mealItem.className = 'meal-item';
+  mealItem.innerHTML = `
+      <img src="${item.image}" alt="${item.name}">
+      <div class="meal-item-content">
+          <div class="meal-item-title">${item.name}</div>
+          <div class="meal-item-time">${item.category}</div>
+      </div>
+  `;
+  return mealItem;
+}
+
+function createMenuCard(item) {
+  const card = document.createElement('div');
+  card.className = 'menu-card';
+  card.innerHTML = `
+      <img src="${item.image}" alt="${item.name}">
+      <div class="menu-card-content">
+          <h3>${item.name}</h3>
+          <p>${item.category}</p>
+          <span class="menu-card-price">$${item.price ? item.price.toFixed(2) : '0.00'}</span>
+      </div>
+  `;
+  return card;
 }
 
 function initializeMenuPage() {
@@ -141,70 +250,6 @@ function initializeMenuPage() {
   }
 }
 
-function createFoodCard(item) {
-  const card = document.createElement('div');
-  card.className = 'food-card';
-  card.innerHTML = `
-      <img src="${item.image}" alt="${item.name}">
-      <div class="food-card-content">
-          <div class="food-card-title">
-              <h3>${item.name}</h3>
-              
-          </div>
-          <div class="food-card-footer">
-              <span class="food-card-category">${item.category}</span>
-              <button class="order-button">claim</button>
-              
-          </div>
-      </div>
-  `;
-  const claimButton = card.querySelector('.order-button');
-  claimButton.addEventListener('click', () => {
-    window.location.href = "user-dashboard.html"; // Redirect with item ID
-  });
-  return card;
-}
-
-function createMealItem(item) {
-  const mealItem = document.createElement('div');
-  mealItem.className = 'meal-item';
-  mealItem.innerHTML = `
-      <img src="${item.image}" alt="${item.name}">
-      <div class="meal-item-content">
-          <div class="meal-item-title">${item.name}</div>
-          <div class="meal-item-time">${item.category}</div>
-      </div>
-  `;
-  return mealItem;
-}
-
-function createDonationRow(request) {
-  const row = document.createElement('tr');
-  row.innerHTML = `
-      <td>${request.id}</td>
-      <td>${request.recipient}</td>
-      <td>${request.address}</td>
-      <td>${request.items}</td>
-      <td><span class="status-badge status-${request.status.toLowerCase()}">${request.status}</span></td>
-      <td><button class="order-button">View Details</button></td>
-  `;
-  return row;
-}
-
-function createMenuCard(item) {
-  const card = document.createElement('div');
-  card.className = 'menu-card';
-  card.innerHTML = `
-      <img src="${item.image}" alt="${item.name}">
-      <div class="menu-card-content">
-          <h3>${item.name}</h3>
-          <p>${item.category}</p>
-          <span class="menu-card-price">$${item.price.toFixed(2)}</span>
-      </div>
-  `;
-  return card;
-}
-
 function filterFoodItems(category) {
   const foodCards = document.querySelectorAll('.food-card');
   foodCards.forEach(card => {
@@ -217,8 +262,6 @@ function filterFoodItems(category) {
   });
 }
 
-
-
 function filterMenuItems(category) {
     const menuCards = document.querySelectorAll('.menu-card');
     menuCards.forEach(card => {
@@ -229,7 +272,7 @@ function filterMenuItems(category) {
             card.style.display = 'none';
         }
     });
-  }
+}
 
 // Search functionality
 function setupSearchFunctionality() {
@@ -324,6 +367,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Function to render orders
     function renderOrders(orders) {
+        if (!ordersList) return;
+        
         ordersList.innerHTML = ''; // Clear current orders
         orders.forEach(order => {
             const orderItem = document.createElement('div');
@@ -339,24 +384,26 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Initial render of Active Orders
-    renderOrders(activeOrders);
+    if (ordersList && tabButtons.length > 0) {
+        renderOrders(activeOrders);
 
-    // Tab switching functionality
-    tabButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Remove active class from all buttons
-            tabButtons.forEach(btn => btn.classList.remove('active'));
-            // Add active class to the clicked button
-            this.classList.add('active');
+        // Tab switching functionality
+        tabButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to the clicked button
+                this.classList.add('active');
 
-            // Render the appropriate orders based on the button text
-            if (this.textContent === "Active Orders") {
-                renderOrders(activeOrders);
-            } else if (this.textContent === "Past Orders") {
-                renderOrders(pastOrders);
-            }
+                // Render the appropriate orders based on the button text
+                if (this.textContent === "Active Orders") {
+                    renderOrders(activeOrders);
+                } else if (this.textContent === "Past Orders") {
+                    renderOrders(pastOrders);
+                }
+            });
         });
-    });
+    }
 });
 
 // schedule js 
@@ -405,6 +452,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to render upcoming meals for a specific date
     function renderUpcomingMeals(date) {
+        if (!scheduledMealsSection) return;
+        
         const mealsForDate = upcomingMeals.filter(meal => meal.date === date);
         scheduledMealsSection.innerHTML = "<h2>Upcoming Meals</h2>"; // Reset the heading
 
@@ -426,6 +475,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to render a basic calendar with available dates
     function renderCalendar() {
+        if (!calendarView) return;
+        
         const calendarInput = document.createElement("input");
         calendarInput.type = "date";
         calendarInput.className = "calendar-input";
@@ -449,7 +500,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Initial render
-    renderCalendar();
+    if (calendarView) {
+        renderCalendar();
+    }
 });
 
 //logout js
@@ -468,27 +521,69 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-//donor dashboard js data
 document.addEventListener("DOMContentLoaded", function () {
-    // Sample donation data
     const activeDonations = [
         { id: 1, title: "Canned Food", quantity: "10 boxes", date: "2025-02-05" },
         { id: 2, title: "Bags of Rice", quantity: "5 bags", date: "2025-02-04" },
     ];
-    
-    const scheduledDonations = [
-        { id: 3, title: "Milk Cartons", quantity: "20 cartons", date: "2025-02-10" },
-    ];
 
-    const donationHistory = [
-        { date: "2025-02-01", recipient: "Local Shelter", items: "5kg Rice, 10 Cans of Beans", status: "Delivered" },
-        { date: "2025-01-28", recipient: "Community Kitchen", items: "15 Packs of Noodles", status: "Pending" },
-    ];
+    const modal = document.getElementById("donation-modal");
+    const openModalBtn = document.querySelector(".primary-btn");
+    const closeModalBtn = document.querySelector(".close-btn");
+    const donationForm = document.getElementById("donation-form");
 
-    // Populate active donations by default
+    // Open modal
+    if (openModalBtn) {
+        openModalBtn.addEventListener("click", () => {
+            if (modal) modal.style.display = "flex";
+        });
+    }
+
+    // Close modal
+    if (closeModalBtn && modal) {
+        closeModalBtn.addEventListener("click", () => {
+            modal.style.display = "none";
+        });
+    }
+
+    // Close modal if user clicks outside modal content
+    if (modal) {
+        window.addEventListener("click", (event) => {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    }
+
+    // Handle form submission
+    if (donationForm) {
+        donationForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            const title = document.getElementById("donation-title").value;
+            const quantity = document.getElementById("donation-quantity").value;
+            const date = new Date().toISOString().split("T")[0];
+
+            if (!title || !quantity) return;
+
+            const newDonation = { id: activeDonations.length + 1, title, quantity: quantity + " units", date };
+
+            activeDonations.push(newDonation);
+            renderDonations(activeDonations);
+
+            // Close modal
+            if (modal) modal.style.display = "none";
+            donationForm.reset();
+        });
+    }
+
+    // Render donation items
     function renderDonations(donations) {
         const list = document.querySelector(".donations-list");
-        list.innerHTML = ""; // Clear list
+        if (!list) return;
+        
+        list.innerHTML = "";
+
         donations.forEach(donation => {
             const item = document.createElement("div");
             item.classList.add("donation-item");
@@ -501,46 +596,24 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    renderDonations(activeDonations);
-
-    // Tab switching functionality
-    document.querySelectorAll(".tab-btn").forEach((button, index) => {
-        button.addEventListener("click", () => {
-            document.querySelector(".tab-btn.active").classList.remove("active");
-            button.classList.add("active");
-            renderDonations(index === 0 ? activeDonations : scheduledDonations);
-        });
-    });
-
-    // Add new donation
-    document.querySelector(".primary-btn").addEventListener("click", () => {
-        // Prompt user for donation details
-        const title = prompt("Enter donation item name:");
-        if (!title) return; // Exit if no input
-    
-        const quantity = prompt("Enter quantity:");
-        if (!quantity) return;
-    
-        const date = new Date().toISOString().split("T")[0];
-    
-        // Create new donation object
-        const newDonation = {
-            id: activeDonations.length + 1,
-            title: title,
-            quantity: quantity + " units",
-            date: date,
-        };
-    
-        // Add donation and re-render list
-        activeDonations.push(newDonation);
+    const donationsList = document.querySelector(".donations-list");
+    if (donationsList) {
         renderDonations(activeDonations);
-    });
-    
+    }
+
+    // Donation History Data
+    const donationHistory = [
+        { date: "2025-02-01", recipient: "Lagos Food Bank", items: "Canned Food, Rice, Water", status: "Delivered" },
+        { date: "2025-01-28", recipient: "Hope Foundation", items: "Bread, Milk, Snacks", status: "Pending" },
+        { date: "2025-01-20", recipient: "Red Cross", items: "Vegetables, Fruits", status: "Delivered" },
+        { date: "2025-01-15", recipient: "Orphanage Home", items: "Clothing, Shoes", status: "Completed" },
+    ];
 
     // Populate Donation History Table
     function renderDonationHistory() {
         const tableBody = document.querySelector(".history-table tbody");
         if (!tableBody) return;
+        
         tableBody.innerHTML = "";
         donationHistory.forEach(entry => {
             const row = document.createElement("tr");
@@ -548,7 +621,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <td>${entry.date}</td>
                 <td>${entry.recipient}</td>
                 <td>${entry.items}</td>
-                <td>${entry.status}</td>
+                <td><span class="status-badge status-${entry.status.toLowerCase()}">${entry.status}</span></td>
                 <td><button class='view-btn'>View</button></td>
             `;
             tableBody.appendChild(row);
@@ -557,7 +630,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     renderDonationHistory();
 });
-//histrory data
+
+//history data
 document.addEventListener("DOMContentLoaded", function () {
     const historyTableBody = document.querySelector(".history-table tbody");
 
@@ -571,6 +645,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to render table rows
     function renderTable() {
+        if (!historyTableBody) return;
+        
         historyTableBody.innerHTML = ""; // Clear previous data
         donationHistory.forEach((donation, index) => {
             const row = document.createElement("tr");
@@ -578,7 +654,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <td>${donation.date}</td>
                 <td>${donation.recipient}</td>
                 <td>${donation.items}</td>
-                <td>${donation.status}</td>
+                <td><span class="status-badge status-${donation.status.toLowerCase()}">${donation.status}</span></td>
                 <td><button class="delete-btn" data-index="${index}">Delete</button></td>
             `;
             historyTableBody.appendChild(row);
@@ -586,16 +662,18 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Delete donation history entry
-    historyTableBody.addEventListener("click", function (event) {
-        if (event.target.classList.contains("delete-btn")) {
-            const index = event.target.getAttribute("data-index");
-            donationHistory.splice(index, 1); // Remove from array
-            renderTable(); // Re-render table
-        }
-    });
+    if (historyTableBody) {
+        historyTableBody.addEventListener("click", function (event) {
+            if (event.target.classList.contains("delete-btn")) {
+                const index = event.target.getAttribute("data-index");
+                donationHistory.splice(index, 1); // Remove from array
+                renderTable(); // Re-render table
+            }
+        });
 
-    // Initial render
-    renderTable();
+        // Initial render
+        renderTable();
+    }
 });
 
 // donor history data js
@@ -630,31 +708,68 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     // Populating the Analytics Page
-    document.querySelector(".analytics-grid").innerHTML = `
-        <div class="chart-container">
-            <h3>Donations Over Time</h3>
-            <ul>
-                ${donationsOverTime.map(d => `<li>${d.month}: ${d.count} donations</li>`).join('')}
-            </ul>
-        </div>
-        <div class="chart-container">
-            <h3>Top Donated Items</h3>
-            <ul>
-                ${topDonatedItems.map(item => `<li>${item.item}: ${item.count} times</li>`).join('')}
-            </ul>
-        </div>
-        <div class="chart-container">
-            <h3>Impact Summary</h3>
-            <p>Total Donations: ${impactSummary.totalDonations}</p>
-            <p>Total Beneficiaries: ${impactSummary.totalBeneficiaries}</p>
-            <p>Food Distributed: ${impactSummary.foodDistributed}</p>
-        </div>
-        <div class="chart-container">
-            <h3>Recipient Demographics</h3>
-            <ul>
-                ${Object.entries(recipientDemographics).map(([group, count]) => `<li>${group}: ${count} people</li>`).join('')}
-            </ul>
-        </div>
-    `;
+    const analyticsGrid = document.querySelector(".analytics-grid");
+    if (analyticsGrid) {
+        analyticsGrid.innerHTML = `
+            <div class="chart-container">
+                <h3>Donations Over Time</h3>
+                <ul>
+                    ${donationsOverTime.map(d => `<li>${d.month}: ${d.count} donations</li>`).join('')}
+                </ul>
+            </div>
+            <div class="chart-container">
+                <h3>Top Donated Items</h3>
+                <ul>
+                    ${topDonatedItems.map(item => `<li>${item.item}: ${item.count} times</li>`).join('')}
+                </ul>
+            </div>
+            <div class="chart-container">
+                <h3>Impact Summary</h3>
+                <p>Total Donations: ${impactSummary.totalDonations}</p>
+                <p>Total Beneficiaries: ${impactSummary.totalBeneficiaries}</p>
+                <p>Food Distributed: ${impactSummary.foodDistributed}</p>
+            </div>
+            <div class="chart-container">
+                <h3>Recipient Demographics</h3>
+                <ul>
+                    ${Object.entries(recipientDemographics).map(([group, count]) => `<li>${group}: ${count} people</li>`).join('')}
+                </ul>
+            </div>
+        `;
+    }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const menuBtn = document.getElementById("menu-btn");
+    const sidebar = document.querySelector(".sidebar");
+
+    if (menuBtn && sidebar) {
+        menuBtn.addEventListener("click", function () {
+            sidebar.classList.toggle("show-sidebar");
+        });
+    }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const saveBtn = document.getElementById("save-profile-btn");
+
+    if (saveBtn) {
+        saveBtn.addEventListener("click", function () {
+            const formGroups = document.querySelectorAll("#donor-profile-form .form-group, #donation-preferences-form .form-group");
+
+            formGroups.forEach(group => {
+                const input = group.querySelector("input, select, textarea");
+                if (input) {
+                    const value = input.value;
+                    const textElement = document.createElement("p");
+                    textElement.textContent = value;
+                    textElement.classList.add("saved-text");
+                    group.replaceChild(textElement, input);
+                }
+            });
+
+            // Hide the save button after saving
+            saveBtn.style.display = "none";
+        });
+    }
+});

@@ -34,6 +34,7 @@
 }
 
 .logo-container img{
+  margin-top: 10px;
     width: 70px;
     height: 70px;
 }
@@ -60,6 +61,7 @@
     cursor: pointer;
     list-style: none;
     padding: 1rem;
+    color: #011800;
 }
 
 .menu-and-icon{
@@ -76,7 +78,7 @@
 }
 
 .menu-links ul li a:hover, i:hover {
-    color: red;
+  color:  #008000;
     transition: 0.5s ease;
 }
 .menu-links ul li a.active, i.active {
@@ -85,7 +87,7 @@
 }
 
 .dropdownmenu-container{
-  width: 16vw;
+
 
   width: 16vw;
   height: auto;
@@ -97,7 +99,7 @@
   align-items: center;
   row-gap: 0.8rem;
   border-radius: 0.4rem; 
-  top: 1.8rem;
+  top: 3rem;
 }
 
 .dropdown-div{
@@ -206,13 +208,14 @@ a{
     outline: none;
     border: none;
 }
-.mobileview-navbar{
+.menu-btn{
+  display: none;
+}
+.sidebar{
   display: none;
 }
 
-/* .sidebar{
-  display: none;
-} */
+
 
  /* **************************************************MAIN **************************************** */
  
@@ -229,7 +232,6 @@ a{
     background-image:url(image/heroimage.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
-    margin-top: 4%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -305,12 +307,13 @@ button{
     row-gap: 1.2rem;
 }
 
-.mission-heading-text h3, .howitworks h3, .available-food-heading h3, .partners-heading h3, .communityimpact-heading h3{
+.mission-heading-text h3, .howitworks h3, .available-food-heading h3, .partners-heading h3{
   font-size: 2.8rem;
   color: #008000;
   font-weight: 700;
 
 }
+
 .mission-paragraph {
     width: 100%;
     height: auto;
@@ -533,26 +536,7 @@ button{
   color: #a31402;
 }
 
-/* .team{
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin-top: 20px;
-}
-.team-grid{
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 15px;
-  padding:30px 30px 20px 30px;
-}
-.team-grid img{
-  width: 200px;
-  height: 200px;
-  border-radius: 10px;
-}
-.team-grid img:hover {
-  transform: translateY(-10px);
-} */
+
 .newsletter{
   width: 100%;
   height: auto;
@@ -707,29 +691,29 @@ button{
  }
  /* Donate and request*/
  .video-container{
+ 
   position: relative;
   width: 100%;
   height: 100vh;
   display: flex;
   overflow: hidden;
-  
-  
+  padding-top: 0px;
+  z-index: -1;
+
  }
  .video-background{
-  position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    position: absolute;
+ min-width: 100%;
+ 
  }
  .form-div{
-  position: absolute;
+ 
+
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1;
+    z-index: -1;
     color: white;
     text-align: center;
     font-size: 1.8rem;
@@ -737,8 +721,10 @@ button{
     background: rgba(0, 0, 0, 0.5); 
     padding: 20px;
     border-radius: 10px;
-    width: 80%;
-    max-width: 600px;
+    min-width: 50%;
+    display: flex;
+  justify-content: center;
+  align-items: center;
  }
 
  .appeal-section{
@@ -817,23 +803,7 @@ button{
   border-radius: 5px;
  }
  
- /* ****************************************************SERVICES**************************************** */
- .services-header{
-  width: 100%;
-  height: 100vh;
-  color: #008000;
-  background-image:url(image/donate.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-top: 8%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  
-  
-}
-
+ 
 /* scrolling animation */
 @keyframes marquee {
   from {
@@ -1014,129 +984,629 @@ button{
 .copyright p {
     font-size: 1.4rem;
 }
-
-/* Media Query */
-/* @media screen and (max-width:640px){
-  .mobileview-navbar{
-    display: block;
+@media (max-width: 1024px) {
+   
+  .menu-links {
+      display: none; 
   }
-  .webview-navbar{
-    display: none;
+  .signup-container {
+      display: none; 
   }
-  nav .list-content{
-    display: none;
-  }
-  h1{
-    font-size: 30px;
-    color: #008000;
-    text-align: center;
- }
- h2{
   
+  .menu-btn {
+      display: block; 
+  }
+  .sidebar{
+        display: block;
+      width: 70%;
+      height: 100vh;
+      background-color: #ecfce5;
+      box-shadow: 0px 0px 0px 5px rgba(0, 0 , 0, 0.1);
+     padding: 10px;
+     color: #011800;
+     font-size: 20px;
+     position: fixed;
+     top: 0;
+     left: -80%;
+     z-index:1000;  
+     transition: left 0.35s ease;
+     border-top-right-radius: 10px;
+     border-bottom-right-radius: 10px;
+     }
+ 
+  .sidebar.active {
+      left: 0; 
+  }
+  .sidebar-list-content{
+      display: block;
+      justify-content: center; 
+      align-items: start;
+      list-style: none;   
+      padding:20px 0px 20px 40px;
+        
+  }
+  .sidebar-list-content li{
+      margin-top: 4%;
+      font-weight: 600;
+      font-size: 20px;
+    
+    }
+    .dropdownmenu-container{
+      width: 50vw;
+      top: 5rem;
+      left: 2rem;
+      justify-content: center;
+      
+    }
+    .signup-btn2 button{
+      margin-top: 20px;
+   }
+   .cancel-div{
+      display: flex;
+      justify-content: space-between;
+     }
+     .cancel-div i{
+      margin-top: 20px;
+     }
+     .menu-and-icon{
+      column-gap: 2.6rem;
+  }
+  .menu-and-icon i{
+      margin-top: 20px;
+  }
+   /* **************************************Main******************************************* */
+  
+   .hero {
+    height: auto;
+    padding: 5rem 1.5rem;
+    text-align: center;
+  }
+
+  .hero-heading-text h1 {
+    font-size: 2.5rem; 
+  }
+
+  .hero-h2 p {
+    font-size: 1.2rem;
+  }
+
+  .buttonDiv {
+    flex-direction: column;
+    width: 90%;
+    gap: 10px;
+  }
+
+  .donateButton, .find-food {
+    width: 100%;
+    text-align: center;
+  }
+  .foodItems-div { 
+   
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem; 
+ 
+  }
+  .mission, .how-it-works, .available-food, .ourpartnersection{
+    width: 100%;
+    padding: 0rem;
+  }
+  .mission h3, .how-it-works h3, .available-food h3, .ourpartnersection h3{
+    font-size: 2rem;
+    
+  }
+  .community h3 {
+ font-size: 1.5rem;
+ }
+  .howItWorks-div, .partner {
+    width: 100%;
+    padding: 1rem;
+    column-gap: 2.5rem; 
+    flex-direction: column;
+  }
+  .howItWorks-children {
+    width: 100%;
+    background-color: #ecfce5;
+    margin-top: 30px;
+  }
+  .share-food-image{
+    padding: 6rem 10.4rem;
+  }
+  .share-food-image2{
+    padding: 6rem 10.4rem;
+  }
+  .share-food-image3{
+    padding: 6rem 10.4rem;
+  }
+  .mission-paragraph {
+    padding: 1rem 1rem;
+}
+  .howItWorks-children {
+    width: 100%;
+  }
+  
+  .foodItems-div2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .food-item {
+    width: 90%;
+  }
+
+  .newsletter {
+    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .newsletter form {
+    width: 100%;
+  }
+
+  .newsletter input,
+  .newsletter button {
+    width: 100%;
+  }
+  .community{
+    padding: 1rem ;
+    display: flex;
+    flex-direction: column;
+  } 
+  .communityImpactDiv{
+    width: 100%;
+    flex-direction: column;
+  }  
+  .testimonialContainer {
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+
+  .testimonialCards {
+    width: 100%;
+  }
+  
+  .video-container {
+    height: 100vh;
+  }
+
+  .video-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+  .form-div {
+    width: 90%;
+    font-size: 1.2rem;
+    padding: 15px;
+  }
+
+  .form {
+    width: 90%;
+  }
+
+  .form input, .form textarea, .form select, .form button {
+    width: 90%;
+    font-size: 16px;
+  }
+
+  
+  .appeal-section {
+    padding: 2rem;
+    row-gap: 1rem;
+  }
+
+  .appeal-heading-title h1 {
+    font-size: 2rem;
+    padding-left: 0;
+  }
+
+  .appeal-paragraph p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  /* Responsive Donate Image */
+  .donate-image img {
+    width: 100%;
+    height: auto;
+    
+  }
+
+  .food-item:hover {
+    transform: scale(1.05);  
+}
+.food-item {
+  width: 100%; 
+}
+
+
+
+.food-item h3 {
+    font-size: 1.5rem;
+    color: #011800;
+    margin: 10px 0;
+}
+
+.food-item p {
+    font-size: 1.2rem;
+    
+}
+
+.food-item button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.3rem;
+    cursor: pointer;
+  
+}
+
+.food-item button:hover {
+    background-color: #008000;
+}
+.quantity-and-quantitymeasure{
+  
+  justify-content: center;
+ 
+  column-gap: 0.4rem;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+  /*  Footer Adjustments */
+  .footer-top, .footer-mid, .footer-bottom {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+  .quicklinks, .footercontact, .foothead {
+      width: 100%;
+      align-items: flex-start;
+      text-align: left;         
+  }
+  .quicklinks ul {
+      padding-left: 0; 
+  }
+}
+
+@media (max-width: 768px) {
+       
+  .list-content{
+    display: none;
+}
+.h1-text{
+   display: flex;
+   font-size: 25px;
+   font-weight: 800;
+   color: #011800;
+}
+.signup-container{
+   display: none;
+  
+}
+.menu-btn{
+   display: block;
+}
+.sidebar{
+   display: block;
+   width: 70%;
+   height: 100vh;
+   background-color: #ecfce5;
+   box-shadow: 0px 0px 0px 5px rgba(0, 0 , 0, 0.1);
+  padding: 10px;
+  color: #011800;
+  font-size: 20px;
+  position: fixed;
+  top: 0;
+  left: -80%;
+  z-index:1000;  
+  transition: left 0.35s ease;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  }
+  
+  .sidebar.active{
+     left:0;
+  }
+  .sidebar-list-content{
+   display: block;
+   justify-content: center; 
+   align-items: start;
+   list-style: none;   
+   padding:20px 0px 20px 40px;
+     
+}
+.sidebar-list-content li{
+ margin-top: 4%;
+ font-weight: 600;
+ font-size: 15px;
+
+}
+
+
+.sidebar-list-content li a:hover{
+   color:  #008000;
+ 
+}
+.signup-btn2 button{
+  margin-top: 20px;
+}
+  .cancel-div{
+   display: flex;
+   justify-content: space-between;
+  }
+  .cancel-div i{
+   margin-top: 10px;
+  }
+.contact-right {
+   width: 100%;  
+}
+.dropdownmenu-container{
+ width: 60vw;
+ top: 3rem;
+ left: -2rem;
+ justify-content: center;
+ 
+}
+.menu-and-icon{
+   column-gap: 2.6rem;
+}
+.menu-and-icon i{
+   margin-top: 5px;
+}
+  /* ********************************************main******************************************* */
+  .hero {
+    height: auto;
+    padding: 5rem 1.3rem;
+    text-align: center;
+  }
+
+  .hero-heading-text h1 {
+    font-size: 2rem; /* Reduce font size */
+  }
+
+  .hero-h2 p {
+    font-size: 1rem;
+  }
+
+  .buttonDiv {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .donateButton, .find-food {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .mission, .how-it-works, .available-food, .ourpartnersection{
+    width: 100%;
+    padding: 0rem;
+  }
+  .mission h3, .how-it-works h3, .available-food h3, .ourpartnersection h3{
+    font-size: 2rem;
+    
+  }
+  .mission-paragraph p{
+    font-size: 1rem;
+    
+}
+  .community h3 {
+ font-size: 1.3rem;
+ }
+ 
+  .howItWorks-div, .partner {
+    width: 100%;
+    padding: 1rem;
+    column-gap: 2.5rem; 
+    flex-direction: column;
+  }
+  .howItWorks-children {
+    width: 100%;
+  
+    margin-top: 30px;
+   
+  }
+  /* .howItWorks-children {
+    width: 33%;
+    height: auto;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+    padding-bottom: 1.4rem;
+    background-color: #ecfce5;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;  
+    row-gap: 1rem;
+    border-radius: 0.8rem; 
+  } */
+  h4 {
+    
+    font-size: 1.2rem;
+  }
+  .community-testimonial-heading h2{ 
+    font-size: 1.3rem;
+    color: #071800;
+  }
+  .share-food p{
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #011800;
+    line-height: 1.6rem;
+  }
+  .share-food-image{
+    padding: 6rem 10.4rem;
+    
+  }
+  .share-food-image2{
+    padding: 6rem 10.4rem;
+  }
+  .share-food-image3{
+    padding: 6rem 10.4rem;
+  }
+  .mission-paragraph {
+    padding: 1rem 1rem;
+}
+  .howItWorks-children {
+    width: 100%;
+  }
+
+  .foodItems-div2 {
+    flex-direction: column;
+    align-items: center;
+  }
+  .foodItems-div { 
+    row-gap: 1.5rem; 
+    width: 100%;
+ 
+  }
+  .food-item {
+    width: 90%;
+  }
+  .food-item h3 {
+    font-size: 1.3rem;
+    
+}
+.quantity-and-quantitymeasure{
+ 
+  column-gap: 0.2rem;
+}
+.food-item p {
+    font-size: 1.0rem;
+    
+}
+  .newsletter {
+    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .newsletter form {
+    width: 100%;
+  }
+
+  .newsletter input,
+  .newsletter button {
+    width: 100%;
+  }
+  .community{
+    padding: 1rem ;
+    display: flex;
+    flex-direction: column;
+  } 
+  .communityImpactDiv{
+    width: 100%;
+    flex-direction: column;
+  }  
+  .testimonialContainer {
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+
+  .testimonialCards {
+    width: 100%;
+  }
+  /* donate and findfood */
+  .video-container {
+    height: 100vh;
+  }
+
+  .video-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Centering the form better on small screens */
+  .form-div {
+    width: 90%;
+    font-size: 1.2rem;
+    padding: 15px;
+  }
+
+  .form {
+    width: 90%;
+  }
+
+  .form input, .form textarea, .form select, .form button {
+    width: 90%;
+    font-size: 16px;
+  }
+
+  /* Appeal Section Adjustments */
+  .appeal-section {
+    padding: 2rem;
+    row-gap: 1rem;
+  }
+
+  .appeal-heading-title h1 {
+    font-size: 2rem;
+    padding-left: 0;
+  }
+
+  .appeal-paragraph p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  /* Responsive Donate Image */
+  .donate-image img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+  }
+
+   
+ /* footer */
+ .footer-top, .footer-mid, .footer-bottom {
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
- nav{
-  justify-content: space-around;
- }
- .menu-btn{
-  display: block;
-  
-}
-    .sidebar{
-        display: block;
-        width: 80%;
-        height: 100vh;
-        background-color: white;
-        box-shadow: 0px 0px 0px 5px rgba(0, 0 , 0, 0.1);
-       padding: 40px;
-       color: gray;
-       font-size: 20px;
-       position: fixed;
-       top: 0;
-       left: -80%;
-       z-index:1000;  
-       transition: left 0.35s ease;
-     }
-     .sideBarMenu {
-      font-size: 24px;
-      background: none;
-      border: none;
-      cursor: pointer;
-    }
-     .sidebar.active{
-        left:0;
-     }
-     .buttonDiv{
-      width: 60%;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      
-   }
-     button{
-      width: 60%;
-    }
-    .howItWorks-children {
-      width: 64%;
-        padding: 20px;   
-    }
-    .food-item {
-      width: 40%; 
-    }
-    .food-item img {
-      width: 100%; 
-    }
-    .food-item button{
-      width: 60%;  
-    }
-    .newsletter{
-     
-      display: flex;
-     flex-direction: column;
-     justify-content: center;
-      align-items: center;
-    }
-    .newsletter form{
-      margin-top: 20px;
-    }
-    .newsletter h2{
-      font-size: 20px;
-    }
-    .newsletter p{
-      font-size: 15px;
-      text-align: center;
-      margin-top: 2px;
-    }
-    .partner{
-      display: flex;
-      flex-direction: column;
-    }
-    .communityImpactDiv{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    .testimonialContainer{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-    }
-    .testimonialCards{
-      width: 80%;   
-     }
-     .footerInfo{
-      display: flex;
-      flex-direction: column;
-    }
-    
-    
+
+.quicklinks, .footercontact, .foothead {
+  width: 100%;
 }
 
-@media screen and (max-width:768px){
+
+.socials-icon {
+  padding: 1rem;
+  column-gap: 1rem;
+  font-size: 1rem; 
+}
+.socials ul {
+ 
+  column-gap: 1rem;
+
+}
+
+.footerInfo ul li a,
+.contact-text p,
+.links li a {
   
-   
-} */
+  font-size: 1rem;
+}
+.socialicon i,
+.icon i {
+  font-size: 1rem;
+  color: #FAFFD1;
+}
+.footercontact {
+  width: 100%;
+  margin-left: -10px;
+  row-gap: 1rem;
+ 
+}
+}
+
+

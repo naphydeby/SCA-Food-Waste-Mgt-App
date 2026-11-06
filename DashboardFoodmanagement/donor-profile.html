@@ -9,11 +9,12 @@
 </head>
 <body>
     <div class="dashboard-container">
+        
         <!-- Include the donor-left-sidebar.html content here -->
         <aside class="sidebar">
           <div class="logo">
-            <img src="/images/image/WhatsApp_Image_2025-02-06_at_10.12.19_90829287-removebg-preview.png" alt="FoodSavage Logo">
-            <h2>Food Savage</h2>
+           <img src="/image/Logo.png" alt="FoodSalvage Logo">
+            <h2>Food Salvage</h2>
         </div>
           <nav class="sidebar-nav">
               <a href="donor-dashboard.html"><i class="material-icons">dashboard</i>Dashboard</a>
@@ -28,12 +29,18 @@
       </aside>
         <main class="main-content">
             <header class="top-bar">
-                <h1>Donor Profile</h1>
+                <div class="welcome-text-menu-container">
+                    <div class="welcome-text">
+                        <h1>Donor Profile</h1> 
+                    </div>
+                    <button id="menu-btn" class="menu-btn">☰</button>
+                </div>
+                
             </header>
             <div class="profile-info">
-                <img src="/images/foodimages/donate1.jpg" alt="Donor Profile Picture" class="profile-picture">
-                <h2>Jane Smith</h2>
-                <p>jane.smith@example.com</p>
+                <img src="/DashboardFoodmanagement/images/foodimages/my-pic.jpg" alt="Donor Profile Picture" class="profile-picture">
+                <h2>GB Groceries Stores</h2>
+                <p>gbgroceries@example.com</p>
             </div>
             <div class="profile-details">
                 <h3>Organization Information</h3>
@@ -44,11 +51,11 @@
                     </div>
                     <div class="form-group">
                         <label for="contact-person">Contact Person</label>
-                        <input type="text" id="contact-person" name="contact-person" value="Jane Smith" required>
+                        <input type="text" id="contact-person" name="contact-person" value="John Anderson" required>
                     </div>
                     <div class="form-group">
                         <label for="org-email">Organization Email</label>
-                        <input type="email" id="org-email" name="org-email" value="info@foodforall.org" required>
+                        <input type="email" id="org-email" name="org-email" value="gbgroceries@example.com" required>
                     </div>
                     <div class="form-group">
                         <label for="org-phone">Organization Phone</label>
@@ -56,11 +63,11 @@
                     </div>
                     <div class="form-group">
                         <label for="org-address">Organization Address</label>
-                        <textarea id="org-address" name="org-address" rows="3" required>123 Charity St, City, Country</textarea>
+                        <textarea id="org-address" name="org-address" rows="3" required>Km 146 Abeokuta Exp.way, Lagos, Nigeria</textarea>
                     </div>
                     <div class="form-group">
                         <label for="org-website">Organization Website</label>
-                        <input type="url" id="org-website" name="org-website" value="https://www.foodforall.org" required>
+                        <input type="url" id="org-website" name="org-website" value="https://www.gbgroceries.org" required>
                     </div>
                     
                 </form>
@@ -73,7 +80,7 @@
                         <select id="donation-type" name="donation-type" required>
                             <option value="food">Food</option>
                             <option value="money">Money</option>
-                            <option value="both">Both Food and Money</option>
+                            <option value="both">Food and Money</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -98,8 +105,11 @@
                     </div>
                     <div class="form-group">
                         <label for="special-instructions">Special Instructions</label>
-                        <textarea id="special-instructions" name="special-instructions" rows="3">Please deliver donations before 5 PM.</textarea>
+                        <textarea id="special-instructions" name="special-instructions" rows="3">Please deliver donations as and when due</textarea>
                     </div>
+
+                    <button type="button" id="save-profile-btn" class="save-btn">Save</button>
+
                    
                 </form>
             </div>
@@ -108,3 +118,4 @@
     <script src="dashboard.js"></script>
 </body>
 </html>
+
